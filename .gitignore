@@ -2,9 +2,14 @@
 coverage/*
 logs/*
 node_modules/*
+package-lock.json
 
 helix-importer-ui
 .DS_Store
 *.bak
-.idea
-.iml
+.idea/*
+.iml/*
+.vscode/*
+.DS_Store
+*/.DS_Store
+*/*/.DS_Store

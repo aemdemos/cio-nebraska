@@ -1,4 +1,5 @@
 main .section {
+    margin: 120px 0;
     > div {
         width: 72%;
     }
@@ -9,7 +10,7 @@ main .section {
         background-size: cover;
         background-position: bottom center;
         background-repeat: no-repeat;
-        background-color: #676664;
+        background-color: #676664ba;
         background-blend-mode: soft-light;
         text-align: center;
         margin: 0;
@@ -30,10 +31,13 @@ main .section {
             line-height: 1.25em;
         }
 
+        h1+h2 {
+            margin-top: 0;
+            margin-bottom: 2em;
+        }
+
         > div {
             opacity: 1.0;
-            display: inline-block;
-            vertical-align: middle;
             transition: all 1s ease;
             transform: translateZ(0);
         }
@@ -44,40 +48,83 @@ main .section {
       main .section.parallax {
             background-attachment: fixed;
             height: 100vh;
-            padding: 0 15px;
+            padding: 0;
+            overflow: hidden;
+            align-content: center;
 
             > div {
                 animation: fadeIn 2.5s;
                 position: relative;
-                display: inline-block;
-                vertical-align: middle;
             }
 
-            &.right > div, &.left > div {
-                width: 50%;
-                padding: 60px 43px;
-                background-color: white;
-                text-align: left;
+            &.right, &.left {
+                position: relative;
+                /* this probably needs to be an element injected with JS */
+                &:after {
+                    content: url("/icons/home-section-down-arrow.svg");
+                    border-radius: 3em 3em 0 0;
+                    height: 36px;
+                    border: 2px solid #e5e6e7;
+                    border-bottom: none;
+                    padding: 20px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                > div {
+                    width: calc(60% - 86px);
+                    padding: 60px 43px;
+                    background-color: white;
+                    text-align: left;
+                    margin: 0;
+                }
             }
 
             &.right {
-                align-content: center;
                 > div {
                     animation: slideLeft 2.5s;
-                    left: 23%;
+                    left: 40%;
                 }
             }
 
             &.left {
-                align-content: center;
                     > div {
                         animation: slideRight 2.5s;
-                        right: 23%;
                     }
                 }
 
             }
         }
+
+@media (width >= 1000px) {
+    main .section.parallax {
+        &.right > div, &.left > div {
+            width: calc(50% - 86px);
+        }
+
+        &.right {
+            > div {
+                left: 50%;
+            }
+        }
+    }
+}
+
+@media (width >= 1280px) {
+    main .section.parallax {
+        &.right > div, &.left > div {
+            width: calc(40% - 86px);
+        }
+
+        &.right {
+            > div {
+                left: 60%;
+            }
+        }
+    }
+}
 
     @keyframes fadeIn {
         0% { opacity: 0; }
