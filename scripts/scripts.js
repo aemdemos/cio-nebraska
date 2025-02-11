@@ -74,14 +74,10 @@ export function createOptimizedBackgroundImage(element, breakpoints = [
   { media: '(min-width: 450px)', width: '768' },
   { media: '(min-width: 768px)', width: '1024' },
   { media: '(min-width: 1024px)', width: '1600' },
-  { media: '(min-width: 1600px)', width: '2000' },
 ]) {
   const updateBackground = () => {
     const bgImage = getBackgroundImage(element);
-    const extImageUrl = /dish\.scene7\.com|\/aemedge\/svgs\//;
-    const pathname = extImageUrl.test(bgImage)
-      ? bgImage
-      : new URL(bgImage, window.location.href).pathname;
+    const { pathname } = new URL(bgImage, window.location.href);
 
     const matchedBreakpoint = breakpoints
       .filter((br) => !br.media || window.matchMedia(br.media).matches)
@@ -89,8 +85,7 @@ export function createOptimizedBackgroundImage(element, breakpoints = [
       > parseInt(acc.width, 10) ? curr : acc), breakpoints[0]);
 
     const adjustedWidth = matchedBreakpoint.width * window.devicePixelRatio;
-    element.style.backgroundImage = extImageUrl.test(bgImage) ? `url(${pathname}`
-      : `url(${pathname}?width=${adjustedWidth}&format=webply&optimize=highest)`;
+    element.style.backgroundImage = `url(${pathname}?width=${adjustedWidth}&format=webply&optimize=highest)`;
   };
 
   if (resizeListeners.has(element)) {
@@ -104,38 +99,33 @@ export function createOptimizedBackgroundImage(element, breakpoints = [
 function decorateStyledSections(main) {
   Array.from(main.querySelectorAll('.section[data-background]')).forEach((section) => {
     createOptimizedBackgroundImage(section);
-    console.log('section background decoration happened');
   });
 }
 
 // Initiate the IntersectionObserver to animate the parallax sections
-console.log('template js loaded');
-
 function createObserver() {
   const parallaxRight = document.querySelector('.parallax.right');
   const parallaxLeft = document.querySelector('.parallax.left');
   document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           if (entry.target.classList.contains('right')) {
             entry.target.querySelector('div').classList.add('slideLeft');
           } else if (entry.target.classList.contains('left')) {
             entry.target.querySelector('div').classList.add('slideRight');
           }
-        } else {
-          if (entry.target.classList.contains('right')) {
-            entry.target.querySelector('div').classList.remove('slideLeft');
-          } else if (entry.target.classList.contains('left')) {
-            entry.target.querySelector('div').classList.remove('slideRight');
-          }
+        } else if (entry.target.classList.contains('right')) {
+          entry.target.querySelector('div').classList.remove('slideLeft');
+        } else if (entry.target.classList.contains('left')) {
+          entry.target.querySelector('div').classList.remove('slideRight');
         }
       });
     }, {
-      threshold: 0.3
+      threshold: 0.3,
     });
 
-    [parallaxRight, parallaxLeft].forEach(section => {
+    [parallaxRight, parallaxLeft].forEach((section) => {
       if (section) {
         observer.observe(section);
       }
