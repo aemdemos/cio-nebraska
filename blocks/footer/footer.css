@@ -1,6 +1,7 @@
 footer {
   background-color: var(--footer-color);
   font-size: var(--body-font-size-xs);
+  color: var(--footer-text-color);
 }
 
 footer .footer > div {
@@ -23,11 +24,40 @@ footer .footer .default-content-wrapper ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+footer .footer .default-content-wrapper ul:first-child {
   gap: 20%;
 }
 
 footer .footer .default-content-wrapper ul:first-child li br {
   display: none;
+}
+
+footer .footer .default-content-wrapper ul li a {
+  color: var(--footer-text-color);
+}
+
+footer .footer .default-content-wrapper ul:nth-child(2) {
+  font-size: 20.4px;
+}
+
+footer .footer .default-content-wrapper ul li {
+  padding: 0 0 0 0.5em;
+  margin: 0 0 0 0.5em;
+}
+
+footer .footer .default-content-wrapper ul:nth-child(2) li:not(:first-child) {
+  border-left: solid 1px rgb(145 146 147 / 25%);
+}
+
+footer .footer .default-content-wrapper ul:nth-child(2) li:first-child,
+footer .footer .default-content-wrapper ul:nth-child(2) li:nth-child(2) {
+  font-weight: 700;
+}
+
+footer .footer .default-content-wrapper ul:nth-child(2) li:nth-child(3) {
+  font-weight: 300;
 }
 
 @media (width >= 900px) {
