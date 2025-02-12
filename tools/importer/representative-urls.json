@@ -11,15 +11,11 @@
       "source": "NAV"
     },
     {
-      "url": "https://stateofne.sharepoint.com/sites/ocio_home/SitePages/Services.aspx?ga=1",
+      "url": "https://cio.nebraska.gov/news/index.html",
       "source": "NAV"
     },
     {
-      "url": "https://stateofne.sharepoint.com/sites/ocio_home/SitePages/Teammate-Links.aspx?e=4%3A497d8e36c1ef46d1a442348e5104ebb8&web=1",
-      "source": "NAV"
-    },
-    {
-      "url": "https://nitc.nebraska.gov/",
+      "url": "https://cio.nebraska.gov/rates/",
       "source": "NAV"
     },
     {
@@ -27,279 +23,54 @@
       "source": "NAV"
     },
     {
-      "url": "https://cio.nebraska.gov/blog/2021/06/legacy.html",
-      "repCount": 73,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/network-serv/publicsafety/statewideradio/equipment.html",
-      "repCount": 10,
-      "source": "SITEMAP"
-    },
-    {
       "url": "https://cio.nebraska.gov/recognition/awards/index.html",
       "repCount": 10,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/financial/index.html",
-      "repCount": 9,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/pmo/index.html",
-      "repCount": 6,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/network-serv/publicsafety/roc/index.html",
-      "repCount": 6,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/news/index.html",
-      "repCount": 5,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/blog/2015/index.html",
-      "repCount": 5,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/network-serv/video/jabber/index.html",
-      "repCount": 5,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/network-serv/voice/index.html",
-      "repCount": 5,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/cyber-sec/index.html",
-      "repCount": 5,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/network-serv/video/conference/index.html",
-      "repCount": 4,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/network-serv/publicsafety/index.html",
-      "repCount": 4,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/news/pressreleases/2016/08/pub-schools.html",
-      "repCount": 4,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/applications/ecm/index.html",
-      "repCount": 4,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/tech-serv/dist_comp_support.html",
-      "repCount": 4,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/enterprise_computing/db_mgt/manuals.html",
-      "repCount": 4,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/webdesign/index.html",
-      "repCount": 3,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/network-serv/video/webex/resource.html",
-      "repCount": 3,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/ps-broadband/index.html",
-      "repCount": 3,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/gio/index.html",
-      "repCount": 3,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/intergov_data_serv/personnel.html",
-      "repCount": 3,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/network-serv/open-sys/index.html",
-      "repCount": 2,
-      "source": "SITEMAP"
+      "source": "SITEMAPS"
     },
     {
       "url": "https://cio.nebraska.gov/contact/webmaster.php",
       "repCount": 2,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/network-serv/wan/index.html",
-      "repCount": 2,
-      "source": "SITEMAP"
+      "source": "SITEMAPS"
     },
     {
       "url": "https://cio.nebraska.gov/servicedesk/forms/problem.php",
       "repCount": 2,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/site-support/index.html",
-      "repCount": 2,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/network-serv/index.html",
-      "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/blog/index.html",
-      "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/network-serv/field_serv/index.html",
-      "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/news/pressreleases/index.html",
-      "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/cloud_serv/index.html",
-      "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/network-serv/mfa/index.html",
-      "repCount": 1,
-      "source": "SITEMAP"
+      "source": "SITEMAPS"
     },
     {
       "url": "https://cio.nebraska.gov/news/serv-announcements/index.html",
       "repCount": 1,
-      "source": "SITEMAP"
+      "source": "SITEMAPS"
     },
     {
       "url": "https://cio.nebraska.gov/index.html",
       "repCount": 1,
-      "source": "SITEMAP"
+      "source": "SITEMAPS"
     },
     {
       "url": "https://cio.nebraska.gov/recognition/index.html",
       "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/network-serv/video/index.html",
-      "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/network-serv/vpn/index.html",
-      "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/news/articles/index.html",
-      "repCount": 1,
-      "source": "SITEMAP"
+      "source": "SITEMAPS"
     },
     {
       "url": "https://cio.nebraska.gov/about/about-ocio.html",
       "repCount": 1,
-      "source": "SITEMAP"
+      "source": "SITEMAPS"
     },
     {
       "url": "https://cio.nebraska.gov/servicedesk/feedback/feedback.php",
       "repCount": 1,
-      "source": "SITEMAP"
+      "source": "SITEMAPS"
     },
     {
       "url": "https://cio.nebraska.gov/servicedesk/metrics/metrics.html",
       "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/network-serv/publicsafety/interoperability/interoperability.html",
-      "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/network-serv/video/streaming/index.html",
-      "repCount": 1,
-      "source": "SITEMAP"
+      "source": "SITEMAPS"
     },
     {
       "url": "https://cio.nebraska.gov/news/reports/index.html",
       "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/network-serv/wireless/index.html",
-      "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/docs/pdf/Road_Map_Public.pdf",
-      "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/services/index.html",
-      "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/applications/index.html",
-      "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/enterprise_computing/operations/index.html",
-      "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/enterprise_computing/cics/index.html",
-      "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/enterprise_computing/schd_auto/index.html",
-      "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/enterprise_computing/index.html",
-      "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/recognition/awards/2017/stars-q3.html",
-      "repCount": 1,
-      "source": "SITEMAP"
-    },
-    {
-      "url": "https://cio.nebraska.gov/it-consolidation/index.html",
-      "repCount": 1,
-      "source": "SITEMAP"
+      "source": "SITEMAPS"
     }
   ],
   "crawlOptions": {
@@ -309,7 +80,7 @@
     "limit": -1,
     "sameDomain": true,
     "keepHash": false,
+    "strategy": "sitemaps",
     "logger": {}
-  },
-  "source": "SITEMAP"
+  }
 }
