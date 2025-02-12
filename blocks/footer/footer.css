@@ -1,5 +1,5 @@
 footer {
-  background-color: var(--light-color);
+  background-color: var(--footer-color);
   font-size: var(--body-font-size-xs);
 }
 
@@ -11,6 +11,23 @@ footer .footer > div {
 
 footer .footer p {
   margin: 0;
+}
+
+footer .footer .default-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footer .default-content-wrapper ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20%;
+}
+
+footer .footer .default-content-wrapper ul:first-child li br {
+  display: none;
 }
 
 @media (width >= 900px) {

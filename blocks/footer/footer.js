@@ -15,6 +15,15 @@ export default async function decorate(block) {
   block.textContent = '';
   const footer = document.createElement('div');
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
-
   block.append(footer);
+
+  document.querySelectorAll('footer .footer .default-content-wrapper ul:first-child li').forEach((li) => {
+    const picture = li.querySelector('picture');
+    const link = li.querySelector('a');
+
+    if (picture && link) {
+      link.textContent = '';
+      link.insertBefore(picture, link.firstChild);
+    }
+  });
 }
