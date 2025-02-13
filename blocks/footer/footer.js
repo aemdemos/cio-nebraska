@@ -20,7 +20,8 @@ export default async function decorate(block) {
   document.querySelectorAll('footer .footer .default-content-wrapper ul:first-child li').forEach((li) => {
     const picture = li.querySelector('picture');
     const link = li.querySelector('a');
-
+    const br = li.querySelector('br');
+    if (br) br.remove();
     if (picture && link) {
       link.textContent = '';
       link.insertBefore(picture, link.firstChild);
