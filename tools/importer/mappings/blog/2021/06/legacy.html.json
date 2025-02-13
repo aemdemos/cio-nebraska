@@ -6,8 +6,7 @@
     "adBlocker": true,
     "gdprBlocker": true,
     "delay": 0,
-    "screenshot": false,
-    "sectionMappingLimit": 10
+    "screenshot": false
   },
   "autoDetect": true,
   "template": {
@@ -36,8 +35,8 @@
               },
               "x": -15,
               "y": 0,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-3sdvag-1102402302"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-3sdvag-1102402302"
             },
             {
               "id": "box-id-1891081828",
@@ -53,7 +52,7 @@
               "x": 70,
               "y": 290,
               "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-3sdvag-box-id-1891081828"
+              "customBlockName": "aidefaultContent-3sdvag-1891081828"
             },
             {
               "id": "box-id--1186836369",
@@ -84,8 +83,8 @@
               },
               "x": 275,
               "y": 645,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-3sdvag-1279231601"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-3sdvag-1279231601"
             },
             {
               "id": "box-id-513199300",
@@ -100,8 +99,8 @@
               },
               "x": 275,
               "y": 681,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-3sdvag-box-id-513199300"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-3sdvag-513199300"
             },
             {
               "id": "box-id-513199331",
@@ -116,8 +115,8 @@
               },
               "x": 275,
               "y": 714,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-3sdvag-box-id-513199331"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-3sdvag-513199331"
             },
             {
               "id": "box-id-513199362",
@@ -132,8 +131,8 @@
               },
               "x": 275,
               "y": 747,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-3sdvag-box-id-513199362"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-3sdvag-513199362"
             },
             {
               "id": "box-id-513199393",
@@ -148,8 +147,8 @@
               },
               "x": 275,
               "y": 780,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-3sdvag-box-id-513199393"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-3sdvag-513199393"
             },
             {
               "id": "box-id-513199424",
@@ -164,8 +163,8 @@
               },
               "x": 275,
               "y": 813,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-3sdvag-box-id-513199424"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-3sdvag-513199424"
             },
             {
               "id": "box-id-513199455",
@@ -180,8 +179,8 @@
               },
               "x": 275,
               "y": 845,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-3sdvag-box-id-513199455"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-3sdvag-513199455"
             },
             {
               "id": "box-id-513199486",
@@ -196,8 +195,8 @@
               },
               "x": 275,
               "y": 878,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-3sdvag-box-id-513199486"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-3sdvag-513199486"
             },
             {
               "id": "box-id-513199517",
@@ -212,8 +211,8 @@
               },
               "x": 275,
               "y": 911,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-3sdvag-box-id-513199517"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-3sdvag-513199517"
             },
             {
               "id": "box-id-513199548",
@@ -228,8 +227,8 @@
               },
               "x": 275,
               "y": 944,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-3sdvag-box-id-513199548"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-3sdvag-513199548"
             }
           ]
         }

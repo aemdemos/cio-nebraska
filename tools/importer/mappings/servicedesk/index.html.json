@@ -6,8 +6,7 @@
     "adBlocker": true,
     "gdprBlocker": true,
     "delay": 0,
-    "screenshot": false,
-    "sectionMappingLimit": 10
+    "screenshot": false
   },
   "autoDetect": true,
   "template": {
@@ -36,8 +35,8 @@
               },
               "x": -15,
               "y": 0,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-8dun0s-1102402271"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-8dun0s-1102402271"
             },
             {
               "id": "box-id-83627396",
@@ -53,7 +52,7 @@
               "x": 70,
               "y": 291,
               "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-8dun0s-box-id-83627396"
+              "customBlockName": "aidefaultContent-8dun0s-83627396"
             },
             {
               "id": "box-id-83627427",
@@ -68,8 +67,8 @@
               },
               "x": 70,
               "y": 421,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-8dun0s-box-id-83627427"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-8dun0s-83627427"
             },
             {
               "id": "box-id--1927594062",
@@ -125,8 +124,8 @@
               },
               "x": 452,
               "y": 755,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-8dun0s-2039665697"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-8dun0s-2039665697"
             },
             {
               "id": "box-id-559918771",
@@ -142,7 +141,7 @@
               "x": 70,
               "y": 775,
               "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-8dun0s-box-id-559918771"
+              "customBlockName": "aidefaultContent-8dun0s-559918771"
             }
           ]
         }

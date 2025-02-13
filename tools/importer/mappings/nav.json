@@ -6,8 +6,7 @@
     "adBlocker": true,
     "gdprBlocker": true,
     "delay": 0,
-    "screenshot": false,
-    "sectionMappingLimit": 10
+    "screenshot": false
   },
   "autoDetect": true,
   "template": {

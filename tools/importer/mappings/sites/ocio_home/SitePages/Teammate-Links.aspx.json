@@ -6,8 +6,7 @@
     "adBlocker": true,
     "gdprBlocker": true,
     "delay": 0,
-    "screenshot": false,
-    "sectionMappingLimit": 10
+    "screenshot": false
   },
   "autoDetect": true,
   "template": {
@@ -37,7 +36,7 @@
               "x": 0,
               "y": 668,
               "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-nbuk83-box-id-513650509"
+              "customBlockName": "aidefaultContent-nbuk83-513650509"
             }
           ]
         }
