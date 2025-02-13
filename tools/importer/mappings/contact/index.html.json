@@ -6,8 +6,7 @@
     "adBlocker": true,
     "gdprBlocker": true,
     "delay": 0,
-    "screenshot": false,
-    "sectionMappingLimit": 10
+    "screenshot": false
   },
   "autoDetect": true,
   "template": {
@@ -36,8 +35,8 @@
               },
               "x": -15,
               "y": 0,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-2a5va6-1102402271"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-2a5va6-1102402271"
             },
             {
               "id": "box-id-83627427",
@@ -52,8 +51,8 @@
               },
               "x": 55,
               "y": 250,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-2a5va6-box-id-83627427"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-2a5va6-83627427"
             },
             {
               "id": "box-id-83627458",
@@ -68,8 +67,8 @@
               },
               "x": 70,
               "y": 421,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-2a5va6-box-id-83627458"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-2a5va6-83627458"
             },
             {
               "id": "box-id-1749612991",
@@ -94,7 +93,7 @@
               "x": 70,
               "y": 421,
               "mapping": "columns",
-              "customBlockName": "aicolumns-2a5va6-box-id-1749612991"
+              "customBlockName": "aicolumns-2a5va6-1749612991"
             }
           ]
         }

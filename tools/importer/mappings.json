@@ -1,0 +1,40 @@
+{
+  "mappings": [
+    {
+      "path": "tools/importer/mappings/nav.json"
+    },
+    {
+      "path": "tools/importer/mappings/footer.json"
+    },
+    {
+      "path": "tools/importer/mappings/index.json"
+    },
+    {
+      "path": "tools/importer/mappings/servicedesk/index.html.json"
+    },
+    {
+      "path": "tools/importer/mappings/sites/ocio_home/SitePages/Services.aspx.json"
+    },
+    {
+      "path": "tools/importer/mappings/sites/ocio_home/SitePages/Teammate-Links.aspx.json"
+    },
+    {
+      "path": "tools/importer/mappings/index.json"
+    },
+    {
+      "path": "tools/importer/mappings/contact/index.html.json"
+    },
+    {
+      "path": "tools/importer/mappings/blog/2021/06/legacy.html.json"
+    },
+    {
+      "path": "tools/importer/mappings/network-serv/publicsafety/statewideradio/equipment.html.json"
+    },
+    {
+      "path": "tools/importer/mappings/recognition/awards/index.html.json"
+    },
+    {
+      "path": "tools/importer/mappings/financial/index.html.json"
+    }
+  ]
+}
