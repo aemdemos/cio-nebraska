@@ -6,8 +6,7 @@
     "adBlocker": true,
     "gdprBlocker": true,
     "delay": 0,
-    "screenshot": false,
-    "sectionMappingLimit": 10
+    "screenshot": false
   },
   "autoDetect": true,
   "template": {
@@ -36,8 +35,8 @@
               },
               "x": -15,
               "y": 0,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-62pe3g-1102402302"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-62pe3g-1102402302"
             },
             {
               "id": "box-id-1891081859",
@@ -53,7 +52,7 @@
               "x": 70,
               "y": 291,
               "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-62pe3g-box-id-1891081859"
+              "customBlockName": "aidefaultContent-62pe3g-1891081859"
             },
             {
               "id": "box-id-1891081890",
@@ -68,8 +67,8 @@
               },
               "x": 70,
               "y": 421,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-62pe3g-box-id-1891081890"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-62pe3g-1891081890"
             },
             {
               "id": "box-id--1972658944",
@@ -84,8 +83,8 @@
               },
               "x": 452,
               "y": 444,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-62pe3g-1972658944"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-62pe3g-1972658944"
             },
             {
               "id": "box-id-1070452948",
@@ -101,7 +100,7 @@
               "x": 70,
               "y": 494,
               "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-62pe3g-box-id-1070452948"
+              "customBlockName": "aidefaultContent-62pe3g-1070452948"
             },
             {
               "id": "box-id-292812197",
@@ -116,8 +115,8 @@
               },
               "x": 70,
               "y": 1626,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-62pe3g-box-id-292812197"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-62pe3g-292812197"
             },
             {
               "id": "box-id-292812228",
@@ -132,8 +131,8 @@
               },
               "x": 70,
               "y": 1659,
-              "mapping": "defaultContent",
-              "customBlockName": "aidefaultContent-62pe3g-box-id-292812228"
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-62pe3g-292812228"
             }
           ]
         }

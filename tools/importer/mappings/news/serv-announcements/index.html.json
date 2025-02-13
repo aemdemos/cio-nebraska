@@ -1,0 +1,78 @@
+{
+  "url": "https://cio.nebraska.gov/news/serv-announcements/index.html",
+  "browserOptions": {
+    "width": 1280,
+    "disableJS": false,
+    "adBlocker": true,
+    "gdprBlocker": true,
+    "delay": 0,
+    "screenshot": false
+  },
+  "autoDetect": true,
+  "template": {
+    "raw": "/html[1]/body[1]/header[1]/nav[1]\n  /html[1]/body[1]/div[2]\n  - /html[1]/body[1]/div[2]/div[2]\n  - /html[1]/body[1]/div[2]/div[3]\n  - /html[1]/body[1]/div[2]/main[1]\n  /html[1]/body[1]/footer[1]\n  - /html[1]/body[1]/footer[1]/div[1]/p[1]\n  - /html[1]/body[1]/footer[1]/div[1]/div[1]\n  - /html[1]/body[1]/footer[1]/div[1]/p[3]\n  - /html[1]/body[1]/footer[1]/div[1]/div[2]",
+    "hash": -288218677
+  },
+  "pageHeight": 1427,
+  "mapping": [
+    {
+      "id": 2,
+      "path": "/news/serv-announcements/index",
+      "sections": [
+        {
+          "id": "2-1",
+          "blocks": [
+            {
+              "id": "box-id-1891081859",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1170,
+              "height": 170,
+              "xpath": "/html[1]/body[1]/div[2]/div[2]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 55,
+              "y": 60,
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-womd0v-1891081859"
+            },
+            {
+              "id": "box-id-1891081890",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1140,
+              "height": 22,
+              "xpath": "/html[1]/body[1]/div[2]/div[3]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 70,
+              "y": 230,
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-womd0v-1891081890"
+            },
+            {
+              "id": "box-id-1946126496",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1140,
+              "height": 792,
+              "xpath": "/html[1]/body[1]/div[2]/main[1]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 70,
+              "y": 230,
+              "mapping": "defaultContent",
+              "customBlockName": "aidefaultContent-womd0v-1946126496"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
