@@ -35,6 +35,18 @@
     },
     {
       "path": "tools/importer/mappings/servicedesk/forms/problem.php.json"
+    },
+    {
+      "path": "tools/importer/mappings/servicedesk/forms/service.php.json"
+    },
+    {
+      "path": "tools/importer/mappings/servicedesk/metrics/metrics.html.json"
+    },
+    {
+      "path": "tools/importer/mappings/news/reports/index.html.json"
+    },
+    {
+      "path": "tools/importer/mappings/about/about-ocio.html.json"
     }
   ]
 }
