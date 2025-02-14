@@ -10,39 +10,25 @@ header nav {
   box-sizing: border-box;
   display: grid;
   grid-template:
-    'hamburger brand tools' var(--nav-height)
-    'sections sections sections' 1fr / auto 1fr auto;
+      'hamburger hamburger' var(--nav-height)
+    'sections sections' 1fr / auto auto;
   align-items: center;
-  gap: 0 24px;
   margin: auto;
   max-width: 1248px;
   height: var(--nav-height);
-  padding: 0 24px;
-  font-family: var(--body-font-family);
+  font-family: var(--heading-font-family);
+
+    > * {
+        padding: 0 24px;
+    }
 }
 
 header nav[aria-expanded='true'] {
   grid-template:
-    'hamburger brand' var(--nav-height)
-    'sections sections' 1fr
-    'tools tools' var(--nav-height) / auto 1fr;
+    'hamburger hamburger' var(--nav-height)
+    'sections sections' 1fr;
   overflow-y: auto;
-  min-height: 100dvh;
-}
-
-@media (width >= 900px) {
-  header nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 0 32px;
-    max-width: 1264px;
-    padding: 0 32px;
-  }
-
-  header nav[aria-expanded='true'] {
-    min-height: 0;
-    overflow: visible;
-  }
+  min-height: max-content;
 }
 
 header nav p {
@@ -52,6 +38,11 @@ header nav p {
 
 header nav a:any-link {
   color: currentcolor;
+
+    &:hover {
+        color: #333;
+        text-decoration: none;
+    }
 }
 
 /* hamburger */
@@ -60,6 +51,12 @@ header nav .nav-hamburger {
   height: 22px;
   display: flex;
   align-items: center;
+  justify-self: right;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px 10px;
+    opacity: .6;
+    margin-right: 16px;
 }
 
 header nav .nav-hamburger button {
@@ -128,100 +125,119 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   transform: rotate(-45deg);
 }
 
-@media (width >= 900px) {
-  header nav .nav-hamburger {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-/* brand */
-header .nav-brand {
-  grid-area: brand;
-  flex-basis: 128px;
-  font-size: var(--heading-font-size-s);
-  font-weight: 700;
-  line-height: 1;
-}
-
-header nav .nav-brand img {
-  width: 128px;
-  height: auto;
-}
-
 /* sections */
 header nav .nav-sections {
   grid-area: sections;
   flex: 1 1 auto;
   display: none;
   visibility: hidden;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
 }
 
 header nav[aria-expanded='true'] .nav-sections {
   display: block;
   visibility: visible;
   align-self: start;
+    animation: slideDown .5s;
+    background-color: var(--background-color);
 }
 
 header nav .nav-sections ul {
   list-style: none;
   padding-left: 0;
-  font-size: var(--body-font-size-s);
+  margin-top: 0;
+}
+
+.arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 6px;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    float: right;
+    position: relative;
+    top: 10px;
 }
 
 header nav .nav-sections ul > li {
-  font-weight: 500;
+  font-weight: 600;
+    position: relative;
+    display: block;
+    padding: 10px 0;
+    color: #777;
+    font-size: var(--heading-font-size-s);
+    width: calc(100% - 50px);
+    font-family: Roboto, 'Roboto Fallback', sans-serif;
+    cursor: pointer;
 }
 
-header nav .nav-sections ul > li > ul {
-  margin-top: 0;
+header nav .nav-sections .default-content-wrapper ul > li.nav-drop > ul {
+     display: none;
+     position: relative;
+}
+
+header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
+    display: block;
+    margin: 0;
+    cursor: pointer;
 }
 
 header nav .nav-sections ul > li > ul > li {
   font-weight: 400;
+    padding: 0;
+    margin: 5px;
+    font-size: var(--heading-font-size-s);
 }
 
 @media (width >= 900px) {
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 0 32px;
+        max-width: 1264px;
+        padding: 0 32px;
+    }
+
+    header nav[aria-expanded='true'] {
+        min-height: 0;
+        overflow: visible;
+    }
+
+    header nav .nav-hamburger {
+        display: none;
+        visibility: hidden;
+    }
+
   header nav .nav-sections {
     display: block;
     visibility: visible;
     white-space: nowrap;
+      border: 0;
   }
 
   header nav[aria-expanded='true'] .nav-sections {
     align-self: unset;
+    animation: none;
   }
 
   header nav .nav-sections .nav-drop {
     position: relative;
-    padding-right: 16px;
+    padding-right: 5px;
     cursor: pointer;
   }
 
-  header nav .nav-sections .nav-drop::after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 0.5em;
-    right: 2px;
-    transform: rotate(135deg);
-    width: 6px;
-    height: 6px;
-    border: 2px solid currentcolor;
-    border-radius: 0 1px 0 0;
-    border-width: 2px 2px 0 0;
-  }
-
-  header nav .nav-sections .nav-drop[aria-expanded='true']::after {
-    top: unset;
-    bottom: 0.5em;
-    transform: rotate(315deg);
-  }
-
   header nav .nav-sections ul {
-    display: flex;
-    gap: 24px;
-    margin: 0;
+      display: flex;
+      gap: 24px;
+      margin: 0;
+      justify-content: center;
+
+      > li {
+          width: unset;
+      }
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li {
@@ -237,32 +253,21 @@ header nav .nav-sections ul > li > ul > li {
   header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
     display: block;
     position: absolute;
-    left: -24px;
-    width: 200px;
-    top: 150%;
+    width: max-content;
     padding: 16px;
-    background-color: var(--light-color);
     white-space: initial;
-  }
-
-  header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: 16px;
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid var(--light-color);
-  }
-
-  header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
-    padding: 8px 0;
+      animation: slideDown .2s;
+      background-color: var(--background-color);
   }
 }
 
-/* tools */
-header nav .nav-tools {
-  grid-area: tools;
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
