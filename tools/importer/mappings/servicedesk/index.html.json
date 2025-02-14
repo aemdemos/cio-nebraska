@@ -1,0 +1,151 @@
+{
+  "url": "https://cio.nebraska.gov/servicedesk/index.html",
+  "browserOptions": {
+    "width": 1280,
+    "disableJS": false,
+    "adBlocker": true,
+    "gdprBlocker": true,
+    "delay": 0,
+    "screenshot": false
+  },
+  "autoDetect": true,
+  "template": {
+    "raw": "/html[1]/body[1]/header[1]/nav[1]\n  /html[1]/body[1]/div[2]\n  /html[1]/body[1]/div[3]\n  - /html[1]/body[1]/div[3]/div[2]\n  - /html[1]/body[1]/div[3]/div[3]\n  - /html[1]/body[1]/div[3]/nav[1]/div[1]\n  - /html[1]/body[1]/div[3]/main[1]/div[1]/div[1]\n  - /html[1]/body[1]/div[3]/nav[2]/div[1]\n  /html[1]/body[1]/footer[1]\n  - /html[1]/body[1]/footer[1]/div[1]/p[1]\n  - /html[1]/body[1]/footer[1]/div[1]/div[1]\n  - /html[1]/body[1]/footer[1]/div[1]/p[3]\n  - /html[1]/body[1]/footer[1]/div[1]/div[2]",
+    "hash": -192148405
+  },
+  "pageHeight": 1948,
+  "mapping": [
+    {
+      "id": 2,
+      "path": "/servicedesk/index",
+      "sections": [
+        {
+          "id": "2-1",
+          "blocks": [
+            {
+              "id": "box-id--1102402271",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1310,
+              "height": 250,
+              "xpath": "/html[1]/body[1]/div[2]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": -15,
+              "y": 0,
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-8dun0s-1102402271"
+            },
+            {
+              "id": "box-id-83627396",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1140,
+              "height": 110,
+              "xpath": "/html[1]/body[1]/div[3]/div[2]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 70,
+              "y": 291,
+              "mapping": "defaultContent",
+              "customBlockName": "aidefaultContent-8dun0s-83627396"
+            },
+            {
+              "id": "box-id-83627427",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1140,
+              "height": 22,
+              "xpath": "/html[1]/body[1]/div[3]/div[3]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 70,
+              "y": 421,
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-8dun0s-83627427"
+            },
+            {
+              "id": "box-id--1927594062",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 950,
+              "height": 228,
+              "xpath": "/html[1]/body[1]/div[3]/nav[1]/div[1]",
+              "childrenXpaths": [
+                {
+                  "xpath": "/html[1]/body[1]/div[3]/nav[1]/div[1]/div[1]",
+                  "xpathWithDetails": "/div[@class=\"container\"]/div[@class=\"col-lg-10 col-sm-offset-2 clearfix\"]/div[@class=\"border col-lg-4 col-md-4 col-sm-5 col-xs-12 bar-blue\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[3]/nav[1]/div[1]/div[2]",
+                  "xpathWithDetails": "/div[@class=\"container\"]/div[@class=\"col-lg-10 col-sm-offset-2 clearfix\"]/div[@class=\"border col-lg-4 col-md-4 col-sm-4 col-xs-12 bar-ltblue\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[3]/nav[1]/div[1]/div[3]",
+                  "xpathWithDetails": "/div[@class=\"container\"]/div[@class=\"col-lg-10 col-sm-offset-2 clearfix\"]/div[@class=\"border col-lg-4 col-md-4 col-sm-4 col-xs-12 bar-red\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[3]/nav[1]/div[1]/p[1]",
+                  "xpathWithDetails": "/div[@class=\"container\"]/div[@class=\"col-lg-10 col-sm-offset-2 clearfix\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[3]/nav[1]/div[1]/div[4]",
+                  "xpathWithDetails": "/div[@class=\"container\"]/div[@class=\"col-lg-10 col-sm-offset-2 clearfix\"]/div[@class=\"border col-lg-4 col-md-4 col-sm-5 col-xs-12 bar-blue\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[3]/nav[1]/div[1]/div[5]",
+                  "xpathWithDetails": "/div[@class=\"container\"]/div[@class=\"col-lg-10 col-sm-offset-2 clearfix\"]/div[@class=\"border col-lg-4 col-md-4 col-sm-5 col-xs-12 bar-ltblue\"]"
+                }
+              ],
+              "layout": {
+                "numCols": 3,
+                "numRows": 2
+              },
+              "x": 260,
+              "y": 446,
+              "mapping": "columns",
+              "customBlockName": "aicolumns-8dun0s-1927594062"
+            },
+            {
+              "id": "box-id--2039665697",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 682,
+              "height": 759,
+              "xpath": "/html[1]/body[1]/div[3]/main[1]/div[1]/div[1]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 452,
+              "y": 755,
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-8dun0s-2039665697"
+            },
+            {
+              "id": "box-id-559918771",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 285,
+              "height": 311,
+              "xpath": "/html[1]/body[1]/div[3]/nav[2]/div[1]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 70,
+              "y": 775,
+              "mapping": "defaultContent",
+              "customBlockName": "aidefaultContent-8dun0s-559918771"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

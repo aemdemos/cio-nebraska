@@ -1,0 +1,222 @@
+{
+  "url": "https://cio.nebraska.gov/servicedesk/forms/problem.php",
+  "browserOptions": {
+    "width": 1280,
+    "disableJS": false,
+    "adBlocker": true,
+    "gdprBlocker": true,
+    "delay": 0,
+    "screenshot": false
+  },
+  "autoDetect": true,
+  "template": {
+    "raw": "/html[1]/body[1]/header[1]/nav[1]\n  /html[1]/body[1]/div[1]\n  /html[1]/body[1]/div[2]\n  - /html[1]/body[1]/div[2]/div[1]\n  - /html[1]/body[1]/div[2]/div[2]\n  - /html[1]/body[1]/div[2]/nav[1]/div[1]\n  /html[1]/body[1]/footer[1]\n  - /html[1]/body[1]/footer[1]/div[1]/p[1]\n  - /html[1]/body[1]/footer[1]/div[1]/div[1]\n  - /html[1]/body[1]/footer[1]/div[1]/p[3]\n  - /html[1]/body[1]/footer[1]/div[1]/div[2]",
+    "hash": 1410225824
+  },
+  "pageHeight": 2054,
+  "mapping": [
+    {
+      "id": 2,
+      "path": "/servicedesk/forms/problem-php",
+      "sections": [
+        {
+          "id": "2-1",
+          "blocks": [
+            {
+              "id": "box-id--1102402302",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1310,
+              "height": 250,
+              "xpath": "/html[1]/body[1]/div[1]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": -15,
+              "y": 0,
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-dafedg-1102402302"
+            },
+            {
+              "id": "box-id-1891081828",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1140,
+              "height": 335,
+              "xpath": "/html[1]/body[1]/div[2]/div[1]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 70,
+              "y": 290,
+              "mapping": "defaultContent",
+              "customBlockName": "aidefaultContent-dafedg-1891081828"
+            },
+            {
+              "id": "box-id--374304381",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 825,
+              "height": 22,
+              "xpath": "/html[1]/body[1]/div[2]/div[2]/p[1]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 370,
+              "y": 645,
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-dafedg-374304381"
+            },
+            {
+              "id": "box-id-1440642959",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 549,
+              "height": 61,
+              "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/form[1]/div[1]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 370,
+              "y": 678,
+              "mapping": "defaultContent",
+              "customBlockName": "aidefaultContent-dafedg-1440642959"
+            },
+            {
+              "id": "box-id-1440642990",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 549,
+              "height": 61,
+              "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/form[1]/div[2]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 370,
+              "y": 755,
+              "mapping": "defaultContent",
+              "customBlockName": "aidefaultContent-dafedg-1440642990"
+            },
+            {
+              "id": "box-id-1440643021",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 549,
+              "height": 61,
+              "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/form[1]/div[3]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 370,
+              "y": 832,
+              "mapping": "defaultContent",
+              "customBlockName": "aidefaultContent-dafedg-1440643021"
+            },
+            {
+              "id": "box-id-1440643052",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 549,
+              "height": 61,
+              "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/form[1]/div[4]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 370,
+              "y": 909,
+              "mapping": "defaultContent",
+              "customBlockName": "aidefaultContent-dafedg-1440643052"
+            },
+            {
+              "id": "box-id-1440643083",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 549,
+              "height": 61,
+              "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/form[1]/div[5]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 370,
+              "y": 985,
+              "mapping": "defaultContent",
+              "customBlockName": "aidefaultContent-dafedg-1440643083"
+            },
+            {
+              "id": "box-id-1440643114",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 549,
+              "height": 423,
+              "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/form[1]/div[6]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 370,
+              "y": 1062,
+              "mapping": "defaultContent",
+              "customBlockName": "aidefaultContent-dafedg-1440643114"
+            },
+            {
+              "id": "box-id--864140124",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 519,
+              "height": 22,
+              "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/p[1]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 385,
+              "y": 1501,
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-dafedg-864140124"
+            },
+            {
+              "id": "box-id--1838536285",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 519,
+              "height": 55,
+              "xpath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 385,
+              "y": 1534,
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-dafedg-1838536285"
+            },
+            {
+              "id": "box-id--1417059885",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 285,
+              "height": 311,
+              "xpath": "/html[1]/body[1]/div[2]/nav[1]/div[1]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 70,
+              "y": 695,
+              "mapping": "defaultContent",
+              "customBlockName": "aidefaultContent-dafedg-1417059885"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

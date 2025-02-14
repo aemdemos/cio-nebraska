@@ -1,0 +1,51 @@
+{
+  "url": "https://cio.nebraska.gov/",
+  "browserOptions": {
+    "width": 1280,
+    "disableJS": false,
+    "adBlocker": true,
+    "gdprBlocker": true,
+    "delay": 0,
+    "screenshot": false
+  },
+  "autoDetect": true,
+  "template": {
+    "raw": "/html[1]/body[1]/nav[1]\n  /html[1]/body[1]/section[1]\n  - /html[1]/body[1]/section[1]/div[1]/header[1]\n  - /html[1]/body[1]/section[1]/div[1]/p[1]\n  /html[1]/body[1]/section[2]\n  /html[1]/body[1]/section[3]\n  /html[1]/body[1]/section[4]\n  /html[1]/body[1]/section[5]\n  /html[1]/body[1]/footer[1]\n  - /html[1]/body[1]/footer[1]/ul[1]\n  - /html[1]/body[1]/footer[1]/ul[2]",
+    "hash": 1067408742
+  },
+  "pageHeight": 913,
+  "mapping": [
+    {
+      "id": "footer-1",
+      "path": "/footer",
+      "sections": [
+        {
+          "id": "footer-1-1",
+          "blocks": [
+            {
+              "id": "box-id--953139808",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1280,
+              "height": 86,
+              "xpath": "/html[1]/body[1]/footer[1]",
+              "childrenXpaths": [
+                {
+                  "xpath": "/html[1]/body[1]/footer[1]",
+                  "xpathWithDetails": "id(\"footer\")"
+                }
+              ],
+              "layout": {
+                "numCols": 2,
+                "numRows": 1
+              },
+              "x": 0,
+              "y": 3775,
+              "mapping": "footer",
+              "customBlockName": "aifooter-xq1tf8-953139808"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
