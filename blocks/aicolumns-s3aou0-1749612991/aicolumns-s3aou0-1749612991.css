@@ -22,7 +22,7 @@
 .aicolumns-s3aou0-1749612991-wrapper ul {
   list-style: none; /* Remove default list styling */
   padding: 0;
-  margin: 0 0 4px 0; /* Add tighter spacing below the list */
+  margin: 0 0 4px; /* Add tighter spacing below the list */
 }
 
 .aicolumns-s3aou0-1749612991-wrapper ul li {
@@ -50,12 +50,12 @@
 }
 
 .aicolumns-s3aou0-1749612991-wrapper h4 {
-  margin: 0 0 8px 0; /* Add tighter spacing between headings */
+  margin: 0 0 8px; /* Add tighter spacing between headings */
   font-size: 1rem; /* Adjust font size */
   text-align: left; /* Ensure headings are left-aligned */
 }
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .aicolumns-s3aou0-1749612991-wrapper > .aicolumns-s3aou0-1749612991 > div {
     flex-direction: column; /* Stack columns vertically for smaller screens */
     gap: 10px; /* Adjust spacing for smaller screens */
