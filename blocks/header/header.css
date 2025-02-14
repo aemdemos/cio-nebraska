@@ -256,16 +256,17 @@ header nav .nav-sections ul > li > ul > li {
     width: max-content;
     padding: 16px;
     white-space: initial;
-      animation: slideDown .2s;
+      animation: slide-down .2s;
       background-color: var(--background-color);
   }
 }
 
-@keyframes slideDown {
+@keyframes slide-down {
     0% {
         opacity: 0;
         transform: translateY(-100px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
