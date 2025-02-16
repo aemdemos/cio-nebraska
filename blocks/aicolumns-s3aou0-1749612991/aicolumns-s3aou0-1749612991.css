@@ -1,0 +1,72 @@
+
+.aicolumns-s3aou0-1749612991-wrapper > .aicolumns-s3aou0-1749612991 > div {
+  display: flex; /* Enable flexbox layout */
+  flex-direction: row; /* Arrange child divs side by side */
+  justify-content: space-between; /* Ensure spacing between columns */
+  align-items: flex-start; /* Align content to the top */
+  gap: 6px; /* Further reduce spacing between columns for a compact layout */
+}
+
+.aicolumns-s3aou0-1749612991-wrapper > .aicolumns-s3aou0-1749612991 > div > div:first-child {
+  flex: 1.05; /* Slightly reduce the width of the left column */
+  max-width: 53%; /* Allow the left column to take slightly less space */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.aicolumns-s3aou0-1749612991-wrapper > .aicolumns-s3aou0-1749612991 > div > div:last-child {
+  flex: 0.95; /* Slightly increase the width of the right column */
+  max-width: 47%; /* Allow the right column to take slightly more space */
+  box-sizing: border-box;
+}
+
+.aicolumns-s3aou0-1749612991-wrapper ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0 0 4px; /* Add tighter spacing below the list */
+}
+
+.aicolumns-s3aou0-1749612991-wrapper ul li {
+  margin-bottom: 2px; /* Further reduce spacing between list items */
+}
+
+.aicolumns-s3aou0-1749612991-wrapper p {
+  margin-top: 3px; /* Reduce spacing above the paragraph */
+  text-align: left; /* Ensure text aligns to the left */
+}
+
+.aicolumns-s3aou0-1749612991-wrapper p .social-icons {
+  display: flex; /* Align social media icons horizontally */
+  flex-direction: row; /* Ensure icons are side by side */
+  align-items: center; /* Vertically align icons with text */
+  gap: 4px; /* Add tighter spacing between icons */
+  margin-top: 2px; /* Reduce vertical spacing from the list above */
+}
+
+.aicolumns-s3aou0-1749612991-wrapper p picture img {
+  width: auto; /* Prevent images from stretching */
+  max-width: 28px; /* Slightly reduce icon size */
+  height: auto; /* Maintain aspect ratio */
+  display: inline-block; /* Ensure icons are inline */
+}
+
+.aicolumns-s3aou0-1749612991-wrapper h4 {
+  margin: 0 0 8px; /* Add tighter spacing between headings */
+  font-size: 1rem; /* Adjust font size */
+  text-align: left; /* Ensure headings are left-aligned */
+}
+
+@media (width <= 900px) {
+  .aicolumns-s3aou0-1749612991-wrapper > .aicolumns-s3aou0-1749612991 > div {
+    flex-direction: column; /* Stack columns vertically for smaller screens */
+    gap: 10px; /* Adjust spacing for smaller screens */
+  }
+
+  .aicolumns-s3aou0-1749612991-wrapper > .aicolumns-s3aou0-1749612991 > div > div {
+    max-width: 100%; /* Allow full width for stacked columns */
+  }
+
+  .aicolumns-s3aou0-1749612991-wrapper p .social-icons {
+    flex-direction: column; /* Stack icons vertically on smaller screens */
+    gap: 3px; /* Adjust spacing for stacked icons */
+  }
+}
