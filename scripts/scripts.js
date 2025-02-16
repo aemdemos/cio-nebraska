@@ -10,7 +10,10 @@ import {
   waitForFirstImage,
   loadSection,
   loadSections,
-  loadCSS, getMetadata, toClassName,
+  loadCSS,
+  getMetadata,
+  toClassName,
+  createOptimizedPicture,
 } from './aem.js';
 
 const TEMPLATES = ['home']; // add your templates here
@@ -22,12 +25,27 @@ const TEMPLATE_META = 'template';
  */
 function buildHeroBlock(main) {
   const h1 = main.querySelector('h1');
-  const picture = main.querySelector('picture');
-  // eslint-disable-next-line no-bitwise
-  if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
-    const section = document.createElement('div');
-    section.append(buildBlock('hero', { elems: [picture, h1] }));
-    main.prepend(section);
+  const logoUrl = 'https://main--cio-nebraska--aemdemos.aem.live/cio-ne-logo.png';
+  let pictureUrl = getMetadata('og:image');
+  const url = new URL(pictureUrl, window.location.href);
+  if (url.hostname === 'localhost') {
+    url.protocol = 'http:';
+    pictureUrl = url.href;
+  }
+
+  if (h1) { // all pages need an H1 anyway
+    const picture = createOptimizedPicture(pictureUrl, 'Hero image', true, [{ media: '(min-width: 600px)', width: '2000' }, { width: '750' }]);
+    picture.classList.add('hero-image');
+    const logo = createOptimizedPicture(logoUrl, 'Nebraska - Good Life. Great Opportunity', true);
+    const logoLink = document.createElement('a');
+    logoLink.href = '/';
+    logoLink.append(logo);
+    logo.classList.add('ocio-logo');
+    const figure = document.createElement('figure');
+    figure.append(logoLink);
+    const heroSection = document.createElement('div');
+    heroSection.append(buildBlock('hero', { elems: [picture, figure] }));
+    main.prepend(heroSection);
   }
 }
 
@@ -140,7 +158,10 @@ createObserver();
  */
 function buildAutoBlocks(main) {
   try {
-    buildHeroBlock(main);
+    const template = getMetadata('template');
+    if (template !== 'home') {
+      buildHeroBlock(main);
+    }
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
