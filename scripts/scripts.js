@@ -27,6 +27,10 @@ function buildHeroBlock(main) {
   const h1 = main.querySelector('h1');
   const logoUrl = 'https://main--cio-nebraska--aemdemos.aem.live/cio-ne-logo.png';
   let pictureUrl = getMetadata('og:image');
+  if (pictureUrl.includes('/default-meta-image.png')) {
+    // if no image in page meta found, then no hero block creation
+    return;
+  }
   const url = new URL(pictureUrl, window.location.href);
   if (url.hostname === 'localhost') {
     url.protocol = 'http:';
