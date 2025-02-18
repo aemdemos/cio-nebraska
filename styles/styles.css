@@ -263,6 +263,26 @@ main>.section:first-of-type {
   margin-top: 0;
 }
 
+/* BREADCRUMBS */
+.breadcrumbs-outer {
+    margin-bottom:12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+
+    .breadcrumbs, .breadcrumbs a {
+        background-color: transparent;
+        font-weight: bold;
+        font-family: Roboto, 'Roboto Fallback', sans-serif;
+        font-size: var(--body-font-size-s);
+        color: black;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        line-height: 1.43;
+        display: inline;
+    }
+}
+
 @media (width>=900px) {
   main>.section>div {
     padding: 0 32px;

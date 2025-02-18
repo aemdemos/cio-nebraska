@@ -156,6 +156,114 @@ function createObserver() {
 }
 createObserver();
 
+/* BREADCRUMBS */
+// first have to copy function from fragment.js
+export async function loadFragment(path) {
+  if (path && path.startsWith('/')) {
+    const resp = await fetch(`${path}.plain.html`);
+    if (resp.ok) {
+      const main = document.createElement('main');
+      main.innerHTML = await resp.text();
+      return main;
+    }
+  }
+  return null;
+}
+
+const getFragmentPath = (path) => {
+  let fragmentPath;
+  switch (true) {
+    case path.includes('/news/'):
+      fragmentPath = '/fragments/breadrcumbs-news';
+      break;
+    case path.includes('/contact/'):
+      fragmentPath = '/fragments/breadcrumbs-contact';
+      break;
+    case path.includes('/servicedesk/'):
+      fragmentPath = '/fragments/breadcrumbs-servicedesk';
+      break;
+    case path.includes('/about/'):
+      fragmentPath = '/fragments/breadcrumbs-about';
+      break;
+    default:
+      fragmentPath = '/fragments/breadcrumbs-default';
+  }
+  return fragmentPath;
+};
+
+async function buildBreadcrumbs() {
+  const outerSection = document.createElement('div');
+  const breadcrumbsMetadata = getMetadata('breadcrumbs').toLowerCase();
+  // if breadcrumbs are disabled in metadata, return an empty div
+  if (breadcrumbsMetadata !== 'off' && breadcrumbsMetadata !== 'false') {
+    // Even if breadcrumbs are disabled, we need an empty div to keep the layout consistent
+    outerSection.className = 'breadcrumbs-outer';
+    const container = document.createElement('div');
+    container.className = 'section breadcrumbs-container';
+    const breadcrumb = document.createElement('nav');
+    breadcrumb.className = 'breadcrumbs';
+    breadcrumb.setAttribute('aria-label', 'Breadcrumb');
+    breadcrumb.innerHTML = '';
+    const fragmentPath = getFragmentPath(window.location.pathname);
+    // load the fragment and add it to the breadcrumb
+    const fragment = await loadFragment(fragmentPath);
+    if (fragment) {
+      const breadcrumbLinks = fragment.querySelectorAll('a');
+      breadcrumbLinks.forEach((link, index) => {
+        breadcrumb.appendChild(link);
+        // if (index < breadcrumbLinks.length - 1) {
+        if (index < breadcrumbLinks.length) {
+          const separator = document.createElement('span');
+          separator.className = 'breadcrumb-separator';
+          separator.textContent = ' / ';
+          breadcrumb.appendChild(separator);
+        }
+      });
+    }
+    outerSection.appendChild(container);
+    container.appendChild(breadcrumb);
+  }
+  console.log('Breadcrumbs created');
+  return outerSection;
+}
+
+/* END BREADCRUMBS */
+
+async function wrapMainContent() {
+  const template = getMetadata('template');
+  if (template !== 'home') {
+    const main = document.querySelector('main');
+
+    const sections = main.querySelectorAll(':scope > div.section');
+    const h1 = main.querySelector('h1:first-of-type');
+    let wrapperSection = main.querySelector('.main-content');
+
+    if (!wrapperSection && sections.length > 0) { // don't create a duplicate wrapper div
+      wrapperSection = document.createElement('div');
+      wrapperSection.classList.add('main-content');
+      // So here is the IF for the hero:
+      const heroContainer = main.querySelector('.hero-container:first-of-type'); // looking for the first section to be a hero only
+      if (heroContainer) { // if it exists, this is our 1st section of Main
+        while (heroContainer.nextElementSibling) {
+          // put all the sibling content of the hero in this new div
+          wrapperSection.append(heroContainer.nextElementSibling);
+        }
+        heroContainer.after(wrapperSection); // put the new section after the hero container
+        console.log('wrapper created');
+      } else {
+        // now every other condition
+        sections.forEach((section) => {
+          wrapperSection.appendChild(section);
+          main.append(wrapperSection);
+        });
+      }
+
+      h1.after(await buildBreadcrumbs());
+      console.log('new breadcrumbs created');
+    }
+  }
+}
+
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
@@ -165,6 +273,7 @@ function buildAutoBlocks(main) {
     const template = getMetadata('template');
     if (template !== 'home') {
       buildHeroBlock(main);
+      console.log('hero created');
     }
   } catch (error) {
     // eslint-disable-next-line no-console
@@ -186,6 +295,7 @@ export function decorateMain(main) {
   decorateBlocks(main);
   decorateStyledSections(main);
   createObserver();
+  wrapMainContent();
 }
 
 /**
@@ -223,6 +333,8 @@ async function loadEager(doc) {
     await loadTemplate(main);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
+    // const h1 = main.querySelector('h1:first-of-type');
+    // h1.after(await buildBreadcrumbs());
   }
 
   try {
