@@ -1,9 +1,3 @@
-/*
- * Accordion Block
- * Recreate an accordion
- * https://www.hlx.live/developer/block-collection/accordion
- */
-
 export default function decorate(block) {
   [...block.children].forEach((row) => {
     // decorate accordion item label
