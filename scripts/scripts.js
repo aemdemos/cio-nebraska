@@ -174,7 +174,7 @@ const getFragmentPath = (path) => {
   let fragmentPath;
   switch (true) {
     case path.includes('/news/'):
-      fragmentPath = '/fragments/breadrcumbs-news';
+      fragmentPath = '/fragments/breadcrumbs-news';
       break;
     case path.includes('/contact/'):
       fragmentPath = '/fragments/breadcrumbs-contact';
