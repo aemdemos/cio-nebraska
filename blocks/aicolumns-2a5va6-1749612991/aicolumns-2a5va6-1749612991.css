@@ -48,7 +48,7 @@
 }
 
 /* Responsive Design: Stack columns vertically on smaller screens */
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .aicolumns-2a5va6-1749612991-wrapper > .aicolumns-2a5va6-1749612991 > div {
     flex-direction: column; /* Stack columns vertically */
     gap: 2rem; /* Adjust spacing for vertical layout */
