@@ -149,7 +149,7 @@ header nav .nav-sections ul {
   margin-top: 0;
 }
 
-.arrow {
+header .arrow {
     display: inline-block;
     width: 0;
     height: 0;
