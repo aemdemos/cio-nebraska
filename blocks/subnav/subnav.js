@@ -27,6 +27,8 @@ export default function decorate(block) {
   divs.forEach((div, index) => {
     div.classList.add(classes[index % classes.length]);
     const buttonContainerParagraph = div.querySelector('.button-container a');
-    buttonContainerParagraph.classList.remove('button');
+    if (buttonContainerParagraph && buttonContainerParagraph.classList.contains('button')) {
+      buttonContainerParagraph.classList.remove('button');
+    }
   });
 }
