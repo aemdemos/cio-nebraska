@@ -193,9 +193,9 @@ const getFragmentPath = (path) => {
 
 async function buildBreadcrumbs() {
   const outerSection = document.createElement('div');
-  const breadcrumbsMetadata = getMetadata('breadcrumbs').toLowerCase();
-  // if breadcrumbs are disabled in metadata, return an empty div
-  if (breadcrumbsMetadata !== 'off' && breadcrumbsMetadata !== 'false') {
+  const breadcrumbMetadata = getMetadata('breadcrumb-title');
+  // if breadcrumb-title is "false" in metadata, return an empty div
+  if (breadcrumbMetadata !== 'False' && breadcrumbMetadata !== 'false') {
     // Even if breadcrumbs are disabled, we need an empty div to keep the layout consistent
     outerSection.className = 'breadcrumbs-outer';
     const container = document.createElement('div');
@@ -219,11 +219,12 @@ async function buildBreadcrumbs() {
           breadcrumb.appendChild(separator);
         }
       });
+      const textNode = document.createTextNode(breadcrumbMetadata);
+      breadcrumb.append(textNode);
     }
     outerSection.appendChild(container);
     container.appendChild(breadcrumb);
   }
-  console.log('Breadcrumbs created');
   return outerSection;
 }
 
@@ -259,7 +260,7 @@ async function wrapMainContent() {
       }
 
       h1.after(await buildBreadcrumbs());
-      console.log('new breadcrumbs created');
+      console.log('H1 was added to breadcrummbs');
     }
   }
 }
