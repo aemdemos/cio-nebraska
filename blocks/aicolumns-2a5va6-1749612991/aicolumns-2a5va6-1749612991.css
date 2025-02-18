@@ -1,0 +1,60 @@
+
+.aicolumns-2a5va6-1749612991-wrapper > .aicolumns-2a5va6-1749612991 > div {
+  display: flex; /* Enable Flexbox for the overall layout */
+  flex-direction: row; /* Position columns side by side */
+  gap: 2rem; /* Space between the two columns */
+  align-items: flex-start; /* Align content at the top of each column */
+}
+
+.aicolumns-2a5va6-1749612991-wrapper > .aicolumns-2a5va6-1749612991 > div > div:first-child {
+  flex: 1; /* Left column is narrower */
+  display: flex; /* Use Flexbox for inner layout */
+  flex-direction: column; /* Stack elements vertically */
+  gap: 0.75rem; /* Reduce spacing between elements */
+  text-align: left; /* Align content to the left */
+}
+
+.aicolumns-2a5va6-1749612991-wrapper > .aicolumns-2a5va6-1749612991 > div > div:last-child {
+  flex: 2; /* Right column is wider */
+  display: flex; /* Use Flexbox for inner layout */
+  flex-direction: column; /* Stack elements vertically */
+  gap: 1.5rem; /* Add consistent spacing between sections in the right column */
+  text-align: left; /* Align content to the left */
+}
+
+/* Stack social media icons and links vertically in the left column */
+.aicolumns-2a5va6-1749612991-wrapper > .aicolumns-2a5va6-1749612991 > div > div:first-child p {
+  display: flex; /* Use Flexbox for the social media section */
+  flex-direction: column; /* Stack icons and links vertically */
+  align-items: flex-start; /* Align icons and links to the left */
+  gap: 0.5rem; /* Add consistent spacing between icons and their respective links */
+  margin: 0; /* Reset margins */
+}
+
+/* Ensure social media icons are the correct size */
+.aicolumns-2a5va6-1749612991-wrapper img {
+  max-width: 24px; /* Restrict icon size */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure proper alignment */
+}
+
+/* Adjust vertical spacing between all elements */
+.aicolumns-2a5va6-1749612991-wrapper > .aicolumns-2a5va6-1749612991 > div > div > * {
+  margin-bottom: 0.75rem; /* Reduce spacing between elements */
+}
+
+.aicolumns-2a5va6-1749612991-wrapper > .aicolumns-2a5va6-1749612991 > div > div > *:last-child {
+  margin-bottom: 0; /* Remove bottom margin for the last element */
+}
+
+/* Responsive Design: Stack columns vertically on smaller screens */
+@media (width <= 900px) {
+  .aicolumns-2a5va6-1749612991-wrapper > .aicolumns-2a5va6-1749612991 > div {
+    flex-direction: column; /* Stack columns vertically */
+    gap: 2rem; /* Adjust spacing for vertical layout */
+  }
+
+  .aicolumns-2a5va6-1749612991-wrapper > .aicolumns-2a5va6-1749612991 > div > div {
+    flex: unset; /* Reset flex properties for stacked layout */
+  }
+}
