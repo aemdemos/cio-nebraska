@@ -4,7 +4,7 @@
   grid-auto-rows: auto;
   gap: 40px;
   max-width: 1000px;
-  margin: auto;
+  margin: auto auto 40px;
 }
 
 .subnav-group-container .grouped-content-container .grouped-content {
@@ -26,6 +26,11 @@
   text-decoration: underline;
   font-weight: bold;
   font-size: 22.4px;
+}
+
+.subnav-group-container .grouped-content-container .grouped-content p a:hover {
+  text-decoration: none;
+  color: #9B9B9B
 }
 
 .grouped-content-container .grouped-content.blue {
