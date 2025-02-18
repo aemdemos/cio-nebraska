@@ -21,7 +21,13 @@
   color: #696969;
 }
 
-.subnav-group-container .grouped-content-container .grouped-content p a {
+.subnav-group-container .grouped-content-container .grouped-content p:first-child {
+  font-weight: bold;
+  font-size: 22.4px;
+  color: #9B9B9B;
+}
+
+.subnav-group-container .grouped-content-container .grouped-content p:first-child a {
   color: #363636;
   text-decoration: underline;
   font-weight: bold;
@@ -30,7 +36,7 @@
 
 .subnav-group-container .grouped-content-container .grouped-content p a:hover {
   text-decoration: none;
-  color: #9B9B9B
+  color: #9B9B9B;
 }
 
 .grouped-content-container .grouped-content.blue {
