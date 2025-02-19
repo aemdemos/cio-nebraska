@@ -15,11 +15,14 @@
   --dark-color: #505050;
   --text-color: #131313;
   --footer-color: #39454b;
-  --footer-text-color: #B9BABB7F;
+  --footer-text-color: #b9babb7f;
+  --font-style: normal;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
-  --body-font-family: "Source Sans Pro", "Source Sans Pro Fallback", "sans-serif";
-  --heading-font-family: "Source Sans Pro", "Source Sans Pro Fallback", "sans-serif";
+  --body-font-family: "Source Sans Pro", "Source Sans Pro Fallback",
+    "sans-serif";
+  --heading-font-family: "Source Sans Pro", "Source Sans Pro Fallback",
+    "sans-serif";
   --body-font-size-m: 18px;
   --body-font-size-s: 14px;
   --body-font-size-xs: 12px;
@@ -37,46 +40,46 @@
 /* fallback fonts */
 @font-face {
   font-family: "Source Sans Pro Fallback";
-  font-style: normal;
+  font-style: var(--font-style);
   font-weight: 900;
   src: local("Arial Bold");
   ascent-override: 103.96%;
   descent-override: 28.84%;
-  line-gap-override: 0.00%;
+  line-gap-override: 0%;
   size-adjust: 94.65%;
 }
 
 @font-face {
   font-family: "Source Sans Pro Fallback";
-  font-style: normal;
+  font-style: var(--font-style);
   font-weight: 300;
   src: local("Arial");
   ascent-override: 108.45%;
   descent-override: 30.09%;
-  line-gap-override: 0.00%;
+  line-gap-override: 0%;
   size-adjust: 90.73%;
 }
 
 @font-face {
   font-family: "Roboto Fallback";
-  font-style: normal;
+  font-style: var(--font-style);
   font-weight: 400;
   src: local("Arial");
   ascent-override: 92.43%;
   descent-override: 24.32%;
-  line-gap-override: 0.00%;
+  line-gap-override: 0%;
   size-adjust: 100.37%;
 }
 
 @font-face {
   font-family: "FontAwesome Fallback";
-  font-style: normal;
+  font-style: var(--font-style);
   font-weight: normal;
   src: local("Arial");
   ascent-override: 85.71%;
   descent-override: 14.29%;
-  line-gap-override: 0.00%;
-  size-adjust: 100.00%;
+  line-gap-override: 0%;
+  size-adjust: 100%;
 }
 
 @media (width >= 900px) {
@@ -111,15 +114,22 @@ header {
   height: var(--nav-height);
 }
 
-header .header, footer .footer {
+header .header,
+footer .footer {
   visibility: hidden;
 }
 
-header .header[data-block-status="loaded"], footer .footer[data-block-status="loaded"] {
+header .header[data-block-status="loaded"],
+footer .footer[data-block-status="loaded"] {
   visibility: visible;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
@@ -152,12 +162,18 @@ h6 {
   font-size: var(--heading-font-size-xs);
 }
 
-p, dl, ol, ul, pre, blockquote {
+p,
+dl,
+ol,
+ul,
+pre,
+blockquote {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
 }
 
-code, pre {
+code,
+pre {
   font-size: var(--body-font-size-s);
 }
 
@@ -177,7 +193,10 @@ main > div {
   margin: 40px 16px;
 }
 
-input, textarea, select, button {
+input,
+textarea,
+select,
+button {
   font: inherit;
 }
 
@@ -195,22 +214,24 @@ a:hover {
 
 /* buttons */
 .button-container {
-    text-decoration: none;
-    color: #2929FF;
-    line-height: 1.1;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: var(--button-font-size);
-    font-family: var(--button-font-family);
+  text-decoration: none;
+  color: #2929ff;
+  line-height: 1.1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: var(--button-font-size);
+  font-family: var(--button-font-family);
 }
 
-button:disabled, button:disabled:hover {
+button:disabled,
+button:disabled:hover {
   background-color: var(--light-color);
   cursor: unset;
 }
 
-a.button.secondary, button.secondary {
+a.button.secondary,
+button.secondary {
   background-color: unset;
   border: 2px solid currentcolor;
   color: var(--text-color);
@@ -260,10 +281,11 @@ main > .section:first-of-type {
   margin: 12px 16px;
   min-height: 83px;
 
-  .breadcrumbs, .breadcrumbs a {
+  .breadcrumbs,
+  .breadcrumbs a {
     background-color: transparent;
     font-weight: bold;
-    font-family: Roboto, 'Roboto Fallback', sans-serif;
+    font-family: Roboto, "Roboto Fallback", sans-serif;
     font-size: var(--body-font-size-s);
     color: black;
     margin: 0;
@@ -277,7 +299,6 @@ main > .section:first-of-type {
 .main-content .aside {
   min-height: 350px;
 }
-
 
 @media (width >= 900px) {
   .main-content {
@@ -308,7 +329,8 @@ main > .section:first-of-type {
 }
 
 /* section metadata */
-main .section.light, main .section.highlight {
+main .section.light,
+main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
