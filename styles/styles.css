@@ -250,6 +250,10 @@ main img {
 /* sections */
 main > .section {
   margin: 40px 0;
+
+  & .hero-container {
+    height: 200px;
+  }
 }
 
 main > .section > div {
@@ -268,6 +272,7 @@ main > .section:first-of-type {
   border-bottom: 1px solid #eee;
   max-width: 1200px;
   margin: 12px 16px;
+  min-height: 83px;
 
   .breadcrumbs, .breadcrumbs a {
     background-color: transparent;
@@ -283,6 +288,10 @@ main > .section:first-of-type {
   }
 }
 
+.main-content .aside {
+  min-height: 350px;
+}
+
 
 @media (width >= 900px) {
   .main-content {
@@ -294,6 +303,7 @@ main > .section:first-of-type {
 
     aside {
       min-width: 200px;
+      min-height: unset;
     }
   }
 
