@@ -7,8 +7,7 @@
 
 .aidefaultcontent-5ul6px-1891081859-container > .aidefaultcontent-5ul6px-1891081859-wrapper > .aidefaultcontent-5ul6px-1891081859.block > div {
   display: flex;
-  flex-direction: row; /* Side-by-side layout for the main structure */
-  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  flex-flow: row wrap; /* Side-by-side layout for the main structure */ /* Allow wrapping for responsiveness */
   justify-content: space-between; /* Distribute items evenly */
   gap: 20px; /* Add consistent spacing between elements */
 }
@@ -52,7 +51,7 @@
 
 .aidefaultcontent-5ul6px-1891081859 p:last-of-type {
   margin-top: 10px; /* Adjust spacing above the feedback note */
-  color: #cc0000; /* Darker red for better contrast */
+  color: #c00; /* Darker red for better contrast */
   font-style: italic;
   font-weight: bold; /* Bold and italic for emphasis */
   font-size: 14px; /* Reduce font size for the feedback note */
