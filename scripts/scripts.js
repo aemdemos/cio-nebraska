@@ -214,7 +214,6 @@ async function buildBreadcrumbs() {
       const breadcrumbLinks = fragment.querySelectorAll('a');
       breadcrumbLinks.forEach((link, index) => {
         breadcrumb.appendChild(link);
-        // if (index < breadcrumbLinks.length - 1) {
         if (index < breadcrumbLinks.length) {
           const separator = document.createElement('span');
           separator.className = 'breadcrumb-separator';
@@ -234,7 +233,6 @@ async function buildBreadcrumbs() {
 
 /**
  * wraps main content with breadcrumbs, subnav, and aside.
- * @returns {Promise<void>}
  */
 
 async function wrapMainContent() {
