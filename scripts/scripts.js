@@ -160,13 +160,19 @@ function createObserver() {
 createObserver();
 
 /* BREADCRUMBS */
-// first have to copy function from fragment.js
+// first have to copy function from fragment.js and add a cache
+const fragmentCache = new Map();
+
 export async function loadFragment(path) {
   if (path && path.startsWith('/')) {
+    if (fragmentCache.has(path)) {
+      return fragmentCache.get(path);
+    }
     const resp = await fetch(`${path}.plain.html`);
     if (resp.ok) {
       const main = document.createElement('main');
       main.innerHTML = await resp.text();
+      fragmentCache.set(path, main);
       return main;
     }
   }
@@ -285,10 +291,10 @@ async function wrapMainContent() {
     if (!aside) {
       aside = document.createElement('aside');
       aside.classList.add('content-aside');
-      wrapperSection.prepend(aside);
       loadFragment('/fragments/links-of-interest').then((fragment) => {
         aside.append(fragment);
       });
+      wrapperSection.prepend(aside);
     }
   }
 }

@@ -313,7 +313,7 @@ main > .section:first-of-type {
 
   .breadcrumbs-outer {
     margin: 0 auto 12px;
-    padding: 0 16px;
+    padding: 0 16px 12px;
   }
 
   .subnav-wrapper {
