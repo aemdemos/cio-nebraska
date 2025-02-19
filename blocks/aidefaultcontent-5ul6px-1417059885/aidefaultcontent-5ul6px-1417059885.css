@@ -22,6 +22,25 @@
   margin-top: 5px; /* Add spacing between title and divider */
 }
 
+.aidefaultcontent-5ul6px-1417059885-wrapper p {
+  display: flex;
+  flex-direction: row; /* Align icons and text side by side */
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center; /* Vertically align icons and text */
+  gap: 12px; /* Add spacing between icons */
+  padding-left: 0; /* Ensure alignment with links above */
+  margin-left: 0; /* Remove unintended left margin */
+  align-self: flex-start; /* Ensure icons align with the block's left edge */
+}
+
+.aidefaultcontent-5ul6px-1417059885-wrapper p picture {
+  display: inline-block; /* Keep icons inline */
+}
+
+.aidefaultcontent-5ul6px-1417059885-wrapper p a {
+  display: none; /* Hide social media links */
+}
+
 .aidefaultcontent-5ul6px-1417059885-wrapper ul {
   list-style: none; /* Remove bullet points */
   padding: 0; /* Remove padding */
@@ -42,25 +61,6 @@
   font-weight: normal; /* Plain text for last item */
   color: #555; /* Slightly muted color */
   margin-bottom: 25px; /* Add extra spacing below the last item */
-}
-
-.aidefaultcontent-5ul6px-1417059885-wrapper p {
-  display: flex;
-  flex-direction: row; /* Align icons and text side by side */
-  justify-content: flex-start; /* Align items to the left */
-  align-items: center; /* Vertically align icons and text */
-  gap: 12px; /* Add spacing between icons */
-  padding-left: 0; /* Ensure alignment with links above */
-  margin-left: 0; /* Remove unintended left margin */
-  align-self: flex-start; /* Ensure icons align with the block's left edge */
-}
-
-.aidefaultcontent-5ul6px-1417059885-wrapper p picture {
-  display: inline-block; /* Keep icons inline */
-}
-
-.aidefaultcontent-5ul6px-1417059885-wrapper p a {
-  display: none; /* Hide social media links */
 }
 
 .aidefaultcontent-5ul6px-1417059885-container > .aidefaultcontent-5ul6px-1417059885-wrapper {
