@@ -50,6 +50,9 @@ function buildHeroBlock(main) {
     const heroSection = document.createElement('div');
     heroSection.append(buildBlock('hero', { elems: [picture, figure] }));
     main.prepend(heroSection);
+    // remove empty divs
+    const emptyDivs = main.querySelectorAll('div:empty');
+    emptyDivs.forEach((div) => div.remove());
   }
 }
 
@@ -227,40 +230,67 @@ async function buildBreadcrumbs() {
   }
   return outerSection;
 }
-
 /* END BREADCRUMBS */
+
+/**
+ * wraps main content with breadcrumbs, subnav, and aside.
+ * @returns {Promise<void>}
+ */
 
 async function wrapMainContent() {
   const template = getMetadata('template');
   if (template !== 'home') {
     const main = document.querySelector('main');
-
+    const breadcrumbs = await buildBreadcrumbs();
     const sections = main.querySelectorAll(':scope > div.section');
     const h1 = main.querySelector('h1:first-of-type');
+    const subnav = main.querySelector(':scope div.subnav-wrapper');
     let wrapperSection = main.querySelector('.main-content');
 
-    if (!wrapperSection && sections.length > 0) { // don't create a duplicate wrapper div
+    if (!wrapperSection && sections.length > 0) {
       wrapperSection = document.createElement('div');
       wrapperSection.classList.add('main-content');
-      // So here is the IF for the hero:
-      const heroContainer = main.querySelector('.hero-container:first-of-type'); // looking for the first section to be a hero only
-      if (heroContainer) { // if it exists, this is our 1st section of Main
-        while (heroContainer.nextElementSibling) {
-          // put all the sibling content of the hero in this new div
-          wrapperSection.append(heroContainer.nextElementSibling);
-        }
-        heroContainer.after(wrapperSection); // put the new section after the hero container
-        console.log('wrapper created');
-      } else {
-        // now every other condition
-        sections.forEach((section) => {
-          wrapperSection.appendChild(section);
-          main.append(wrapperSection);
-        });
-      }
+      const fragment = document.createDocumentFragment();
+      const heroContainer = main.querySelector('.hero-container:first-of-type');
 
-      h1.after(await buildBreadcrumbs());
-      console.log('H1 was added to breadcrummbs');
+      if (heroContainer) {
+        let nextSibling = heroContainer.nextElementSibling;
+        while (nextSibling) {
+          const currentSibling = nextSibling;
+          nextSibling = nextSibling.nextElementSibling;
+          fragment.appendChild(currentSibling);
+        }
+        wrapperSection.appendChild(fragment);
+        heroContainer.after(breadcrumbs);
+        if (subnav) {
+          breadcrumbs.after(subnav);
+          subnav.after(wrapperSection);
+        } else {
+          breadcrumbs.after(wrapperSection);
+        }
+        breadcrumbs.prepend(h1);
+      } else {
+        sections.forEach((section) => {
+          fragment.appendChild(section);
+        });
+        wrapperSection.appendChild(fragment);
+        main.prepend(breadcrumbs);
+        breadcrumbs.before(h1);
+        if (subnav) {
+          breadcrumbs.after(subnav);
+        }
+        main.append(wrapperSection);
+      }
+    }
+
+    let aside = wrapperSection.querySelector('.content-aside');
+    if (!aside) {
+      aside = document.createElement('aside');
+      aside.classList.add('content-aside');
+      wrapperSection.prepend(aside);
+      loadFragment('/fragments/links-of-interest').then((fragment) => {
+        aside.append(fragment);
+      });
     }
   }
 }
@@ -274,7 +304,6 @@ function buildAutoBlocks(main) {
     const template = getMetadata('template');
     if (template !== 'home') {
       buildHeroBlock(main);
-      console.log('hero created');
     }
   } catch (error) {
     // eslint-disable-next-line no-console
