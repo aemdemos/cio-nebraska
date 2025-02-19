@@ -1,0 +1,52 @@
+
+.aidefaultcontent-5ul6px-2099450319-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack main elements vertically */
+  gap: 16px; /* Ensure sufficient vertical spacing between rows */
+  align-items: stretch; /* Ensure children stretch to full width */
+}
+
+.aidefaultcontent-5ul6px-2099450319-wrapper > .aidefaultcontent-5ul6px-2099450319 > div {
+  display: flex;
+  flex-direction: row; /* Align label and input side by side */
+  align-items: center; /* Vertically align label and input */
+  justify-content: flex-start; /* Align content to the left */
+  width: 100%; /* Full width for the container */
+}
+
+/* Label styling */
+.aidefaultcontent-5ul6px-2099450319-wrapper > .aidefaultcontent-5ul6px-2099450319 > div > div:first-child {
+  display: flex;
+  flex-direction: row; /* Ensure asterisk and text are side by side */
+  align-items: center; /* Vertically align elements */
+  white-space: nowrap; /* Prevent wrapping of label text */
+  flex-shrink: 0; /* Prevent label from shrinking */
+  margin-right: 16px; /* Add space between label and input */
+}
+
+.aidefaultcontent-5ul6px-2099450319-wrapper div div p {
+  font-size: 16px;
+  margin: 0;
+  color: var(--text-color); /* Standard text color */
+}
+
+.aidefaultcontent-5ul6px-2099450319-wrapper div div p::before {
+  content: '*'; /* Add red asterisk */
+  color: red;
+  margin-right: 4px; /* Space between asterisk and label text */
+}
+
+/* Input field styling */
+.aidefaultcontent-5ul6px-2099450319-wrapper > .aidefaultcontent-5ul6px-2099450319 > div > div:last-child a {
+  display: block;
+  flex-grow: 1; /* Allow input field to take up the remaining space */
+  height: 40px; /* Standard input height */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 8px; /* Inner padding */
+  box-sizing: border-box; /* Include padding in width */
+  background-color: #fff; /* White background */
+  text-decoration: none; /* Remove underline */
+  color: #ccc; /* Placeholder-like gray text */
+  pointer-events: none; /* Disable link behavior */
+}
