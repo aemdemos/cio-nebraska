@@ -275,7 +275,7 @@ async function wrapMainContent() {
         });
         wrapperSection.appendChild(fragment);
         main.prepend(breadcrumbs);
-        breadcrumbs.before(h1);
+        breadcrumbs.prepend(h1);
         if (subnav) {
           breadcrumbs.after(subnav);
         }
