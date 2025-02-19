@@ -1,3 +1,10 @@
+:root {
+  --background-color: white;
+  --light-color: #f8f8f8;
+  --dark-color: #505050;
+  --text-color: #131313;
+}
+
 footer {
   background-color: var(--footer-color);
   font-size: var(--body-font-size-xs);
