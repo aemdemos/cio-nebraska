@@ -1,0 +1,58 @@
+
+.aidefaultcontent-5ul6px-1891081859-container > .aidefaultcontent-5ul6px-1891081859-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px; /* Consistent padding for alignment */
+}
+
+.aidefaultcontent-5ul6px-1891081859-container > .aidefaultcontent-5ul6px-1891081859-wrapper > .aidefaultcontent-5ul6px-1891081859.block > div {
+  display: flex;
+  flex-flow: row wrap; /* Side-by-side layout for the main structure */ /* Allow wrapping for responsiveness */
+  justify-content: space-between; /* Distribute items evenly */
+  gap: 20px; /* Add consistent spacing between elements */
+}
+
+.aidefaultcontent-5ul6px-1891081859 h4 {
+  background-color: #f9a825;
+  color: white;
+  padding: 20px 25px; /* Increased padding for a taller orange box */
+  text-align: center; /* Center align text inside the orange box */
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0; /* Reduce spacing below the orange box */
+  flex: 1 1 100%; /* Ensure the orange box spans the full width */
+  line-height: 1.4; /* Adjust line height for proper text alignment */
+}
+
+.aidefaultcontent-5ul6px-1891081859 p {
+  color: #333;
+  font-size: 18px; /* Adjust font size for readability */
+  line-height: 1.8; /* Increase line height for better spacing */
+  margin: 10px 0; /* Standardize spacing between paragraphs */
+  flex: 1 1 100%; /* Ensure paragraphs span the full width */
+}
+
+.aidefaultcontent-5ul6px-1891081859 p:nth-of-type(4) {
+  font-weight: bold; /* Bold the "Office of the CIO" heading */
+  margin-top: 10px; /* Reduce spacing above the address block */
+}
+
+.aidefaultcontent-5ul6px-1891081859 p:nth-of-type(5) {
+  line-height: 2; /* Increase line spacing for the address block */
+  flex: 1 1 100%; /* Ensure the address block spans the full width */
+}
+
+.aidefaultcontent-5ul6px-1891081859 p:nth-of-type(6) {
+  font-weight: normal; /* Remove bold styling */
+  font-style: italic; /* Add emphasis with italics */
+  margin-top: 15px; /* Add spacing above the feedback paragraph */
+  flex: 1 1 100%; /* Ensure this paragraph spans the full width */
+}
+
+.aidefaultcontent-5ul6px-1891081859 p:last-of-type {
+  margin-top: 10px; /* Adjust spacing above the feedback note */
+  color: #c00; /* Darker red for better contrast */
+  font-style: italic;
+  font-weight: bold; /* Bold and italic for emphasis */
+  font-size: 14px; /* Reduce font size for the feedback note */
+}
