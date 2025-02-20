@@ -435,7 +435,7 @@ function decoratePicturesWithLinks(element) {
       const anchorLink = parentElement.querySelector('a');
       const br = parentElement.querySelector('br');
       // To make sure the other images are not affected, we only
-      // target the images with the <br>, <picture>, <a> elements in the same parentElement
+      // target the elements with the <br>, <picture>, <a> elements in the same parentElement
       if (br && picture && anchorLink) {
         br.remove();
         anchorLink.textContent = '';
