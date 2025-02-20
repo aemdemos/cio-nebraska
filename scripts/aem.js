@@ -425,10 +425,10 @@ function decorateButtons(element) {
 }
 
 /**
- * Decorate Social Media icons with links
+ * Decorate pictures with links
  * @param element
  */
-function decorateLinksWithIcons(element) {
+function decoratePicturesWithLinks(element) {
   element.querySelectorAll('picture').forEach((picture) => {
     const { parentElement } = picture;
     if (parentElement) {
@@ -732,7 +732,7 @@ export {
   createOptimizedPicture,
   decorateBlock,
   decorateBlocks,
-  decorateLinksWithIcons,
+  decoratePicturesWithLinks,
   decorateButtons,
   decorateIcons,
   decorateSections,

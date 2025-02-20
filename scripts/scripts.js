@@ -14,7 +14,7 @@ import {
   getMetadata,
   toClassName,
   createOptimizedPicture,
-  decorateLinksWithIcons,
+  decoratePicturesWithLinks,
 } from './aem.js';
 
 const TEMPLATES = ['home']; // add your templates here
@@ -331,7 +331,7 @@ export function decorateMain(main) {
   decorateStyledSections(main);
   createObserver();
   wrapMainContent();
-  decorateLinksWithIcons(main);
+  decoratePicturesWithLinks(main);
 }
 
 /**
