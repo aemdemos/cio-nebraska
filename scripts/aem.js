@@ -425,6 +425,27 @@ function decorateButtons(element) {
 }
 
 /**
+ * Decorate pictures with links
+ * @param element
+ */
+function decoratePicturesWithLinks(element) {
+  element.querySelectorAll('picture').forEach((picture) => {
+    const { parentElement } = picture;
+    if (parentElement) {
+      const anchorLink = parentElement.querySelector('a');
+      const br = parentElement.querySelector('br');
+      // To make sure the other images are not affected, we only
+      // target the elements with the <br>, <picture>, <a> elements in the same parentElement
+      if (br && picture && anchorLink) {
+        br.remove();
+        anchorLink.textContent = '';
+        anchorLink.insertBefore(picture, anchorLink.firstChild);
+      }
+    }
+  });
+}
+
+/**
  * Add <img> for icon, prefixed with codeBasePath and optional prefix.
  * @param {Element} [span] span element with icon classes
  * @param {string} [prefix] prefix to be added to icon src
@@ -711,6 +732,7 @@ export {
   createOptimizedPicture,
   decorateBlock,
   decorateBlocks,
+  decoratePicturesWithLinks,
   decorateButtons,
   decorateIcons,
   decorateSections,
