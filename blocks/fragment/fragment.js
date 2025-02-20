@@ -32,7 +32,6 @@ export async function loadFragment(path) {
       };
       resetAttributeBase('img', 'src');
       resetAttributeBase('source', 'srcset');
-
       decorateMain(main);
       await loadSections(main);
       return main;
