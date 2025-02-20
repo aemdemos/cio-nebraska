@@ -288,15 +288,15 @@ async function wrapMainContent() {
       }
     }
 
-    // let aside = wrapperSection.querySelector('.content-aside');
-    // if (!aside) {
-    //   aside = document.createElement('aside');
-    //   aside.classList.add('content-aside');
-    //   loadFragment('/fragments/links-of-interest').then((fragment) => {
-    //     aside.append(fragment);
-    //   });
-    //   wrapperSection.prepend(aside);
-    // }
+    let aside = wrapperSection.querySelector('.content-aside');
+    if (!aside) {
+      aside = document.createElement('aside');
+      aside.classList.add('content-aside');
+      loadFragment('/fragments/links-of-interest').then((fragment) => {
+        aside.append(fragment);
+      });
+      wrapperSection.prepend(aside);
+    }
   }
 }
 
