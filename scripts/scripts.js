@@ -14,6 +14,7 @@ import {
   getMetadata,
   toClassName,
   createOptimizedPicture,
+  decorateLinksWithIcons,
 } from './aem.js';
 
 const TEMPLATES = ['home']; // add your templates here
@@ -320,7 +321,7 @@ function buildAutoBlocks(main) {
  * @param {Element} main The main element
  */
 // eslint-disable-next-line import/prefer-default-export
-export function decorateMain(main) {
+export async function decorateMain(main) {
   // hopefully forward compatible button decoration
   decorateButtons(main);
   decorateIcons(main);
@@ -330,6 +331,7 @@ export function decorateMain(main) {
   decorateStyledSections(main);
   createObserver();
   wrapMainContent();
+  decorateLinksWithIcons(main);
 }
 
 /**
