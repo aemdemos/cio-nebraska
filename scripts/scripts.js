@@ -288,15 +288,15 @@ async function wrapMainContent() {
       }
     }
 
-    let aside = wrapperSection.querySelector('.content-aside');
-    if (!aside) {
-      aside = document.createElement('aside');
-      aside.classList.add('content-aside');
-      loadFragment('/fragments/links-of-interest').then((fragment) => {
-        aside.append(fragment);
-      });
-      wrapperSection.prepend(aside);
-    }
+    // let aside = wrapperSection.querySelector('.content-aside');
+    // if (!aside) {
+    //   aside = document.createElement('aside');
+    //   aside.classList.add('content-aside');
+    //   loadFragment('/fragments/links-of-interest').then((fragment) => {
+    //     aside.append(fragment);
+    //   });
+    //   wrapperSection.prepend(aside);
+    // }
   }
 }
 
@@ -321,7 +321,7 @@ function buildAutoBlocks(main) {
  * @param {Element} main The main element
  */
 // eslint-disable-next-line import/prefer-default-export
-export async function decorateMain(main) {
+export function decorateMain(main) {
   // hopefully forward compatible button decoration
   decorateButtons(main);
   decorateIcons(main);
@@ -330,7 +330,7 @@ export async function decorateMain(main) {
   decorateBlocks(main);
   decorateStyledSections(main);
   createObserver();
-  await wrapMainContent();
+  wrapMainContent();
   decoratePicturesWithLinks(main);
 }
 
