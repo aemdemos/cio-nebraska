@@ -215,7 +215,7 @@ a:hover {
 /* buttons */
 .button-container {
   text-decoration: none;
-  color: #2929ff;
+  color: var(--link-color);
   line-height: 1.1;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -276,7 +276,7 @@ main > .section:first-of-type {
 /* BREADCRUMBS */
 .breadcrumbs-outer {
   padding-bottom: 12px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--light-color);
   max-width: 1200px;
   margin: 12px 16px;
   min-height: 83px;
@@ -285,9 +285,9 @@ main > .section:first-of-type {
   .breadcrumbs a {
     background-color: transparent;
     font-weight: bold;
-    font-family: Roboto, "Roboto Fallback", sans-serif;
+    font-family: var(--button-font-family);
     font-size: var(--body-font-size-s);
-    color: black;
+    color: var(--text-color);
     margin: 0;
     padding: 0;
     border: 0;
