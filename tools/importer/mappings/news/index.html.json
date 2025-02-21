@@ -62,7 +62,7 @@
                 {
                   "xpath": "/html[1]/body[1]/div[3]/nav[2]/div[1]",
                   "xpathWithDetails": "/div[@class=\"container\"]/div[@class=\"col-lg-10 col-sm-offset-2 clearfix\"]"
-                },
+                }
               ],
               "layout": {
                 "numCols": 2,
