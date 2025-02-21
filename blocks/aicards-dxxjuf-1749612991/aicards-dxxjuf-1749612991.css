@@ -1,28 +1,27 @@
 
 .aicards-dxxjuf-1749612991-container > .aicards-dxxjuf-1749612991-wrapper > .block.aicards-dxxjuf-1749612991 > ul {
-  display: flex;
-  flex-direction: column; /* Stack rows vertically */
-  gap: 32px; /* Add consistent vertical spacing between rows */
+  display: flex; /* Use flexbox for the card container */
+  flex-wrap: wrap; /* Allow items to wrap into new rows */
+  gap: 24px; /* Add consistent spacing between items */
   list-style: none; /* Remove default list styling */
   margin: 0;
   padding: 0;
 }
 
 .aicards-dxxjuf-1749612991-container > .aicards-dxxjuf-1749612991-wrapper > .block.aicards-dxxjuf-1749612991 > ul > li {
-  display: flex; /* Align items horizontally */
-  flex-direction: row; /* Ensure items are side by side */
-  justify-content: space-between; /* Distribute items evenly across the row */
-  align-items: flex-start; /* Align items at the top */
-  gap: 24px; /* Add consistent spacing between items in the row */
-  border: none; /* Remove borders */
-  background-color: transparent; /* Ensure no background color */
+  display: flex; /* Make each card a flex container */
+  flex-direction: row; /* Ensure elements inside the card are horizontally aligned */
+  gap: 12px; /* Add spacing between the vertical bar and text */
+  flex: 1 1 calc(33.333% - 24px); /* Create a responsive layout with three cards per row */
+  box-sizing: border-box; /* Ensure padding and borders don't affect width */
+  align-items: flex-start; /* Align items to the top */
 }
 
 .aicards-dxxjuf-1749612991-container > .aicards-dxxjuf-1749612991-wrapper > .block.aicards-dxxjuf-1749612991 .aicards-dxxjuf-1749612991-card-body {
-  display: flex; /* Align content horizontally */
-  flex-direction: row; /* Ensure elements inside the card body are side by side */
-  align-items: center; /* Vertically align content */
-  gap: 12px; /* Add spacing between the vertical bar and text */
+  display: flex; /* Align content inside card body side by side */
+  flex-direction: row; /* Ensure the vertical bar and text are aligned horizontally */
+  align-items: center; /* Vertically align the content */
+  gap: 8px; /* Add spacing between the vertical bar and text */
 }
 
 .aicards-dxxjuf-1749612991-container > .aicards-dxxjuf-1749612991-wrapper > .block.aicards-dxxjuf-1749612991 .aicards-dxxjuf-1749612991-card-body::before {
@@ -31,21 +30,30 @@
   width: 4px; /* Set the width of the vertical bar */
   height: 1em; /* Match the height of the title text */
   background-color: blue; /* Set the color of the bar */
-  margin-right: 8px; /* Add spacing between the bar and the text */
+  margin-right: 8px; /* Add spacing between the bar and text */
 }
 
 .aicards-dxxjuf-1749612991-container > .aicards-dxxjuf-1749612991-wrapper > .block.aicards-dxxjuf-1749612991 .button {
   font-weight: bold; /* Make titles bold */
   text-decoration: none; /* Remove underline */
+  font-size: 1rem; /* Adjust font size for titles */
   color: inherit; /* Use inherited text color */
-  background: none; /* Remove background color */
-  padding: 0; /* Remove extra padding */
-  border: none; /* Remove border */
+  margin: 0; /* Remove unnecessary margins */
+  padding: 0; /* Remove unnecessary padding */
+  background: none; /* Remove button background */
+  border: none; /* Remove button border */
 }
 
 .aicards-dxxjuf-1749612991-container > .aicards-dxxjuf-1749612991-wrapper > .block.aicards-dxxjuf-1749612991 p {
-  margin: 0; /* Remove default margins */
-  font-weight: normal; /* Use normal font weight for subtitles */
+  font-size: 0.875rem; /* Adjust font size for descriptions */
+  font-weight: normal; /* Use normal font weight */
   text-align: left; /* Align text to the left */
   line-height: 1.4; /* Adjust line height for better readability */
+  margin: 0; /* Remove default margins */
+}
+
+@media (max-width: 768px) {
+  .aicards-dxxjuf-1749612991-container > .aicards-dxxjuf-1749612991-wrapper > .block.aicards-dxxjuf-1749612991 > ul > li {
+    flex: 1 1 100%; /* Stack cards vertically on smaller screens */
+  }
 }
