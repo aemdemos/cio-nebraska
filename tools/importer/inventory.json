@@ -1,0 +1,166 @@
+{
+  "inventory": {
+    "blocks": [
+      {
+        "blockName": "header",
+        "instances": [
+          {
+            "url": "https://cio.nebraska.gov/news/index.html",
+            "id": "box-id--855297627",
+            "color": "rgba(0, 255, 0, 1)",
+            "width": 1280,
+            "height": 51,
+            "xpath": "/html[1]/body[1]/header[1]/nav[1]",
+            "childrenXpaths": null,
+            "layout": {
+              "numCols": 0,
+              "numRows": 0
+            },
+            "x": 0,
+            "y": 0,
+            "mapping": "header",
+            "customBlockName": "aiheader-dxxjuf-855297627"
+          }
+        ]
+      },
+      {
+        "blockName": "unknown",
+        "instances": [
+          {
+            "url": "https://cio.nebraska.gov/news/index.html",
+            "id": "box-id--1797775295",
+            "color": "rgba(0, 255, 0, 1)",
+            "width": 1140,
+            "height": 22,
+            "xpath": "/html[1]/body[1]/footer[1]/div[1]/p[1]",
+            "childrenXpaths": null,
+            "layout": {
+              "numCols": 0,
+              "numRows": 0
+            },
+            "x": 70,
+            "y": 1184,
+            "mapping": "unknown",
+            "customBlockName": "aiunknown-dxxjuf-1797775295"
+          },
+          {
+            "url": "https://cio.nebraska.gov/news/index.html",
+            "id": "box-id--1797775233",
+            "color": "rgba(0, 255, 0, 1)",
+            "width": 1140,
+            "height": 22,
+            "xpath": "/html[1]/body[1]/footer[1]/div[1]/p[3]",
+            "childrenXpaths": null,
+            "layout": {
+              "numCols": 0,
+              "numRows": 0
+            },
+            "x": 70,
+            "y": 1353,
+            "mapping": "unknown",
+            "customBlockName": "aiunknown-dxxjuf-1797775233"
+          },
+          {
+            "url": "https://cio.nebraska.gov/news/index.html",
+            "id": "box-id--1413770721",
+            "color": "rgba(0, 255, 0, 1)",
+            "width": 1170,
+            "height": 141,
+            "xpath": "/html[1]/body[1]/footer[1]/div[1]/div[2]",
+            "childrenXpaths": null,
+            "layout": {
+              "numCols": 0,
+              "numRows": 0
+            },
+            "x": 55,
+            "y": 1386,
+            "mapping": "unknown",
+            "customBlockName": "aiunknown-dxxjuf-1413770721"
+          },
+          {
+            "url": "https://cio.nebraska.gov/news/index.html",
+            "id": "box-id--1102402271",
+            "color": "rgba(0, 255, 0, 1)",
+            "width": 1310,
+            "height": 250,
+            "xpath": "/html[1]/body[1]/div[2]",
+            "childrenXpaths": null,
+            "layout": {
+              "numCols": 0,
+              "numRows": 0
+            },
+            "x": -15,
+            "y": 0,
+            "mapping": "unknown",
+            "customBlockName": "aiunknown-dxxjuf-1102402271"
+          }
+        ]
+      },
+      {
+        "blockName": "columns",
+        "instances": [
+          {
+            "url": "https://cio.nebraska.gov/news/index.html",
+            "id": "box-id--1413770752",
+            "color": "rgba(0, 255, 0, 1)",
+            "width": 1170,
+            "height": 126,
+            "xpath": "/html[1]/body[1]/footer[1]/div[1]/div[1]",
+            "childrenXpaths": [
+              {
+                "xpath": "/html[1]/body[1]/footer[1]/div[1]/div[1]/div[1]",
+                "xpathWithDetails": "id(\"foot\")/div[@class=\"row\"]/div[@class=\"col-lg-2 col-md-2 col-sm-2 col-xs-2 text-muted\"]"
+              },
+              {
+                "xpath": "/html[1]/body[1]/footer[1]/div[1]/div[1]/div[2]",
+                "xpathWithDetails": "id(\"foot\")/div[@class=\"row\"]/div[@class=\"col-lg-2 col-md-2 col-sm-2 col-xs-2 text-muted\"]"
+              },
+              {
+                "xpath": "/html[1]/body[1]/footer[1]/div[1]/div[1]/div[3]",
+                "xpathWithDetails": "id(\"foot\")/div[@class=\"row\"]/div[@class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 text-muted pull-right\"]"
+              }
+            ],
+            "layout": {
+              "numCols": 3,
+              "numRows": 1
+            },
+            "x": 55,
+            "y": 1217,
+            "mapping": "columns",
+            "customBlockName": "aicolumns-dxxjuf-1413770752"
+          },
+          {
+            "url": "https://cio.nebraska.gov/news/index.html",
+            "id": "box-id-1749612991",
+            "color": "rgba(0, 255, 0, 1)",
+            "width": 1140,
+            "height": 702,
+            "xpath": "/html[1]/body[1]/div[3]/main[1]",
+            "childrenXpaths": [
+              {
+                "xpath": "/html[1]/body[1]/div[3]/nav[1]/div[1]",
+                "xpathWithDetails": "/div[@class=\"container\"]/div[@class=\"col-lg-10 col-sm-offset-2 clearfix\"]"
+              },
+              {
+                "xpath": "/html[1]/body[1]/div[3]/nav[2]/div[1]",
+                "xpathWithDetails": "/div[@class=\"container\"]/div[@class=\"col-lg-10 col-sm-offset-2 clearfix\"]"
+              },
+              {
+                "xpath": "/html[1]/body[1]/div[3]/main[1]/div[1]/div[1]",
+                "xpathWithDetails": "/div[@class=\"container\"]/div[@class=\"row\"]/div[@class=\"col-md-6 col-sm-5 col-xs-10 col-md-offset-1 col-xs-offset-2\"]"
+              }
+            ],
+            "layout": {
+              "numCols": 2,
+              "numRows": 3
+            },
+            "x": 70,
+            "y": 421,
+            "mapping": "columns",
+            "customBlockName": "aicolumns-dxxjuf-1749612991"
+          }
+        ]
+      }
+    ]
+  }
+}
