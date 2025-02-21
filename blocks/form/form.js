@@ -582,6 +582,26 @@ export default async function decorate(block) {
     if (source === 'aem' && formDef.properties) {
       form.dataset.formpath = formDef.properties['fd:path'];
     }
+
+    // Move the buttons within a container to allow for better styling (flex)
+    const submitDiv = form.querySelector('.button-wrapper.field-submit');
+    const resetDiv = form.querySelector('.button-wrapper.field-reset');
+
+    if (submitDiv && resetDiv) {
+      // Create a new parent div
+      const parentDiv = document.createElement('div');
+      parentDiv.classList.add('button-wrapper-container');
+
+      // Get the parent of the existing divs
+      const parent = submitDiv.parentNode;
+
+      // Insert the new parent div before the first button wrapper
+      parent.insertBefore(parentDiv, submitDiv);
+
+      // Move both button wrapper divs inside the new parent
+      parentDiv.appendChild(submitDiv);
+      parentDiv.appendChild(resetDiv);
+    }
     container.replaceWith(form);
   }
 }

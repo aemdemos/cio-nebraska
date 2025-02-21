@@ -1,11 +1,11 @@
 :root {
     --background-color-primary: #fff;
-    --label-color: #666;
+    --label-color: #333;
     --border-color: #818a91;
     --form-error-color: #ff5f3f;
-    --button-primary-color: #5F8DDA;
-    --button-secondary-color: #666;
-    --button-primary-hover-color: #035fe6;
+    --button-primary-color: #333;
+    --button-secondary-color: #e6e6e6;
+    --button-primary-hover-color: #333;
     --form-font-size-m: 22px;
     --form-font-size-s: 18px;
     --form-font-size-xs: 16px;
@@ -26,8 +26,8 @@
     --form-paragraph-font-style: none;
     --form-paragraph-font-size: var(--form-font-size-s);
     --form-label-color: var(--label-color);
-    --form-label-font-size: var(--form-font-size-s);
-    --form-label-font-weight: 400;
+    --form-label-font-size: var(--form-font-size-xs);
+    --form-label-font-weight: 700;
     --form-title-font-weight: 600;
     --form-fieldset-border: 0;
     --form-fieldset-marign: 0;
@@ -37,12 +37,12 @@
     --form-fieldset-legend-font-weight: var(--form-title-font-weight);
     --form-fieldset-legend-border: none;
     --form-fieldset-legend-padding: 0;
-    --form-button-color: var(--background-color-primary);
-    --form-button-font-size: var(--form-font-size-s);
-    --form-button-background-color: var(--button-primary-color);
+    --form-button-color: var(--button-primary-color);
+    --form-button-font-size: var(--form-font-size-xs);
+    --form-button-background-color: #fff;
     --form-button-background-hover-color: var(--button-primary-hover-color);
-    --form-button-border: 2px solid transparent;
-    --form-button-padding:15px 50px;
+    --form-button-border: 1px solid #CCC;
+    --form-button-padding: 6px 12px;
     --form-upload-color: var(--form-label-color);
     --form-upload-font-size: var(--form-font-size-xs);
     --form-upload-background-color: var(--background-color-primary);
@@ -281,7 +281,7 @@ main .form button {
     border: var(--form-button-border);
     padding: var(--form-button-padding);
     font-size: var(--form-button-font-size);
-    border-radius: unset;
+    border-radius: 4px;
     width: 100%;
 }
 
@@ -380,13 +380,17 @@ main .file-wrapper .file-description button::after{
     transform: translate(-50%, -50%);
 }
 
+main .form .button-wrapper-container {
+    display: flex;
+    gap: 60px;
+}
+
 main .form .button-wrapper button {
     cursor:pointer
 }
 
 main .form .button-wrapper button:hover {
     border: 3px solid var(#fff);
-    color: #fff;
     background-color: var(--button-secondary-color);
 }
 
