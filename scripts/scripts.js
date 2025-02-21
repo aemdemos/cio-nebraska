@@ -330,13 +330,13 @@ export function linkTextIncludesHref(link) {
 }
 
 /**
- * Builds video and social media blocks when those links are encountered
+ * Builds youtube embedded blocks when those links are encountered
  * @param {Element} main The container element
  */
-export function buildVideoBlocks(main) {
-  const videoPlatforms = /youtu|vimeo|twitter\.com|facebook\.com|instagram\.com|watch\.sling\.com/;
+export function buildYoutubeBlocks(main) {
+  const youTubeRegex = /youtube\.com|youtu\.be/
   main.querySelectorAll('a[href]').forEach((a) => {
-    if (videoPlatforms.test(a.href) && linkTextIncludesHref(a)) {
+    if (youTubeRegex.test(a.href) && linkTextIncludesHref(a)) {
       const embedBlock = buildBlock('embed', a.cloneNode(true));
       a.replaceWith(embedBlock);
       decorateBlock(embedBlock);
@@ -354,7 +354,7 @@ export function decorateMain(main) {
   decorateButtons(main);
   decorateIcons(main);
   buildAutoBlocks(main);
-  buildVideoBlocks(main);
+  buildYoutubeBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
   decorateStyledSections(main);
