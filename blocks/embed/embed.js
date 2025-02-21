@@ -1,4 +1,3 @@
-
 import { loadScript } from '../../scripts/aem.js';
 
 const getDefaultEmbed = (url) => `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">

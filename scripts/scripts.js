@@ -318,6 +318,21 @@ function buildAutoBlocks(main) {
 }
 
 /**
+ * Builds video and social media blocks when those links are encountered
+ * @param {Element} main The container element
+ */
+export function buildVideoBlocks(main) {
+  const videoPlatforms = /youtu|vimeo|twitter\.com|facebook\.com|instagram\.com|watch\.sling\.com/;
+  main.querySelectorAll('a[href]').forEach((a) => {
+    if (videoPlatforms.test(a.href) && linkTextIncludesHref(a)) {
+      const embedBlock = buildBlock('embed', a.cloneNode(true));
+      a.replaceWith(embedBlock);
+      decorateBlock(embedBlock);
+    }
+  });
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
@@ -430,21 +445,6 @@ export function linkTextIncludesHref(link) {
   const textcontent = link.textContent;
 
   return textcontent.includes(href);
-}
-
-/**
- * Builds video and social media blocks when those links are encountered
- * @param {Element} main The container element
- */
-export function buildVideoBlocks(main) {
-  const videoPlatforms = /youtu|vimeo|twitter\.com|facebook\.com|instagram\.com|watch\.sling\.com/;
-  main.querySelectorAll('a[href]').forEach((a) => {
-    if (videoPlatforms.test(a.href) && linkTextIncludesHref(a)) {
-      const embedBlock = buildBlock('embed', a.cloneNode(true));
-      a.replaceWith(embedBlock);
-      decorateBlock(embedBlock);
-    }
-  });
 }
 
 loadPage();
