@@ -6,7 +6,6 @@ const getDefaultEmbed = (url) => `<div style="left: 0; width: 100%; height: 0; p
     </iframe>
   </div>`;
 
-
 // Function to extract videoId from YouTube and Vimeo URLs
 const getVideoId = (url) => {
   if (url.origin.includes('youtu.be')) {
@@ -46,8 +45,6 @@ const embedYoutube = async (url) => {
   return wrapper.outerHTML;
 };
 
-
-
 const EMBEDS_CONFIG = {
   youtube: embedYoutube,
 };
@@ -83,7 +80,6 @@ const loadEmbed = async (block, service, url) => {
     block.style.maxHeight = '0px';
   }
 };
-
 
 /**
  * @param {HTMLDivElement} block
