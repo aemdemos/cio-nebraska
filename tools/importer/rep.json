@@ -1,0 +1,62 @@
+{
+  "originUrl": "https://cio.nebraska.gov/",
+  "totalUrls": 14,
+  "urls": [
+    {
+      "url": "https://cio.nebraska.gov/",
+      "source": "NAV"
+    },
+    {
+      "url": "https://cio.nebraska.gov/servicedesk/index.html",
+      "source": "NAV"
+    },
+    {
+      "url": "https://cio.nebraska.gov/contact/index.html",
+      "source": "NAV"
+    },
+    {
+      "url": "https://cio.nebraska.gov/contact/webmaster.php",
+      "source": "CRAWL"
+    },
+    {
+      "url": "https://cio.nebraska.gov/news/index.html",
+      "source": "CRAWL"
+    },
+    {
+      "url": "https://cio.nebraska.gov/news/serv-announcements/index.html",
+      "source": "CRAWL"
+    },
+    {
+      "url": "https://cio.nebraska.gov/rates/",
+      "source": "CRAWL"
+    },
+    {
+      "url": "https://cio.nebraska.gov/recognition/index.html",
+      "source": "CRAWL"
+    },
+    {
+      "url": "https://cio.nebraska.gov/servicedesk/feedback/feedback.php",
+      "source": "CRAWL"
+    },
+    {
+      "url": "https://cio.nebraska.gov/servicedesk/forms/problem.php",
+      "source": "CRAWL"
+    },
+    {
+      "url": "https://cio.nebraska.gov/servicedesk/forms/service.php",
+      "source": "CRAWL"
+    },
+    {
+      "url": "https://cio.nebraska.gov/servicedesk/metrics/metrics.html",
+      "source": "CRAWL"
+    },
+    {
+      "url": "https://cio.nebraska.gov/news/reports/index.html",
+      "source": "CRAWL"
+    },
+    {
+      "url": "https://cio.nebraska.gov/about/about-ocio.html",
+      "source": "CRAWL"
+    }
+  ]
+}
