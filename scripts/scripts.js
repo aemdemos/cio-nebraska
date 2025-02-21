@@ -330,15 +330,8 @@ function buildPageDivider(main) {
       if (lower === 'divider' || lower.includes('element')) {
         el.innerText = '';
         el.classList.add('divider');
-      } else if (lower.includes('layout')) {
-        el.innerText = '';
-        el.classList.add('divider', 'layout');
       }
     }
-  });
-  const dividersLayout = main.querySelectorAll('div + div > p:first-of-type > code.divider.layout');
-  dividersLayout.forEach((dividerLayout) => {
-    dividerLayout.closest('div').classList.add('no-pad');
   });
 }
 

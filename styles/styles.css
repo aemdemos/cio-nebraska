@@ -335,3 +335,11 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+/* dividers */
+p:has(code.divider) {
+  border-bottom: 1px solid #eee;
+  margin-top: 2em;
+  padding-top: 2em;
+  margin-bottom: 0;
+}
