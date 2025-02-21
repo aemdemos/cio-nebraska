@@ -354,13 +354,13 @@ export function decorateMain(main) {
   decorateButtons(main);
   decorateIcons(main);
   buildAutoBlocks(main);
-  buildYoutubeBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
   decorateStyledSections(main);
   createObserver();
   wrapMainContent();
   decoratePicturesWithLinks(main);
+  buildYoutubeBlocks(main);
 }
 
 /**
