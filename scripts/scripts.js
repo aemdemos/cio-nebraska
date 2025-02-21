@@ -295,6 +295,7 @@ async function wrapMainContent() {
       aside.classList.add('content-aside');
       loadFragment('/fragments/links-of-interest').then((fragment) => {
         aside.append(fragment);
+        decoratePicturesWithLinks(aside);
       });
       wrapperSection.prepend(aside);
     }
