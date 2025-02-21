@@ -1,0 +1,51 @@
+
+.aicards-dxxjuf-1749612991-container > .aicards-dxxjuf-1749612991-wrapper > .block.aicards-dxxjuf-1749612991 > ul {
+  display: flex;
+  flex-direction: column; /* Stack rows vertically */
+  gap: 32px; /* Add consistent vertical spacing between rows */
+  list-style: none; /* Remove default list styling */
+  margin: 0;
+  padding: 0;
+}
+
+.aicards-dxxjuf-1749612991-container > .aicards-dxxjuf-1749612991-wrapper > .block.aicards-dxxjuf-1749612991 > ul > li {
+  display: flex; /* Align items horizontally */
+  flex-direction: row; /* Ensure items are side by side */
+  justify-content: space-between; /* Distribute items evenly across the row */
+  align-items: flex-start; /* Align items at the top */
+  gap: 24px; /* Add consistent spacing between items in the row */
+  border: none; /* Remove borders */
+  background-color: transparent; /* Ensure no background color */
+}
+
+.aicards-dxxjuf-1749612991-container > .aicards-dxxjuf-1749612991-wrapper > .block.aicards-dxxjuf-1749612991 .aicards-dxxjuf-1749612991-card-body {
+  display: flex; /* Align content horizontally */
+  flex-direction: row; /* Ensure elements inside the card body are side by side */
+  align-items: center; /* Vertically align content */
+  gap: 12px; /* Add spacing between the vertical bar and text */
+}
+
+.aicards-dxxjuf-1749612991-container > .aicards-dxxjuf-1749612991-wrapper > .block.aicards-dxxjuf-1749612991 .aicards-dxxjuf-1749612991-card-body::before {
+  content: ''; /* Add the vertical bar */
+  display: block;
+  width: 4px; /* Set the width of the vertical bar */
+  height: 1em; /* Match the height of the title text */
+  background-color: blue; /* Set the color of the bar */
+  margin-right: 8px; /* Add spacing between the bar and the text */
+}
+
+.aicards-dxxjuf-1749612991-container > .aicards-dxxjuf-1749612991-wrapper > .block.aicards-dxxjuf-1749612991 .button {
+  font-weight: bold; /* Make titles bold */
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Use inherited text color */
+  background: none; /* Remove background color */
+  padding: 0; /* Remove extra padding */
+  border: none; /* Remove border */
+}
+
+.aicards-dxxjuf-1749612991-container > .aicards-dxxjuf-1749612991-wrapper > .block.aicards-dxxjuf-1749612991 p {
+  margin: 0; /* Remove default margins */
+  font-weight: normal; /* Use normal font weight for subtitles */
+  text-align: left; /* Align text to the left */
+  line-height: 1.4; /* Adjust line height for better readability */
+}
