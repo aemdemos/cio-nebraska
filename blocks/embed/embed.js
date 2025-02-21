@@ -12,7 +12,6 @@ const getVideoId = (url) => {
     return url.pathname.substring(1);
   }
   if (url.hostname.includes('youtube.com')) {
-    console.log('videoId', url);
     return new URLSearchParams(url.search).get('v') || url.pathname.split('/').pop();
   }
 
