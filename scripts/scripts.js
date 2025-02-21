@@ -318,6 +318,18 @@ function buildAutoBlocks(main) {
 }
 
 /**
+ * check if link text is same as the href
+ * @param {Element} link the link element
+ * @returns {boolean} true or false
+ */
+export function linkTextIncludesHref(link) {
+  const href = link.getAttribute('href');
+  const textcontent = link.textContent;
+
+  return textcontent.includes(href);
+}
+
+/**
  * Builds video and social media blocks when those links are encountered
  * @param {Element} main The container element
  */
@@ -433,18 +445,6 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
-}
-
-/**
- * check if link text is same as the href
- * @param {Element} link the link element
- * @returns {boolean} true or false
- */
-export function linkTextIncludesHref(link) {
-  const href = link.getAttribute('href');
-  const textcontent = link.textContent;
-
-  return textcontent.includes(href);
 }
 
 loadPage();
