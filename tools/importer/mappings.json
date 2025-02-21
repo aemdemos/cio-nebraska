@@ -1,0 +1,13 @@
+{
+  "mappings": [
+    {
+      "path": "tools/importer/mappings/nav.json"
+    },
+    {
+      "path": "tools/importer/mappings/footer.json"
+    },
+    {
+      "path": "tools/importer/mappings/news/index.html.json"
+    }
+  ]
+}
