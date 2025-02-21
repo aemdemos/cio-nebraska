@@ -334,7 +334,7 @@ export function linkTextIncludesHref(link) {
  * @param {Element} main The container element
  */
 export function buildYoutubeBlocks(main) {
-  const youTubeRegex = /youtube\.com|youtu\.be/
+  const youTubeRegex = /youtube\.com|youtu\.be/;
   main.querySelectorAll('a[href]').forEach((a) => {
     if (youTubeRegex.test(a.href) && linkTextIncludesHref(a)) {
       const embedBlock = buildBlock('embed', a.cloneNode(true));
