@@ -59,6 +59,7 @@ lite-youtube {
 > .ltv-playbtn,
 > .lty-playbtn {
   --size: clamp(60px, 14cqw, 110px);
+
   width: var(--size);
   height: var(--size);
   position: absolute;
