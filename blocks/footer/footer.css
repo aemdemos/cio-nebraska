@@ -48,7 +48,7 @@ footer .footer .default-content-wrapper ul li {
 }
 
 footer .footer .default-content-wrapper ul:nth-child(2) li:not(:first-child) {
-  border-left: solid 1px rgb(145 146 147 / 25%);
+  border-left: solid 1px var(--footer-text-color);
 }
 
 footer .footer .default-content-wrapper ul:nth-child(2) li:first-child,
