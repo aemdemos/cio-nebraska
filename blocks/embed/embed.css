@@ -4,23 +4,14 @@
   max-width: 400px;
   margin: 0 auto 32px;
 
-&.youtube, &.vimeo {
+&.youtube {
               min-height: 280px;
-            }
-}
+ }
 
-.embed:has:not(.youtube) > div,
-.embed:has:not(.vimeo) > div{
+
+.embed:has:not(.youtube) > div {
   display: flex;
   justify-content: center;
-}
-
-.embed.embed-twitter .twitter-tweet-rendered {
-  margin-left: auto;
-  margin-right: auto;
-
-  /* reserve an approximate space to avoid extensive layout shifts */
-  aspect-ratio: 4/3;
 }
 
 .embed .embed-placeholder {
@@ -39,7 +30,7 @@
 }
 
 
-lite-vimeo, lite-youtube {
+lite-youtube {
   container: playbutton / inline-size;
   background: var(--sling-gradient);
   position: relative;
