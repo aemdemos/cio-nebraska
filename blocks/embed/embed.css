@@ -55,7 +55,6 @@ lite-youtube {
   border: 0;
 }
 
-> .ltv-playbtn,
 > .lty-playbtn {
   --size: clamp(60px, 14 cqw, 110px);
 
@@ -73,7 +72,6 @@ lite-youtube {
   min-width: unset;
 }
 
-&:hover > .ltv-playbtn,
 &:hover > .lty-playbtn {
   opacity: .5;
 }
@@ -84,15 +82,11 @@ lite-youtube {
   padding-bottom: calc(100% / (16 / 9));
 }
 
-&.lyt-activated,
-&.ltv-activated {
+&.lyt-activated {
   cursor: unset;
 }
 
-&.lyt-activated::before,
-&.ltv-activated::before,
-&.lyt-activated > .ltv-playbtn,
-&.ltv-activated > .lty-playbtn {
+&.lyt-activated::before {
   opacity: 0;
   pointer-events: none;
 }
