@@ -5,6 +5,7 @@ import {
   decorateButtons,
   decorateIcons,
   decorateSections,
+  decorateBlock,
   decorateBlocks,
   decorateTemplateAndTheme,
   waitForFirstImage,
@@ -294,6 +295,7 @@ async function wrapMainContent() {
       aside.classList.add('content-aside');
       loadFragment('/fragments/links-of-interest').then((fragment) => {
         aside.append(fragment);
+        decoratePicturesWithLinks(aside);
       });
       wrapperSection.prepend(aside);
     }
@@ -314,6 +316,33 @@ function buildAutoBlocks(main) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
   }
+}
+
+/**
+ * check if link text is same as the href
+ * @param {Element} link the link element
+ * @returns {boolean} true or false
+ */
+export function linkTextIncludesHref(link) {
+  const href = link.getAttribute('href');
+  const textcontent = link.textContent;
+
+  return textcontent.includes(href);
+}
+
+/**
+ * Builds youtube embedded blocks when those links are encountered
+ * @param {Element} main The container element
+ */
+export function buildYoutubeBlocks(main) {
+  const youTubeRegex = /youtube\.com|youtu\.be/;
+  main.querySelectorAll('a[href]').forEach((a) => {
+    if (youTubeRegex.test(a.href) && linkTextIncludesHref(a)) {
+      const embedBlock = buildBlock('embed', a.cloneNode(true));
+      a.replaceWith(embedBlock);
+      decorateBlock(embedBlock);
+    }
+  });
 }
 
 /**
@@ -352,6 +381,7 @@ export function decorateMain(main) {
   createObserver();
   wrapMainContent();
   decoratePicturesWithLinks(main);
+  buildYoutubeBlocks(main);
 }
 
 /**
