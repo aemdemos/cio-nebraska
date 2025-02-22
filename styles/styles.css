@@ -12,13 +12,16 @@
 :root {
   --background-color: white;
   --light-color: #f8f8f8;
+  --line-color: #eee;
   --dark-color: #505050;
   --text-color: #131313;
   --footer-color: #39454b;
   --footer-text-color: #b9babb7f;
   --font-style: normal;
   --link-color: #3b63fb;
+  --black-link-color: #363636;
   --link-hover-color: #1d3ecf;
+  --black-link-hover-color: #9B9B9B;
   --body-font-family: "Source Sans Pro", "Source Sans Pro Fallback",
     "sans-serif";
   --heading-font-family: "Source Sans Pro", "Source Sans Pro Fallback",
@@ -254,6 +257,12 @@ main img {
   width: 100%;
 }
 
+main > h1 {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 16px 10px;
+}
+
 /* sections */
 main > .section {
   margin: 40px 0;
@@ -273,13 +282,16 @@ main > .section:first-of-type {
   margin-top: 0;
 }
 
+.section > div.page-details-wrapper {
+  margin: 80px auto;
+}
+
 /* BREADCRUMBS */
 .breadcrumbs-outer {
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--light-color);
+  margin: 0 auto 12px;
+  padding: 0 16px 9px;
+  border-bottom: 1px solid var(--line-color);
   max-width: 1200px;
-  margin: 12px 16px;
-  min-height: 83px;
 
   .breadcrumbs,
   .breadcrumbs a {
@@ -296,31 +308,68 @@ main > .section:first-of-type {
   }
 }
 
-.main-content .aside {
-  min-height: 350px;
+main .aside-details-wrapper {
+  min-height: 345px;
+  max-width: 285px;
+  margin-top: 24px;
+
+  .columns > div {
+    display: flex;
+    padding: 10px 0;
+
+    > div {
+      margin-right: 10px;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: var(--black-link-color);
+
+    &:hover {
+      color: var(--black-link-hover-color);
+    }
+  }
+
+  .content-aside {
+    h1 {
+      margin-top: 0;
+      font-weight: normal;
+      border-bottom: 1px solid var(--line-color);
+    }
+
+    ul {
+      list-style-type: none;
+      padding-inline-start: 0;
+
+      li {
+        border-bottom: 1px solid var(--line-color);
+        padding: 5px 0;
+      }
+    }
+  }
 }
 
 @media (width >= 900px) {
-  .main-content {
-    margin: 80px auto;
+  .section > div.page-details-wrapper {
     display: flex;
     max-width: 1200px;
     gap: 8%;
     padding: 0 16px;
 
-    aside {
+    .aside-details-wrapper {
       min-width: 200px;
-      min-height: unset;
+    }
+
+    .content-details-wrapper {
+      flex-direction: column;
+      width: 60%;
+      margin-left: 36px;
     }
   }
 
   main > .section > div {
     padding: 0 32px;
-  }
-
-  .breadcrumbs-outer {
-    margin: 0 auto 12px;
-    padding: 0 16px 12px;
   }
 
   .subnav-wrapper {
