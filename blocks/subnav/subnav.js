@@ -31,5 +31,4 @@ export default function decorate(block) {
       buttonContainerParagraph.classList.remove('button');
     }
   });
-  // adding a BS comment to try to get this code to deploy
 }
