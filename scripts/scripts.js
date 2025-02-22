@@ -352,7 +352,7 @@ async function loadTemplate(main) {
         `${window.hlx.codeBasePath}/templates/${template}/${template}.css`,
       );
     }
-    await buildDefaultTemplate(main);
+    buildDefaultTemplate(main);
   } catch (err) {
     // eslint-disable-next-line no-console
     console.error(`Failed to load template with error : ${err}`);
