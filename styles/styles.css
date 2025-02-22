@@ -313,21 +313,21 @@ main .aside-details-wrapper {
   max-width: 285px;
   margin-top: 24px;
 
+  a { /* stylelint-disable-line */
+    text-decoration: underline;
+    color: var(--black-link-color);
+
+    &:hover {
+      color: var(--black-link-hover-color);
+    }
+  }
+
   .columns > div {
     display: flex;
     padding: 10px 0;
 
     > div {
       margin-right: 10px;
-    }
-  }
-
-  a {
-    text-decoration: underline;
-    color: var(--black-link-color);
-
-    &:hover {
-      color: var(--black-link-hover-color);
     }
   }
 
