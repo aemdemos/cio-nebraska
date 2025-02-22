@@ -300,6 +300,25 @@ function buildAutoBlocks(main) {
 }
 
 /**
+ * Processes and decorates divider elements within the main content.
+ * @param {Element} main The main element containing divider codes
+ */
+function buildPageDivider(main) {
+  const allPageDivider = main.querySelectorAll('code');
+
+  allPageDivider.forEach((el) => {
+    const alt = el.innerText.trim();
+    const lower = alt.toLowerCase();
+    if (lower.startsWith('divider')) {
+      if (lower === 'divider' || lower.includes('element')) {
+        el.innerText = '';
+        el.classList.add('divider');
+      }
+    }
+  });
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
@@ -309,6 +328,7 @@ export function decorateMain(main) {
   decorateButtons(main);
   decorateIcons(main);
   buildAutoBlocks(main);
+  buildPageDivider(main);
   decorateSections(main);
   decorateBlocks(main);
   decorateStyledSections(main);
