@@ -345,7 +345,7 @@ export function buildYoutubeBlocks(main) {
   });
 }
 
-/**      
+/**
  * Processes and decorates divider elements within the main content.
  * @param {Element} main The main element containing divider codes
  */
