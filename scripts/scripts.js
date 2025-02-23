@@ -258,8 +258,6 @@ async function buildDefaultTemplate() {
   if (template !== 'home') {
     const main = document.querySelector('main');
     const h1 = main.querySelector('h1:first-of-type');
-    const subnav = main.querySelector(':scope div.subnav-wrapper');
-    let wrapperSection = main.querySelector('.main-content');
     const contentSection = main.querySelector(':scope > .section.hero-container+.section') || main.querySelector(':scope > .section');
     // create a lower wrapper div to place aside and content
     const pageContentWrapper = document.createElement('div');
