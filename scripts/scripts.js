@@ -43,6 +43,7 @@ function buildHeroBlock(main) {
     const picture = createOptimizedPicture(pictureUrl, 'Hero image', true, [{ media: '(min-width: 600px)', width: '2000' }, { width: '750' }]);
     picture.classList.add('hero-image');
     const logo = createOptimizedPicture(logoUrl, 'Nebraska - Good Life. Great Opportunity', true);
+    logo.querySelector('img').setAttribute('height', '107px');
     const logoLink = document.createElement('a');
     logoLink.href = '/';
     logoLink.append(logo);
