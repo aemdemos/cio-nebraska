@@ -16,9 +16,12 @@
   --text-color: #131313;
   --footer-color: #39454b;
   --footer-text-color: #b9babb7f;
+  --line-color: #eee;
   --font-style: normal;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
+  --alt-link-color: #363636;
+  --alt-link-hover-color: #9B9B9B;
   --body-font-family: "Source Sans Pro", "Source Sans Pro Fallback",
     "sans-serif";
   --heading-font-family: "Source Sans Pro", "Source Sans Pro Fallback",
