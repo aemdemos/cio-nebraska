@@ -15,7 +15,8 @@
   --dark-color: #505050;
   --text-color: #131313;
   --footer-color: #39454b;
-  --footer-text-color: #b9babb7f;
+  --footer-text-color: #b1b1b1; /* accessible contrast */
+  --med-grey: #757575; /* accessible contrast against white */
   --line-color: #eee;
   --font-style: normal;
   --link-color: #3b63fb;
@@ -33,7 +34,7 @@
   --heading-font-size-m: 18px;
   --heading-font-size-s: 16px;
   --heading-font-size-xs: 12px;
-  --nav-height: 50px;
+  --nav-height: 50px; /* rgb(117 117 117) */
   --button-font-size: 18px;
 }
 

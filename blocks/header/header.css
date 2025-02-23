@@ -52,7 +52,7 @@ header nav .nav-hamburger {
   display: flex;
   align-items: center;
   justify-self: right;
-    border: 1px solid #ddd;
+    border: 1px solid var(--med-grey);
     border-radius: 4px;
     padding: 5px 10px;
     opacity: .6;
@@ -167,7 +167,7 @@ header nav .nav-sections ul > li {
     position: relative;
     display: block;
     padding: 10px 0;
-    color: #777;
+    color: var(--med-grey);
     font-size: var(--heading-font-size-s);
     width: calc(100% - 50px);
     font-family: Roboto, 'Roboto Fallback', sans-serif;
