@@ -115,7 +115,6 @@ async function submitDocBasedForm(form, captcha) {
       throw new Error(error);
     }
   } catch (error) {
-    console.log('error', error);
     submitFailure(error, form);
   }
 }
