@@ -77,11 +77,6 @@ export function createLabel(fd, tagName = 'label') {
     if (fd.tooltip) {
       label.title = stripTags(fd.tooltip, '');
     }
-    // add a span element to the label to prepend an asterisks
-    const span = document.createElement('span');
-    span.textContent = '* '; // You can change this to whatever you want
-    span.className = 'required-asterisk';
-    label.prepend(span);
     return label;
   }
   return null;

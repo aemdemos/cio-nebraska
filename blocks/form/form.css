@@ -236,6 +236,12 @@ main .form form fieldset > .checkbox-wrapper {
     margin-left: var(--form-field-gap);
 }
 
+main .form [data-required="true"] > label::before {
+    content: "* ";
+    color: red;
+  font-weight: bold;
+}
+
 main .form .radio-wrapper  label,
 main .form .checkbox-wrapper label {
     flex-basis: calc(100% - 24px);
