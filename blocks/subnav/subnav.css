@@ -3,8 +3,6 @@
   grid-template-columns: 1fr;
   grid-auto-rows: auto;
   gap: 40px;
-  max-width: 1000px;
-  margin: auto auto 40px;
 }
 
 .subnav-group-container .grouped-content-container .grouped-content {
@@ -24,11 +22,11 @@
 .subnav-group-container .grouped-content-container .grouped-content p:first-child {
   font-weight: bold;
   font-size: 22.4px;
-  color: #9B9B9B;
+  color: var(--alt-link-hover-color);
 }
 
 .subnav-group-container .grouped-content-container .grouped-content p:first-child a {
-  color: #363636;
+  color: var(--alt-link-color);
   text-decoration: underline;
   font-weight: bold;
   font-size: 22.4px;
@@ -36,7 +34,7 @@
 
 .subnav-group-container .grouped-content-container .grouped-content p a:hover {
   text-decoration: none;
-  color: #9B9B9B;
+  color: var(--alt-link-hover-color);
 }
 
 .grouped-content-container .grouped-content.blue {
@@ -52,8 +50,13 @@
 }
 
 @media (width >= 900px) {
-  .subnav-wrapper .subnav .subnav-group-container .grouped-content-container {
-    grid-template-columns: repeat(3, 1fr);
+  .subnav-wrapper .subnav {
+    max-width: 950px;
+    margin: auto auto 40px 17%;
+
+    .subnav-group-container .grouped-content-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 
