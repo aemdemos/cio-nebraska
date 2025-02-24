@@ -231,8 +231,11 @@ async function buildBreadcrumbs() {
           breadcrumb.appendChild(separator);
         }
       });
-      const textNode = document.createTextNode(breadcrumbMetadata);
-      breadcrumb.append(textNode);
+      // Only append the text if it's not empty
+      if (breadcrumbMetadata && breadcrumbMetadata.trim()) {
+        const textNode = document.createTextNode(breadcrumbMetadata);
+        breadcrumb.append(textNode);
+      }
     }
     outerSection.appendChild(container);
     container.appendChild(breadcrumb);
