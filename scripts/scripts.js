@@ -206,7 +206,7 @@ const getFragmentPath = (path) => {
 
 async function buildBreadcrumbs() {
   const outerSection = document.createElement('div');
-  const breadcrumbMetadata = getMetadata('breadcrumb-title');
+  const breadcrumbMetadata = getMetadata('breadcrumb-title') || getMetadata('og:title') || '';
   // if breadcrumb-title is "false" in metadata, return an empty div
   if (breadcrumbMetadata !== 'False' && breadcrumbMetadata !== 'false') {
     // Even if breadcrumbs are disabled, we need an empty div to keep the layout consistent
