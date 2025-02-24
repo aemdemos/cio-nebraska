@@ -267,7 +267,7 @@ async function buildDefaultTemplate() {
   const template = getMetadata('template');
   if (template !== 'home') {
     const main = document.querySelector('main');
-    const h1 = main.querySelector('h1:first-of-type');
+    const h1 = main.querySelector('h1:first-of-type') || '';
     const contentSection = main.querySelector(':scope > .section.hero-container+.section') || main.querySelector(':scope > .section');
     // create a lower wrapper div to place aside and content
     const pageContentWrapper = document.createElement('div');
