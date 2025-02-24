@@ -14,10 +14,7 @@
     background-color: #005a76; /* Dark blue background */
   }
 
-  .accordion details summary:hover {
-    background-color: #4C4D4F;
-  }
-
+  .accordion details summary:hover,
   .accordion details summary:focus {
     background-color: #4C4D4F;
   }
@@ -44,7 +41,11 @@
     padding: 0 16px;
   }
 
-  .accordion details[open] .accordion-item-body {
-    border-top: 1px solid #dadada;
-    background-color: var(--background-color);
+  .accordion-item-body h3 {
+    color: #00607F;
   }
+
+  .accordion-item-body p {
+    color: hsl(0, 50%, 25%);
+  }
+
