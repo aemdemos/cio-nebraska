@@ -28,12 +28,11 @@ lite-youtube {
   background-position: center center;
   background-size: cover;
   cursor: pointer;
-  max-width: 560px;
+  max-width: 670px;
   aspect-ratio: 16 / 9;
   margin: 0 auto;
 
-&
-::before {
+&::before {
   content: '';
   display: block;
   position: absolute;
@@ -56,10 +55,9 @@ lite-youtube {
 }
 
 > .lty-playbtn {
-  --size: clamp(60px, 14 cqw, 110px);
-
-  width: var(--size);
-  height: var(--size);
+  background-image: url('/icons/play-button.svg');
+  width: 90px;
+  height: 90px;
   position: absolute;
   cursor: pointer;
   transform: translate3d(-50%, -50%, 0);
