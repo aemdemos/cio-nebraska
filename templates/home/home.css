@@ -60,18 +60,29 @@ main .section {
     &.right,
     &.left {
       position: relative;
-      /* this probably needs to be an element injected with JS */
-      &:after {
-        content: url("/icons/home-section-down-arrow.svg");
+
+      button {
+        background-image: url("/icons/home-section-down-arrow.svg");
+        background-repeat: no-repeat;
         border-radius: 3em 3em 0 0;
-        height: 36px;
         border: 2px solid var(--light-color);
         border-bottom: none;
-        padding: 20px;
         position: absolute;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+        background-color: rgb(255 255 255 / 0%);
+        background-position: center;
+
+        &:hover {
+          background-color: rgb(255 255 255 / 23%);
+        }
+
+        a {
+          height: 80px;
+          width: 80px;
+          display: block;
+        }
       }
 
       > div {
