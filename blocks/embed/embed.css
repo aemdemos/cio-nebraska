@@ -57,6 +57,7 @@ lite-youtube {
 
 > .lty-playbtn {
   --size: clamp(60px, 14 cqw, 110px);
+
   background-image: url('/icons/play-button.svg');
   width: var(--size);
   height: var(--size);
