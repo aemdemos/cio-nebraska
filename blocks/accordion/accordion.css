@@ -1,4 +1,9 @@
-  .accordion details p {
+.accordion-item-body p {
+  color: hsl(0deg 50% 25%);
+}
+
+
+.accordion details p {
     margin-bottom: 1em;
   }
 
@@ -43,9 +48,5 @@
 
   .accordion-item-body h3 {
     color: #00607F;
-  }
-
-  .accordion-item-body p {
-    color: hsl(0, 50%, 25%);
   }
 
