@@ -206,7 +206,7 @@ const getFragmentPath = (path) => {
 
 async function buildBreadcrumbs() {
   const outerSection = document.createElement('div');
-  const breadcrumbMetadata = getMetadata('breadcrumb-title');
+  const breadcrumbMetadata = getMetadata('breadcrumb-title') || getMetadata('og:title') || '';
   // if breadcrumb-title is "false" in metadata, return an empty div
   if (breadcrumbMetadata !== 'False' && breadcrumbMetadata !== 'false') {
     // Even if breadcrumbs are disabled, we need an empty div to keep the layout consistent
@@ -231,8 +231,11 @@ async function buildBreadcrumbs() {
           breadcrumb.appendChild(separator);
         }
       });
-      const textNode = document.createTextNode(breadcrumbMetadata);
-      breadcrumb.append(textNode);
+      // Only append the text if it's not empty
+      if (breadcrumbMetadata && breadcrumbMetadata.trim()) {
+        const textNode = document.createTextNode(breadcrumbMetadata);
+        breadcrumb.append(textNode);
+      }
     }
     outerSection.appendChild(container);
     container.appendChild(breadcrumb);
