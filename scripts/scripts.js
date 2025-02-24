@@ -161,6 +161,15 @@ function createObserver() {
 
     [parallaxRight, parallaxLeft].forEach((section) => {
       if (section) {
+        const button = document.createElement('div');
+        button.classList.add('button');
+        button.setAttribute('aria-label', 'Scroll down');
+        button.setAttribute('id', 'scroll-down');
+        const anchor = document.createElement('a');
+        anchor.setAttribute('href', '#');
+        anchor.setAttribute('aria-label', 'Skip to the next section');
+        button.append(anchor);
+        section.append(button);
         observer.observe(section);
       }
     });
