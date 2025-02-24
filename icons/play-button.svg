@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1536 1536"><script xmlns=""/>
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: red;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="Layer_1">
+      <g id="SVGRepo_iconCarrier">
+        <path class="cls-2" d="M1379.5,204.1H151.2C66.8,204.1-2.3,273.2-2.3,357.6v817.7c0,84.4,69.1,153.5,153.5,153.5h1228.3c84.4,0,153.5-69.1,153.5-153.5V357.6c0-84.4-69.1-153.5-153.5-153.5ZM562.8,1078.3V451.9l586.6,313.2-586.6,313.2Z"/>
+        <polygon class="cls-1" points="562.8 1078.3 1149.4 765.1 562.8 451.9 562.8 1078.3"/>
+      </g>
+    </g>
+  </g>
+</svg>
