@@ -28,8 +28,8 @@ const TEMPLATE_META = 'template';
 function buildHeroBlock(main) {
   const h1 = main.querySelector('h1');
   const logoUrl = 'https://main--cio-nebraska--aemdemos.aem.live/cio-ne-logo.png';
-  let pictureUrl = getMetadata('og:image');
-  if (pictureUrl.includes('/default-meta-image.png')) {
+  let pictureUrl = getMetadata('og:image') || ''; // Add default empty string
+  if (!pictureUrl || pictureUrl.includes('/default-meta-image.png')) {
     // if no image in page meta found, then no hero block creation
     return;
   }
@@ -39,7 +39,8 @@ function buildHeroBlock(main) {
     pictureUrl = url.href;
   }
 
-  if (h1) { // all pages need an H1 anyway
+  // Create hero block only if we have both an H1 and a valid picture URL
+  if (h1 && pictureUrl) {
     const picture = createOptimizedPicture(pictureUrl, 'Hero image', true, [{ media: '(min-width: 600px)', width: '2000' }, { width: '750' }]);
     picture.classList.add('hero-image');
     const logo = createOptimizedPicture(logoUrl, 'Nebraska - Good Life. Great Opportunity', true);
