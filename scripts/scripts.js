@@ -43,6 +43,8 @@ function buildHeroBlock(main) {
     const picture = createOptimizedPicture(pictureUrl, 'Hero image', true, [{ media: '(min-width: 600px)', width: '2000' }, { width: '750' }]);
     picture.classList.add('hero-image');
     const logo = createOptimizedPicture(logoUrl, 'Nebraska - Good Life. Great Opportunity', true);
+    logo.querySelector('img').setAttribute('height', '107px');
+    logo.querySelector('img').setAttribute('width', 'auto');
     const logoLink = document.createElement('a');
     logoLink.href = '/';
     logoLink.append(logo);
@@ -172,7 +174,7 @@ export async function loadFragment(path) {
     }
     const resp = await fetch(`${path}.plain.html`);
     if (resp.ok) {
-      const main = document.createElement('main');
+      const main = document.createElement('div');
       main.innerHTML = await resp.text();
       fragmentCache.set(path, main);
       return main;
@@ -208,7 +210,7 @@ async function buildBreadcrumbs() {
   // if breadcrumb-title is "false" in metadata, return an empty div
   if (breadcrumbMetadata !== 'False' && breadcrumbMetadata !== 'false') {
     // Even if breadcrumbs are disabled, we need an empty div to keep the layout consistent
-    outerSection.className = 'breadcrumbs-outer';
+    outerSection.className = 'breadcrumbs-outer wrapper';
     const container = document.createElement('div');
     container.className = 'section breadcrumbs-container';
     const breadcrumb = document.createElement('nav');
@@ -239,66 +241,46 @@ async function buildBreadcrumbs() {
 }
 /* END BREADCRUMBS */
 
+function buildLinksOfInterest() {
+  const aside = document.createElement('aside');
+  aside.classList.add('content-aside');
+  loadFragment('/fragments/links-of-interest').then((fragment) => {
+    aside.append(fragment);
+    decoratePicturesWithLinks(aside);
+  });
+  return aside;
+}
+
 /**
  * wraps main content with breadcrumbs, subnav, and aside.
  */
 
-async function wrapMainContent() {
+async function buildDefaultTemplate() {
   const template = getMetadata('template');
   if (template !== 'home') {
     const main = document.querySelector('main');
-    const breadcrumbs = await buildBreadcrumbs();
-    const sections = main.querySelectorAll(':scope > div.section');
     const h1 = main.querySelector('h1:first-of-type');
-    const subnav = main.querySelector(':scope div.subnav-wrapper');
-    let wrapperSection = main.querySelector('.main-content');
+    const contentSection = main.querySelector(':scope > .section.hero-container+.section') || main.querySelector(':scope > .section');
+    // create a lower wrapper div to place aside and content
+    const pageContentWrapper = document.createElement('div');
+    pageContentWrapper.className = 'page-details-wrapper';
+    // aside and content wrappers will be appended to this wrapper
+    const asideWrapper = document.createElement('div');
+    asideWrapper.className = 'aside-details-wrapper';
+    const contentWrapper = document.createElement('div');
+    contentWrapper.className = 'content-details-wrapper';
 
-    if (!wrapperSection && sections.length > 0) {
-      wrapperSection = document.createElement('div');
-      wrapperSection.classList.add('main-content');
-      const fragment = document.createDocumentFragment();
-      const heroContainer = main.querySelector('.hero-container:first-of-type');
+    // move all divs into content wrapper div
+    contentSection.querySelectorAll('div[class*="wrapper"]:not(.subnav-wrapper)').forEach((div) => {
+      contentWrapper.append(div);
+    });
+    asideWrapper.prepend(await buildLinksOfInterest());
+    pageContentWrapper.append(asideWrapper, contentWrapper);
+    contentSection.append(pageContentWrapper);
 
-      if (heroContainer) {
-        let nextSibling = heroContainer.nextElementSibling;
-        while (nextSibling) {
-          const currentSibling = nextSibling;
-          nextSibling = nextSibling.nextElementSibling;
-          fragment.appendChild(currentSibling);
-        }
-        wrapperSection.appendChild(fragment);
-        heroContainer.after(breadcrumbs);
-        if (subnav) {
-          breadcrumbs.after(subnav);
-          subnav.after(wrapperSection);
-        } else {
-          breadcrumbs.after(wrapperSection);
-        }
-        breadcrumbs.prepend(h1);
-      } else {
-        sections.forEach((section) => {
-          fragment.appendChild(section);
-        });
-        wrapperSection.appendChild(fragment);
-        main.prepend(breadcrumbs);
-        breadcrumbs.prepend(h1);
-        if (subnav) {
-          breadcrumbs.after(subnav);
-        }
-        main.append(wrapperSection);
-      }
-    }
-
-    let aside = wrapperSection.querySelector('.content-aside');
-    if (!aside) {
-      aside = document.createElement('aside');
-      aside.classList.add('content-aside');
-      loadFragment('/fragments/links-of-interest').then((fragment) => {
-        aside.append(fragment);
-        decoratePicturesWithLinks(aside);
-      });
-      wrapperSection.prepend(aside);
-    }
+    contentSection.before(h1, await buildBreadcrumbs());
+    const emptyDivs = main.querySelectorAll('div:empty');
+    emptyDivs.forEach((div) => div.remove());
   }
 }
 
@@ -379,7 +361,6 @@ export function decorateMain(main) {
   decorateBlocks(main);
   decorateStyledSections(main);
   createObserver();
-  wrapMainContent();
   decoratePicturesWithLinks(main);
   buildYoutubeBlocks(main);
 }
@@ -400,6 +381,7 @@ async function loadTemplate(main) {
         `${window.hlx.codeBasePath}/templates/${template}/${template}.css`,
       );
     }
+    buildDefaultTemplate(main);
   } catch (err) {
     // eslint-disable-next-line no-console
     console.error(`Failed to load template with error : ${err}`);

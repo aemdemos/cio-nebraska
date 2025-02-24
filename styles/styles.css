@@ -12,29 +12,30 @@
 :root {
   --background-color: white;
   --light-color: #f8f8f8;
-  --dark-color: #505050;
   --text-color: #131313;
   --footer-color: #39454b;
-  --footer-text-color: #b9babb7f;
+  --footer-text-color: #b1b1b1; /* accessible contrast */
+  --med-grey: #757575; /* accessible contrast against white */
+  --line-color: #eee;
   --font-style: normal;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
-  --body-font-family: "Source Sans Pro", "Source Sans Pro Fallback",
-    "sans-serif";
-  --heading-font-family: "Source Sans Pro", "Source Sans Pro Fallback",
-    "sans-serif";
+  --alt-link-color: #505050;
+  --alt-link-hover-color: #9B9B9B;
+  --highlight-color: #e7e7e7;
+  --body-font-family: "Roboto", "Roboto Fallback", "sans-serif";
+  --heading-font-family: "Roboto", "Roboto Fallback", "sans-serif";
   --body-font-size-m: 18px;
   --body-font-size-s: 14px;
   --body-font-size-xs: 12px;
   --heading-font-size-xxl: 36px;
-  --heading-font-size-xl: 39px;
+  --heading-font-size-xl: 28px;
   --heading-font-size-l: 26px;
   --heading-font-size-m: 18px;
   --heading-font-size-s: 16px;
   --heading-font-size-xs: 12px;
-  --nav-height: 50px;
+  --nav-height: 50px; /* rgb(117 117 117) */
   --button-font-size: 18px;
-  --button-font-family: "Roboto", "Roboto Fallback", "sans-serif";
 }
 
 /* fallback fonts */
@@ -88,7 +89,7 @@
     --body-font-size-s: 14px;
     --body-font-size-xs: 12px;
     --heading-font-size-xxl: 36px;
-    --heading-font-size-xl: 39px;
+    --heading-font-size-xl: 28px;
     --heading-font-size-l: 26px;
     --heading-font-size-m: 18px;
     --heading-font-size-s: 16px;
@@ -185,8 +186,36 @@ pre {
   white-space: pre;
 }
 
-.center {
+/* use Word or Gdoc table alignment to position cell contents in most blocks */
+.center, [data-align="center"] {
   text-align: center;
+  background-position-x: center;
+}
+
+[data-valign="bottom"] {
+  align-content: end;
+  background-position-y: bottom;
+}
+
+[data-valign="middle"] {
+  align-content: center;
+  background-position-y: center;
+}
+
+[data-valign="top"] {
+  align-content: start;
+  background-position-y: top;
+}
+
+[data-align="right"] {
+  text-align: right;
+  background-position-x: right;
+}
+
+/* align="left" isn't added to data attributes so use justify instead */
+[data-align="left"], [data-align="justify"] {
+  text-align: left;
+  background-position-x: left;
 }
 
 main > div {
@@ -221,7 +250,6 @@ a:hover {
   margin-bottom: 10px;
   font-weight: bold;
   font-size: var(--button-font-size);
-  font-family: var(--button-font-family);
 }
 
 button:disabled,
@@ -254,6 +282,12 @@ main img {
   width: 100%;
 }
 
+main > h1 {
+  max-width: 1140px;
+  margin: auto;
+  padding: 20px 16px 10px;
+}
+
 /* sections */
 main > .section {
   margin: 40px 0;
@@ -264,7 +298,7 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: 1140px;
   margin: auto;
   padding: 0 24px;
 }
@@ -273,62 +307,10 @@ main > .section:first-of-type {
   margin-top: 0;
 }
 
-/* BREADCRUMBS */
-.breadcrumbs-outer {
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--light-color);
-  max-width: 1200px;
-  margin: 12px 16px;
-  min-height: 83px;
-
-  .breadcrumbs,
-  .breadcrumbs a {
-    background-color: transparent;
-    font-weight: bold;
-    font-family: var(--button-font-family);
-    font-size: var(--body-font-size-s);
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
-    border: 0;
-    line-height: 1.43;
-    display: inline;
-  }
+.section > div.page-details-wrapper {
+  margin: 80px auto;
 }
 
-.main-content .aside {
-  min-height: 350px;
-}
-
-@media (width >= 900px) {
-  .main-content {
-    margin: 80px auto;
-    display: flex;
-    max-width: 1200px;
-    gap: 8%;
-    padding: 0 16px;
-
-    aside {
-      min-width: 200px;
-      min-height: unset;
-    }
-  }
-
-  main > .section > div {
-    padding: 0 32px;
-  }
-
-  .breadcrumbs-outer {
-    margin: 0 auto 12px;
-    padding: 0 16px 12px;
-  }
-
-  .subnav-wrapper {
-    margin-left: 12%;
-  }
-}
-
-/* section metadata */
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
@@ -342,4 +324,100 @@ p:has(code.divider) {
   margin-top: 2em;
   padding-top: 2em;
   margin-bottom: 0;
+}
+
+/* BREADCRUMBS */
+.breadcrumbs-outer {
+  margin: 0 auto 12px;
+  padding: 0 16px 9px;
+  border-bottom: 1px solid var(--line-color);
+  max-width: 1140px;
+
+  .breadcrumbs,
+  .breadcrumbs a {
+    background-color: transparent;
+    font-weight: bold;
+    font-size: var(--body-font-size-s);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 1.43;
+    display: inline;
+  }
+}
+
+main .aside-details-wrapper {
+  min-height: 345px;
+  max-width: 285px;
+  margin-top: 24px;
+
+  a { /* stylelint-disable-line */
+    text-decoration: underline;
+    color: var(--alt-link-color);
+
+    &:hover {
+      color: var(--alt-link-hover-color);
+    }
+  }
+
+  .columns > div { /* specific to aside icons */
+    display: flex;
+    padding: 10px 0;
+    flex-direction: row;
+
+    > div {
+      margin-right: 10px;
+      flex: unset;
+    }
+
+    img {
+      width: unset;
+    }
+  }
+
+  .content-aside {
+    h1 {
+      margin-top: 0;
+      font-size: var(--heading-font-size-xl);
+      font-weight: normal;
+      border-bottom: 1px solid var(--line-color);
+    }
+
+    ul {
+      list-style-type: none;
+      padding-inline-start: 0;
+
+      li {
+        border-bottom: 1px solid var(--line-color);
+        padding: 5px 0;
+      }
+    }
+  }
+}
+
+@media (width >= 900px) {
+  .section > div.page-details-wrapper {
+    margin: 80px auto;
+    display: flex;
+    max-width: 1140px;
+    padding: 0 16px;
+
+    .aside-details-wrapper {
+      min-width: 200px;
+    }
+
+    .content-details-wrapper {
+      width: 59%;
+      margin-left: 14%;
+    }
+  }
+
+  main > .section > div {
+    padding: 0 32px;
+  }
+
+  .subnav-wrapper {
+    margin-left: 12%;
+  }
 }
