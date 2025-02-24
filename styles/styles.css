@@ -12,7 +12,6 @@
 :root {
   --background-color: white;
   --light-color: #f8f8f8;
-  --dark-color: #505050;
   --text-color: #131313;
   --footer-color: #39454b;
   --footer-text-color: #b1b1b1; /* accessible contrast */
@@ -21,8 +20,9 @@
   --font-style: normal;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
-  --alt-link-color: #363636;
+  --alt-link-color: #505050;
   --alt-link-hover-color: #9B9B9B;
+  --highlight-color: #e7e7e7;
   --body-font-family: "Roboto", "Roboto Fallback", "sans-serif";
   --heading-font-family: "Roboto", "Roboto Fallback", "sans-serif";
   --body-font-size-m: 18px;
