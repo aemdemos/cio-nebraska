@@ -294,7 +294,6 @@ main .form button {
     padding: var(--form-button-padding);
     font-size: var(--form-button-font-size);
     border-radius: 4px;
-    width: 100%;
 }
 
 main form .file-wrapper > button{
