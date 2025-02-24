@@ -5,6 +5,7 @@ import {
   decorateButtons,
   decorateIcons,
   decorateSections,
+  decorateBlock,
   decorateBlocks,
   decorateTemplateAndTheme,
   waitForFirstImage,
@@ -294,6 +295,7 @@ async function wrapMainContent() {
       aside.classList.add('content-aside');
       loadFragment('/fragments/links-of-interest').then((fragment) => {
         aside.append(fragment);
+        decoratePicturesWithLinks(aside);
       });
       wrapperSection.prepend(aside);
     }
@@ -317,6 +319,52 @@ function buildAutoBlocks(main) {
 }
 
 /**
+ * check if link text is same as the href
+ * @param {Element} link the link element
+ * @returns {boolean} true or false
+ */
+export function linkTextIncludesHref(link) {
+  const href = link.getAttribute('href');
+  const textcontent = link.textContent;
+
+  return textcontent.includes(href);
+}
+
+/**
+ * Builds youtube embedded blocks when those links are encountered
+ * @param {Element} main The container element
+ */
+export function buildYoutubeBlocks(main) {
+  const youTubeRegex = /youtube\.com|youtu\.be/;
+  main.querySelectorAll('a[href]').forEach((a) => {
+    if (youTubeRegex.test(a.href) && linkTextIncludesHref(a)) {
+      const embedBlock = buildBlock('embed', a.cloneNode(true));
+      a.replaceWith(embedBlock);
+      decorateBlock(embedBlock);
+    }
+  });
+}
+
+/**
+ * Processes and decorates divider elements within the main content.
+ * @param {Element} main The main element containing divider codes
+ */
+function buildPageDivider(main) {
+  const allPageDivider = main.querySelectorAll('code');
+
+  allPageDivider.forEach((el) => {
+    const alt = el.innerText.trim();
+    const lower = alt.toLowerCase();
+    if (lower.startsWith('divider')) {
+      if (lower === 'divider' || lower.includes('element')) {
+        el.innerText = '';
+        el.classList.add('divider');
+      }
+    }
+  });
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
@@ -326,12 +374,14 @@ export function decorateMain(main) {
   decorateButtons(main);
   decorateIcons(main);
   buildAutoBlocks(main);
+  buildPageDivider(main);
   decorateSections(main);
   decorateBlocks(main);
   decorateStyledSections(main);
   createObserver();
   wrapMainContent();
   decoratePicturesWithLinks(main);
+  buildYoutubeBlocks(main);
 }
 
 /**
