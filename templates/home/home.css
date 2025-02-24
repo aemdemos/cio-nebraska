@@ -61,7 +61,7 @@ main .section {
     &.left {
       position: relative;
 
-      button {
+      div.button {
         background-image: url("/icons/home-section-down-arrow.svg");
         background-repeat: no-repeat;
         border-radius: 3em 3em 0 0;
@@ -73,6 +73,8 @@ main .section {
         transform: translateX(-50%);
         background-color: rgb(255 255 255 / 0%);
         background-position: center;
+        width: 90px;
+        padding: 0;
 
         &:hover {
           background-color: rgb(255 255 255 / 23%);

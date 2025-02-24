@@ -156,10 +156,11 @@ function createObserver() {
 
     [parallaxRight, parallaxLeft].forEach((section) => {
       if (section) {
-        const button = document.createElement('button');
-        button.classList.add('scroll-down');
+        const button = document.createElement('div');
+        button.classList.add('button');
         button.setAttribute('aria-label', 'Scroll down');
         button.setAttribute('id', 'scroll-down');
+        // button.innerHTML = '<a href="#" aria-label="Skip to the next section"><img src="/icons/home-section-down-arrow.svg" alt="downwards arrow"/></a>';
         button.innerHTML = '<a href="#" aria-label="Skip to the next section"></a>';
         section.append(button);
         observer.observe(section);
