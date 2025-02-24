@@ -160,7 +160,7 @@ function createObserver() {
         button.classList.add('scroll-down');
         button.setAttribute('aria-label', 'Scroll down');
         button.setAttribute('id', 'scroll-down');
-        button.innerHTML = '<a href="#"></a>';
+        button.innerHTML = '<a href="#" aria-label="Skip to the next section"></a>';
         section.append(button);
         observer.observe(section);
       }
