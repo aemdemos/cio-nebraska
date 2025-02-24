@@ -29,36 +29,40 @@ function buildHeroBlock(main) {
   const h1 = main.querySelector('h1');
   const logoUrl = 'https://main--cio-nebraska--aemdemos.aem.live/cio-ne-logo.png';
   let pictureUrl = getMetadata('og:image') || ''; // Add default empty string
-  if (!pictureUrl || pictureUrl.includes('/default-meta-image.png')) {
-    // if no image in page meta found, then no hero block creation
+
+  // Early return if we don't have an H1
+  if (!h1) {
     return;
   }
+
+  // Skip hero creation if it's the default image
+  if (pictureUrl.includes('/default-meta-image.png')) {
+    return;
+  }
+
   const url = new URL(pictureUrl, window.location.href);
   if (url.hostname === 'localhost') {
     url.protocol = 'http:';
     pictureUrl = url.href;
   }
 
-  // Create hero block only if we have both an H1 and a valid picture URL
-  if (h1 && pictureUrl) {
-    const picture = createOptimizedPicture(pictureUrl, 'Hero image', true, [{ media: '(min-width: 600px)', width: '2000' }, { width: '750' }]);
-    picture.classList.add('hero-image');
-    const logo = createOptimizedPicture(logoUrl, 'Nebraska - Good Life. Great Opportunity', true);
-    logo.querySelector('img').setAttribute('height', '107px');
-    logo.querySelector('img').setAttribute('width', 'auto');
-    const logoLink = document.createElement('a');
-    logoLink.href = '/';
-    logoLink.append(logo);
-    logo.classList.add('ocio-logo');
-    const figure = document.createElement('figure');
-    figure.append(logoLink);
-    const heroSection = document.createElement('div');
-    heroSection.append(buildBlock('hero', { elems: [picture, figure] }));
-    main.prepend(heroSection);
-    // remove empty divs
-    const emptyDivs = main.querySelectorAll('div:empty');
-    emptyDivs.forEach((div) => div.remove());
-  }
+  const picture = createOptimizedPicture(pictureUrl, 'Hero image', true, [{ media: '(min-width: 600px)', width: '2000' }, { width: '750' }]);
+  picture.classList.add('hero-image');
+  const logo = createOptimizedPicture(logoUrl, 'Nebraska - Good Life. Great Opportunity', true);
+  logo.querySelector('img').setAttribute('height', '107px');
+  logo.querySelector('img').setAttribute('width', 'auto');
+  const logoLink = document.createElement('a');
+  logoLink.href = '/';
+  logoLink.append(logo);
+  logo.classList.add('ocio-logo');
+  const figure = document.createElement('figure');
+  figure.append(logoLink);
+  const heroSection = document.createElement('div');
+  heroSection.append(buildBlock('hero', { elems: [picture, figure] }));
+  main.prepend(heroSection);
+  // remove empty divs
+  const emptyDivs = main.querySelectorAll('div:empty');
+  emptyDivs.forEach((div) => div.remove());
 }
 
 /**
