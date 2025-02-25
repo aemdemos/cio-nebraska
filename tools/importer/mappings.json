@@ -8,6 +8,9 @@
     },
     {
       "path": "tools/importer/mappings/news/index.html.json"
+    },
+    {
+      "path": "tools/importer/mappings/404.json"
     }
   ]
 }
