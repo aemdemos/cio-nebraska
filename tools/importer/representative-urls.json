@@ -5,6 +5,10 @@
     {
       "url": "https://cio.nebraska.gov/news/index.html",
       "source": "CRAWL"
+    },
+    {
+      "url": "https://cio.nebraska.gov/404/",
+      "source": "CRAWL"
     }
   ]
 }
