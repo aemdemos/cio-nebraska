@@ -11,8 +11,7 @@
 
 .aidefaultcontent-k1kvr7-1186836369 > div {
     display: flex;
-    flex-direction: row; /* Align first-level children side by side if needed */
-    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    flex-flow: row wrap; /* Align first-level children side by side if needed */ /* Allow wrapping for responsiveness */
     align-items: flex-start; /* Align items to the top */
     gap: 8px; /* Add spacing between nested elements */
 }
@@ -27,7 +26,7 @@
 .aidefaultcontent-k1kvr7-1186836369 h3:first-of-type {
     background-color: #fff5f5; /* Use a lighter pink shade */
     padding: 4px 8px; /* Adjust padding for proper alignment */
-    margin: 0 0 24px 0; /* Adjust spacing below the "Note" section */
+    margin: 0 0 24px; /* Adjust spacing below the "Note" section */
     border-left: 4px solid #f5c6cb; /* Subtle left border for emphasis */
     color: #721c24; /* Dark red text color */
     font-weight: 300; /* Match font weight for consistency */
