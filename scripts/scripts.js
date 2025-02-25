@@ -28,36 +28,41 @@ const TEMPLATE_META = 'template';
 function buildHeroBlock(main) {
   const h1 = main.querySelector('h1');
   const logoUrl = 'https://main--cio-nebraska--aemdemos.aem.live/cio-ne-logo.png';
-  let pictureUrl = getMetadata('og:image');
-  if (pictureUrl.includes('/default-meta-image.png')) {
-    // if no image in page meta found, then no hero block creation
+  let pictureUrl = getMetadata('og:image') || ''; // Add default empty string
+
+  // Early return if we don't have an H1
+  if (!h1) {
     return;
   }
+
+  // Skip hero creation if it's the default image
+  if (pictureUrl.includes('/default-meta-image.png')) {
+    return;
+  }
+
   const url = new URL(pictureUrl, window.location.href);
   if (url.hostname === 'localhost') {
     url.protocol = 'http:';
     pictureUrl = url.href;
   }
 
-  if (h1) { // all pages need an H1 anyway
-    const picture = createOptimizedPicture(pictureUrl, 'Hero image', true, [{ media: '(min-width: 600px)', width: '2000' }, { width: '750' }]);
-    picture.classList.add('hero-image');
-    const logo = createOptimizedPicture(logoUrl, 'Nebraska - Good Life. Great Opportunity', true);
-    logo.querySelector('img').setAttribute('height', '107px');
-    logo.querySelector('img').setAttribute('width', 'auto');
-    const logoLink = document.createElement('a');
-    logoLink.href = '/';
-    logoLink.append(logo);
-    logo.classList.add('ocio-logo');
-    const figure = document.createElement('figure');
-    figure.append(logoLink);
-    const heroSection = document.createElement('div');
-    heroSection.append(buildBlock('hero', { elems: [picture, figure] }));
-    main.prepend(heroSection);
-    // remove empty divs
-    const emptyDivs = main.querySelectorAll('div:empty');
-    emptyDivs.forEach((div) => div.remove());
-  }
+  const picture = createOptimizedPicture(pictureUrl, 'Hero image', true, [{ media: '(min-width: 600px)', width: '2000' }, { width: '750' }]);
+  picture.classList.add('hero-image');
+  const logo = createOptimizedPicture(logoUrl, 'Nebraska - Good Life. Great Opportunity', true);
+  logo.querySelector('img').setAttribute('height', '107px');
+  logo.querySelector('img').setAttribute('width', 'auto');
+  const logoLink = document.createElement('a');
+  logoLink.href = '/';
+  logoLink.append(logo);
+  logo.classList.add('ocio-logo');
+  const figure = document.createElement('figure');
+  figure.append(logoLink);
+  const heroSection = document.createElement('div');
+  heroSection.append(buildBlock('hero', { elems: [picture, figure] }));
+  main.prepend(heroSection);
+  // remove empty divs
+  const emptyDivs = main.querySelectorAll('div:empty');
+  emptyDivs.forEach((div) => div.remove());
 }
 
 /**
@@ -156,6 +161,15 @@ function createObserver() {
 
     [parallaxRight, parallaxLeft].forEach((section) => {
       if (section) {
+        const button = document.createElement('div');
+        button.classList.add('button');
+        button.setAttribute('aria-label', 'Scroll down');
+        button.setAttribute('id', 'scroll-down');
+        const anchor = document.createElement('a');
+        anchor.setAttribute('href', '#');
+        anchor.setAttribute('aria-label', 'Skip to the next section');
+        button.append(anchor);
+        section.append(button);
         observer.observe(section);
       }
     });
@@ -262,7 +276,7 @@ async function buildDefaultTemplate() {
   const template = getMetadata('template');
   if (template !== 'home') {
     const main = document.querySelector('main');
-    const h1 = main.querySelector('h1:first-of-type');
+    const h1 = main.querySelector('h1:first-of-type') || '';
     const contentSection = main.querySelector(':scope > .section.hero-container+.section') || main.querySelector(':scope > .section');
     // create a lower wrapper div to place aside and content
     const pageContentWrapper = document.createElement('div');
