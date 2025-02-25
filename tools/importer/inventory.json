@@ -291,6 +291,57 @@
             "y": 944,
             "mapping": "unknown",
             "customBlockName": "aiunknown-k1kvr7-513199548"
+          },
+          {
+            "url": "https://cio.nebraska.gov/index.html",
+            "id": "box-id--1057360670",
+            "color": "rgba(0, 255, 0, 1)",
+            "width": 690,
+            "height": 330,
+            "xpath": "/html[1]/body[1]/section[1]/div[1]/header[1]",
+            "childrenXpaths": null,
+            "layout": {
+              "numCols": 0,
+              "numRows": 0
+            },
+            "x": 296,
+            "y": 262,
+            "mapping": "unknown",
+            "customBlockName": "aiunknown-g3mcq5-1057360670"
+          },
+          {
+            "url": "https://cio.nebraska.gov/index.html",
+            "id": "box-id--469099412",
+            "color": "rgba(0, 255, 0, 1)",
+            "width": 1280,
+            "height": 913,
+            "xpath": "/html[1]/body[1]/section[3]",
+            "childrenXpaths": null,
+            "layout": {
+              "numCols": 0,
+              "numRows": 0
+            },
+            "x": 0,
+            "y": 1430,
+            "mapping": "unknown",
+            "customBlockName": "aiunknown-g3mcq5-469099412"
+          },
+          {
+            "url": "https://cio.nebraska.gov/index.html",
+            "id": "box-id--469099381",
+            "color": "rgba(0, 255, 0, 1)",
+            "width": 1280,
+            "height": 913,
+            "xpath": "/html[1]/body[1]/section[4]",
+            "childrenXpaths": null,
+            "layout": {
+              "numCols": 0,
+              "numRows": 0
+            },
+            "x": 0,
+            "y": 2343,
+            "mapping": "unknown",
+            "customBlockName": "aiunknown-g3mcq5-469099381"
           }
         ]
       },
@@ -396,6 +447,57 @@
             "y": 440,
             "mapping": "defaultContent",
             "customBlockName": "aidefaultContent-k1kvr7-1186836369"
+          },
+          {
+            "url": "https://cio.nebraska.gov/index.html",
+            "id": "box-id-545429967",
+            "color": "rgba(0, 255, 0, 1)",
+            "width": 690,
+            "height": 60,
+            "xpath": "/html[1]/body[1]/section[1]/div[1]/p[1]",
+            "childrenXpaths": null,
+            "layout": {
+              "numCols": 0,
+              "numRows": 0
+            },
+            "x": 296,
+            "y": 609,
+            "mapping": "defaultContent",
+            "customBlockName": "aidefaultContent-g3mcq5-545429967"
+          },
+          {
+            "url": "https://cio.nebraska.gov/index.html",
+            "id": "box-id--469099443",
+            "color": "rgba(0, 255, 0, 1)",
+            "width": 1280,
+            "height": 517,
+            "xpath": "/html[1]/body[1]/section[2]",
+            "childrenXpaths": null,
+            "layout": {
+              "numCols": 0,
+              "numRows": 0
+            },
+            "x": 0,
+            "y": 913,
+            "mapping": "defaultContent",
+            "customBlockName": "aidefaultContent-g3mcq5-469099443"
+          },
+          {
+            "url": "https://cio.nebraska.gov/index.html",
+            "id": "box-id--469099350",
+            "color": "rgba(0, 255, 0, 1)",
+            "width": 1280,
+            "height": 519,
+            "xpath": "/html[1]/body[1]/section[5]",
+            "childrenXpaths": null,
+            "layout": {
+              "numCols": 0,
+              "numRows": 0
+            },
+            "x": 0,
+            "y": 3256,
+            "mapping": "defaultContent",
+            "customBlockName": "aidefaultContent-g3mcq5-469099350"
           }
         ]
       }

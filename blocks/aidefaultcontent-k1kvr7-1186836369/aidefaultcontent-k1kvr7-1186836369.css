@@ -1,0 +1,51 @@
+
+.aidefaultcontent-k1kvr7-1186836369-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 16px; /* Add consistent spacing between elements */
+    padding: 16px; /* Add padding around the block */
+    max-width: 800px; /* Constrain block width */
+    margin: 0 auto; /* Center the block horizontally */
+    text-align: left; /* Ensure all text is left-aligned */
+}
+
+.aidefaultcontent-k1kvr7-1186836369 > div {
+    display: flex;
+    flex-flow: row wrap; /* Align first-level children side by side if needed */ /* Allow wrapping for responsiveness */
+    align-items: flex-start; /* Align items to the top */
+    gap: 8px; /* Add spacing between nested elements */
+}
+
+.aidefaultcontent-k1kvr7-1186836369 h2 {
+    font-size: var(--heading-font-size-xl); /* Adjust heading size */
+    font-weight: 300; /* Lighten font weight */
+    margin-bottom: 24px; /* Increase space below the main heading */
+    color: var(--text-color); /* Standard text color */
+}
+
+.aidefaultcontent-k1kvr7-1186836369 h3:first-of-type {
+    background-color: #fff5f5; /* Use a lighter pink shade */
+    padding: 4px 8px; /* Adjust padding for proper alignment */
+    margin: 0 0 24px; /* Adjust spacing below the "Note" section */
+    border-left: 4px solid #f5c6cb; /* Subtle left border for emphasis */
+    color: #721c24; /* Dark red text color */
+    font-weight: 300; /* Match font weight for consistency */
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+.aidefaultcontent-k1kvr7-1186836369 h3:last-of-type {
+    font-size: var(--heading-font-size-l); /* Adjust subheading size */
+    font-weight: 300; /* Use a lighter font weight */
+    margin-top: 24px; /* Add consistent spacing above the final subheading */
+    color: var(--text-color); /* Standard text color */
+}
+
+.aidefaultcontent-k1kvr7-1186836369 h3:last-of-type a {
+    color: #3b63fb; /* Use a lighter blue for the link */
+    text-decoration: underline; /* Ensure link is underlined */
+    font-weight: bold; /* Keep the link bold for emphasis */
+}
+
+.aidefaultcontent-k1kvr7-1186836369 ul {
+    display: none; /* Hide unintended bullet points */
+}

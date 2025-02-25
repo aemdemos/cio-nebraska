@@ -11,6 +11,9 @@
     },
     {
       "path": "tools/importer/mappings/404.json"
+    },
+    {
+      "path": "tools/importer/mappings/index.html.json"
     }
   ]
 }
