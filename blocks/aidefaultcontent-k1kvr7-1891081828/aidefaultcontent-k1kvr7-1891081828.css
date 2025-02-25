@@ -1,0 +1,27 @@
+
+.aidefaultcontent-k1kvr7-1891081828-wrapper > .aidefaultcontent-k1kvr7-1891081828 {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: row; /* Ensure elements are side by side */
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center; /* Vertically center the elements */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.aidefaultcontent-k1kvr7-1891081828-wrapper > .aidefaultcontent-k1kvr7-1891081828 > div {
+  display: flex; /* Ensure inner elements are side by side */
+  flex-direction: row; /* Maintain horizontal alignment */
+  align-items: center; /* Vertically center the elements */
+  gap: 0.8rem; /* Add consistent spacing between elements */
+}
+
+.aidefaultcontent-k1kvr7-1891081828-wrapper > .aidefaultcontent-k1kvr7-1891081828 h1 {
+  margin: 0; /* Remove default margin */
+  font-size: 3.8rem; /* Larger font size for "404" */
+  font-weight: bold; /* Bold styling for "404" */
+}
+
+.aidefaultcontent-k1kvr7-1891081828-wrapper > .aidefaultcontent-k1kvr7-1891081828 h1 + div {
+  font-size: 2rem; /* Smaller font size for "Page Not Found" */
+  font-weight: 400; /* Lighter styling for "Page Not Found" */
+  margin-left: 1rem; /* Add more spacing between "404" and "Page Not Found" */
+}
