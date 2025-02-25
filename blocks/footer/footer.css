@@ -1,5 +1,6 @@
 .footer {
   font-size: var(--heading-font-size-s);
+  background-color: var(--footer-color);
 
   ul {
     list-style-type: none;
