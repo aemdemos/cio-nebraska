@@ -1,0 +1,19 @@
+
+.aidefaultcontent-k1kvr7-1891081828-wrapper > .aidefaultcontent-k1kvr7-1891081828.block {
+  display: flex; /* Enable flexbox for layout */
+  flex-direction: row; /* Ensure elements are placed side by side */
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center; /* Vertically center the content */
+  height: 58px; /* Fine-tune height for compact alignment */
+  padding: 0 35px; /* Adjust padding for balanced whitespace */
+}
+
+.aidefaultcontent-k1kvr7-1891081828-wrapper > .aidefaultcontent-k1kvr7-1891081828.block h1 {
+  margin: 0; /* Remove default margins */
+  font-size: 27px; /* Adjust font size for a closer match */
+  font-weight: 500; /* Slightly reduce font weight for better balance */
+  line-height: 1; /* Ensure proper vertical alignment of the text */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Prevent text overflow issues */
+  color: var(--text-color); /* Use the predefined text color */
+}
