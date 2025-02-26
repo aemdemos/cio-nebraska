@@ -193,17 +193,17 @@ pre {
 }
 
 [data-valign="bottom"] {
-  align-content: end;
+  align-self: flex-end;
   background-position-y: bottom;
 }
 
 [data-valign="middle"] {
-  align-content: center;
+  align-self: center;
   background-position-y: center;
 }
 
 [data-valign="top"] {
-  align-content: start;
+  align-self: flex-start;
   background-position-y: top;
 }
 
