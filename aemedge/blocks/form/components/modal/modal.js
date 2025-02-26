@@ -1,4 +1,4 @@
-import { subscribe } from '../../rules/index.js';
+import { subscribe } from '../../rules';
 import { decorateIcons } from '../../../../scripts/aem.js';
 
 export class Modal {

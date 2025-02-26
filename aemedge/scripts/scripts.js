@@ -201,19 +201,19 @@ const getFragmentPath = (path) => {
   let fragmentPath;
   switch (true) {
     case path.includes('/news/'):
-      fragmentPath = '/fragments/breadcrumbs-news';
+      fragmentPath = '/aemedge/fragments/breadcrumbs-news';
       break;
     case path.includes('/contact/'):
-      fragmentPath = '/fragments/breadcrumbs-contact';
+      fragmentPath = '/aemedge/fragments/breadcrumbs-contact';
       break;
     case path.includes('/servicedesk/'):
-      fragmentPath = '/fragments/breadcrumbs-servicedesk';
+      fragmentPath = '/aemedge/fragments/breadcrumbs-servicedesk';
       break;
     case path.includes('/about/'):
-      fragmentPath = '/fragments/breadcrumbs-about';
+      fragmentPath = '/aemedge/fragments/breadcrumbs-about';
       break;
     default:
-      fragmentPath = '/fragments/breadcrumbs-default';
+      fragmentPath = '/aemedge/fragments/breadcrumbs-default';
   }
   return fragmentPath;
 };
@@ -261,7 +261,7 @@ async function buildBreadcrumbs() {
 function buildLinksOfInterest() {
   const aside = document.createElement('aside');
   aside.classList.add('content-aside');
-  loadFragment('/fragments/links-of-interest').then((fragment) => {
+  loadFragment('/aemedge/fragments/links-of-interest').then((fragment) => {
     aside.append(fragment);
     decoratePicturesWithLinks(aside);
   });
