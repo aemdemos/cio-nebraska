@@ -19,7 +19,7 @@
 *************************************************************************/
 
 import { propertyChange, ExecuteRule, Initialize, RemoveItem, Change, FormLoad, FieldChanged, ValidationComplete, Valid, Invalid, SubmitSuccess, CustomEvent, SubmitError, SubmitFailure, Submit, Save, Reset, RemoveInstance, AddInstance, AddItem, Click } from './afb-events.js';
-import Formula from '../formula/index.js';
+import Formula from '../formula';
 import { format, parseDefaultDate, datetimeToNumber, parseDateSkeleton, numberToDatetime, formatDate, parseDate } from './afb-formatters.min.js';
 
 function __decorate(decorators, target, key, desc) {

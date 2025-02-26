@@ -20,7 +20,7 @@ const getVideoId = (url) => {
 
 // YouTube embed with lite-youtube
 const embedYoutube = async (url) => {
-  await loadScript('/blocks/embed/lite-yt-embed/lite-yt-embed.js');
+  await loadScript('/aemedge/blocks/embed/lite-yt-embed/lite-yt-embed.js');
   const videoId = getVideoId(url);
   const wrapper = document.createElement('div');
   wrapper.setAttribute('itemscope', '');
