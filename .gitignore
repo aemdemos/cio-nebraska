@@ -3,6 +3,7 @@ coverage/*
 logs/*
 node_modules/*
 package-lock.json
+package.json
 
 helix-importer-ui
 .DS_Store
@@ -19,3 +20,4 @@ eslint.config.mjs
 
 # Ignore deleted .eslintignore since it's no longer used
 .eslintignore
+.eslintrc.js
