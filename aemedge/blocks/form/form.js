@@ -562,11 +562,11 @@ export default async function decorate(block) {
       formDef = transform.transform(formDef);
       source = 'sheet';
       form = await createForm(formDef);
-      const docRuleEngine = await import('./rules-doc');
+      const docRuleEngine = await import('./rules-doc/index.js');
       docRuleEngine.default(formDef, form);
       rules = false;
     } else {
-      afModule = await import('./rules');
+      afModule = await import('./rules/index.js');
       if (afModule && afModule.initAdaptiveForm && !block.classList.contains('edit-mode')) {
         form = await afModule.initAdaptiveForm(formDef, createForm);
       } else {
