@@ -1,3 +1,4 @@
+/* global document */
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import { Modal } from '../form/components/modal/modal.js';
 
