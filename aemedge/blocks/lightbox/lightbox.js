@@ -1,7 +1,7 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import { Modal } from '../form/components/modal/modal.js';
 
-export default function decorate(block) {
+export default function decorate() {
   // Find all links that contain pictures
   document.querySelectorAll('a:has(picture)').forEach((link) => {
     const picture = link.querySelector('picture');
