@@ -62,7 +62,7 @@ main .section {
       position: relative;
 
       div.button {
-        background-image: url("/icons/home-section-down-arrow.svg");
+        background-image: url("/aemedge/icons/home-section-down-arrow.svg");
         background-repeat: no-repeat;
         border-radius: 3em 3em 0 0;
         border: 2px solid var(--light-color);
