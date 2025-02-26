@@ -13,3 +13,9 @@ helix-importer-ui
 .DS_Store
 */.DS_Store
 */*/.DS_Store
+# ESLint Config Files
+eslint.config.js
+eslint.config.mjs
+
+# Ignore deleted .eslintignore since it's no longer used
+.eslintignore
