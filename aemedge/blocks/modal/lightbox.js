@@ -8,22 +8,22 @@ function createModal() {
   const modal = document.createElement('div');
   modal.className = 'image-modal';
   modal.style.display = 'none';
-  
+
   const modalContent = document.createElement('div');
   modalContent.className = 'image-modal-content';
-  
+
   const closeButton = document.createElement('span');
   closeButton.className = 'close';
   closeButton.onclick = closeModal;
-  
+
   const slides = document.createElement('div');
   slides.className = 'slides';
-  
+
   modalContent.appendChild(closeButton);
   modalContent.appendChild(slides);
   modal.appendChild(modalContent);
   document.body.appendChild(modal);
-  
+
   return modal;
 }
 
