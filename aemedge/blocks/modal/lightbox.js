@@ -56,10 +56,14 @@ function showImageModal(imgSrc) {
   overlay.style.display = 'block';
   overlay.onclick = closeModal;
   
-  // Add keyboard support for closing
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
-  });
+  // Add keyboard support for closing with proper cleanup
+  const handleKeyDown = (e) => {
+    if (e.key === 'Escape') {
+      closeModal();
+      document.removeEventListener('keydown', handleKeyDown);
+    }
+  };
+  document.addEventListener('keydown', handleKeyDown);
 }
 
 function makeImagesClickable() {
