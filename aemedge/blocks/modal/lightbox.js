@@ -1,4 +1,4 @@
-// Using document.createelement instead of importing dom-helpers
+// Using document.createElement instead of importing dom-helpers
 function closeModal() {
   document.querySelector('.image-modal').style.display = 'none';
   document.querySelector('.overlay').style.display = 'none';
