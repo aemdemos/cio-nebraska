@@ -12,8 +12,8 @@ function createModal() {
     div(
       { class: 'image-modal-content' },
       span({ class: 'close', onclick: closeModal }),
-      div({ class: 'slides' })
-    )
+      div({ class: 'slides' }),
+    ),
   );
   document.body.append(modal);
   return modal;
@@ -30,8 +30,8 @@ function showImageModal(imgSrc) {
     { class: 'slide' },
     createOptimizedPicture(imgSrc, '', true, [
       { media: '(min-width: 600px)', width: '2000' },
-      { width: '750' }
-    ])
+      { width: '750' },
+    ]),
   );
   slides.append(slide);
 
