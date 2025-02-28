@@ -103,7 +103,27 @@
   }
 }
 
-/* Basic lightbox styling */
+/* Add these styles to the top of your existing CSS file */
+/* Make all images appear clickable */
+.columns img,
+.metric-info img,
+.cards.metrics img,
+[data-lightbox="true"] img,
+.section img {
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.columns img:hover,
+.metric-info img:hover,
+.cards.metrics img:hover,
+[data-lightbox="true"] img:hover,
+.section img:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* Ensure the modal appears on top of everything */
 .image-modal {
   position: fixed;
   left: 50%;
