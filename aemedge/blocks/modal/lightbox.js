@@ -1,4 +1,4 @@
-// Using document.createelement instead of importing dom-helpers
+// Using document.createElement instead of importing dom-helpers
 function closeModal() {
   document.querySelector('.image-modal').style.display = 'none';
   document.querySelector('.overlay').style.display = 'none';
@@ -64,7 +64,7 @@ function showImageModal(imgSrc) {
 
 function makeImagesClickable() {
   // Target the specific table cells with images in your layout
-  document.querySelectorAll('.columns td img, [data-lightbox="true"] img, a[href^="https://final--cio-nebraska"] img').forEach((img) => {
+  document.querySelectorAll('.columns td img, [data-lightbox="true"] img, a[href^="https://final--cio-nebraska"] img, .metric-info img, .cards.metrics img').forEach((img) => {
     img.style.cursor = 'pointer';
     img.onclick = (e) => {
       e.preventDefault();
