@@ -1,39 +1,56 @@
-import { div, span } from '../../scripts/dom-helpers.js';
-import { createOptimizedPicture } from '../../scripts/aem.js';
-
+// Using document.createElement instead of importing dom-helpers
 function closeModal() {
   document.querySelector('.image-modal').style.display = 'none';
   document.querySelector('.overlay').style.display = 'none';
 }
 
 function createModal() {
-  const modal = div(
-    { class: 'image-modal', style: 'display: none;' },
-    div(
-      { class: 'image-modal-content' },
-      span({ class: 'close', onclick: closeModal }),
-      div({ class: 'slides' }),
-    ),
-  );
-  document.body.append(modal);
+  const modal = document.createElement('div');
+  modal.className = 'image-modal';
+  modal.style.display = 'none';
+  
+  const modalContent = document.createElement('div');
+  modalContent.className = 'image-modal-content';
+  
+  const closeButton = document.createElement('span');
+  closeButton.className = 'close';
+  closeButton.onclick = closeModal;
+  
+  const slides = document.createElement('div');
+  slides.className = 'slides';
+  
+  modalContent.appendChild(closeButton);
+  modalContent.appendChild(slides);
+  modal.appendChild(modalContent);
+  document.body.appendChild(modal);
+  
   return modal;
 }
 
 function showImageModal(imgSrc) {
   const modal = document.querySelector('.image-modal') || createModal();
-  const overlay = document.querySelector('.overlay') || div({ class: 'overlay', style: 'display: none;' });
-  document.body.append(overlay);
+  
+  let overlay = document.querySelector('.overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    overlay.style.display = 'none';
+    document.body.appendChild(overlay);
+  }
 
   const slides = modal.querySelector('.slides');
   slides.innerHTML = '';
-  const slide = div(
-    { class: 'slide' },
-    createOptimizedPicture(imgSrc, '', true, [
-      { media: '(min-width: 600px)', width: '2000' },
-      { width: '750' },
-    ]),
-  );
-  slides.append(slide);
+  
+  const slide = document.createElement('div');
+  slide.className = 'slide';
+  
+  const img = document.createElement('img');
+  img.src = imgSrc;
+  img.style.maxWidth = '100%';
+  img.style.maxHeight = '80vh';
+  
+  slide.appendChild(img);
+  slides.appendChild(slide);
 
   modal.style.display = 'block';
   overlay.style.display = 'block';
