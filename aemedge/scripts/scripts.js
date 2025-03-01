@@ -27,7 +27,7 @@ const TEMPLATE_META = 'template';
  */
 function buildHeroBlock(main) {
   const h1 = main.querySelector('h1');
-  const logoUrl = 'https://main--cio-nebraska--aemdemos.aem.live/cio-ne-logo.png';
+  const logoUrl = 'https://main--cio-nebraska--aemdemos.aem.page/aemedge/icons/ocio-logo-white.svg';
   let pictureUrl = getMetadata('og:image') || ''; // Add default empty string
 
   // Early return if we don't have an H1
@@ -49,8 +49,6 @@ function buildHeroBlock(main) {
   const picture = createOptimizedPicture(pictureUrl, 'Hero image', true, [{ media: '(min-width: 600px)', width: '2000' }, { width: '750' }]);
   picture.classList.add('hero-image');
   const logo = createOptimizedPicture(logoUrl, 'Nebraska - Good Life. Great Opportunity', true);
-  logo.querySelector('img').setAttribute('height', '107px');
-  logo.querySelector('img').setAttribute('width', 'auto');
   const logoLink = document.createElement('a');
   logoLink.href = '/';
   logoLink.append(logo);
