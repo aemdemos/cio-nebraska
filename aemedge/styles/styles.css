@@ -279,7 +279,7 @@ main img {
   &.icon-twitter, &.icon-facebook {
     height: 34px;
     width: 34px;
-    opacity: 35%;
+    opacity: 0.35;
   }
 }
 
