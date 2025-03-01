@@ -275,6 +275,12 @@ main img {
   display: inline-block;
   height: 24px;
   width: 24px;
+
+  &.icon-twitter, &.icon-facebook {
+    height: 34px;
+    width: 34px;
+    opacity: 35%;
+  }
 }
 
 .icon img {

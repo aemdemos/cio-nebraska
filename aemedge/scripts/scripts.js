@@ -262,6 +262,7 @@ function buildLinksOfInterest() {
   loadFragment('/aemedge/fragments/links-of-interest').then((fragment) => {
     aside.append(fragment);
     decoratePicturesWithLinks(aside);
+    decorateIcons(aside);
   });
   return aside;
 }
