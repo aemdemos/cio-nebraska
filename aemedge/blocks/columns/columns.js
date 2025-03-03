@@ -9,12 +9,24 @@ function showGalleryLightbox(picture, pictures) {
   // Function to update the picture in the lightbox
   function updatePicture(index) {
     const img = lightbox.querySelector('img');
-    const newImg = pictures[index].querySelector('img').cloneNode();
+    const originalImg = pictures[index].querySelector('img');
+
+    // Create a new image with the original source URL (without query parameters)
+    const newImg = document.createElement('img');
+    const originalSrc = originalImg.src.split('?')[0];
+    newImg.src = originalSrc;
+    newImg.alt = originalImg.alt || '';
+
     img.replaceWith(newImg);
   }
 
-  // Create the picture element
-  const img = picture.querySelector('img').cloneNode();
+  // Create the picture element with original source
+  const originalImg = picture.querySelector('img');
+  const img = document.createElement('img');
+  const originalSrc = originalImg.src.split('?')[0];
+  img.src = originalSrc;
+  img.alt = originalImg.alt || '';
+
   lightbox.appendChild(img);
 
   // Create the close button
