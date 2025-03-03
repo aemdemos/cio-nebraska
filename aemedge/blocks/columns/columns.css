@@ -67,7 +67,7 @@
   top: 20px;
   right: 20px;
   background: url("/aemedge/icons/close.png") no-repeat center center;
-  background-size: 40px 40px;
+  background-size: auto;
 }
 
 .lightbox-next {
