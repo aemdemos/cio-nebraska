@@ -1,40 +1,39 @@
 /* metric specific styles - updated from product specific styles */
 
-.metric-info {
-  margin: 0 0 2em;
-
-  & picture {
-    clear: both;
-
-    & img {
-      max-width: 100%;
-      max-height: 100%;
-      width: auto;
-      margin: unset;
-    }
-  }
-}
-
 /* Base image styles */
-.columns img,
 .columns td img,
+.columns img,
+.metric-info picture img,
 .metric-info img,
+.block.cards.metrics > ul li img,
 .cards.metrics img,
 [data-lightbox="true"] img,
 .section img,
 .slide img {
   cursor: pointer;
   transition: opacity 0.2s, transform 0.2s;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  margin: unset;
 }
 
-.columns img:hover,
 .columns td img:hover,
+.columns img:hover,
 .metric-info img:hover,
 .cards.metrics img:hover,
 [data-lightbox="true"] img:hover,
 .section img:hover {
-  opacity: 0.9;
+  opacity: 90%;
   transform: scale(1.02);
+}
+
+.metric-info {
+  margin: 0 0 2em;
+
+  & picture {
+    clear: both;
+  }
 }
 
 .block.cards.metrics {
@@ -55,13 +54,7 @@
       color: #00b0f0;
       font-size: 11px;
       font-weight: bold;
-      cursor: hand;
       cursor: pointer;
-
-      & img {
-        width: auto;
-        height: auto;
-      }
     }
   }
 
@@ -124,11 +117,11 @@
   background-size: 20px;
   cursor: pointer;
   z-index: 10;
-  opacity: 0.7;
+  opacity: 70%;
 }
 
 .close:hover {
-  opacity: 1;
+  opacity: 100%;
 }
 
 .slides {
