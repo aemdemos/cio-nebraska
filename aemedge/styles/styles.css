@@ -276,6 +276,11 @@ main img {
   height: 24px;
   width: 24px;
 
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
   &.icon-twitter, &.icon-facebook {
     height: 34px;
     width: 34px;
@@ -286,11 +291,6 @@ main img {
       width: 34px;
     }
   }
-}
-
-.icon img {
-  height: 100%;
-  width: 100%;
 }
 
 main > h1 {
