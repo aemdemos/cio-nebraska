@@ -1,18 +1,34 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-
 export default function decorate(block) {
-  /* change to ul, li */
-  const ul = document.createElement('ul');
-  [...block.children].forEach((row) => {
-    const li = document.createElement('li');
-    while (row.firstElementChild) li.append(row.firstElementChild);
-    [...li.children].forEach((div) => {
-      if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
-      else div.className = 'cards-card-body';
-    });
-    ul.append(li);
+  const container = block.querySelector('div > div');
+  container.classList.add('cards-group-container');
+  const paragraphs = Array.from(container.querySelectorAll('p'));
+  const newContainer = document.createElement('div');
+
+  for (let i = 0; i < paragraphs.length; i += 2) {
+    const wrapperDiv = document.createElement('div');
+    wrapperDiv.classList.add('grouped-content');
+
+    wrapperDiv.appendChild(paragraphs[i]);
+    if (paragraphs[i + 1]) {
+      wrapperDiv.appendChild(paragraphs[i + 1]);
+    }
+
+    newContainer.appendChild(wrapperDiv);
+  }
+
+  newContainer.classList.add('grouped-content-container');
+
+  container.innerHTML = '';
+  container.appendChild(newContainer);
+
+  const divs = block.querySelectorAll('.grouped-content');
+  const classes = ['blue', 'red', 'grey'];
+
+  divs.forEach((div, index) => {
+    div.classList.add(classes[index % classes.length]);
+    const buttonContainerParagraph = div.querySelector('.button-container a');
+    if (buttonContainerParagraph && buttonContainerParagraph.classList.contains('button')) {
+      buttonContainerParagraph.classList.remove('button');
+    }
   });
-  ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
-  block.textContent = '';
-  block.append(ul);
 }
