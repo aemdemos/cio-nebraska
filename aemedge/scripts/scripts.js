@@ -269,7 +269,7 @@ function buildLinksOfInterest() {
 }
 
 /**
- * wraps main content with breadcrumbs, subnav, and aside.
+ * wraps main content with breadcrumbs, cards, and aside.
  */
 
 async function buildDefaultTemplate() {
@@ -288,7 +288,7 @@ async function buildDefaultTemplate() {
     contentWrapper.className = 'content-details-wrapper';
 
     // move all divs into content wrapper div
-    contentSection.querySelectorAll('div[class*="wrapper"]:not(.subnav-wrapper)').forEach((div) => {
+    contentSection.querySelectorAll('div[class*="wrapper"]:not(.cards-wrapper)').forEach((div) => {
       contentWrapper.append(div);
     });
     asideWrapper.prepend(await buildLinksOfInterest());
