@@ -74,8 +74,6 @@ export default function decorate(block) {
   block.classList.add(`columns-${cols.length}-cols`);
   // check if the block has a class of "gallery"
   if (block.classList.contains('gallery')) {
-    // eslint-disable-next-line no-console
-    console.log('Gallery detected, initializing...');
     buildGallery(block);
   }
 
