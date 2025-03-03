@@ -276,16 +276,21 @@ main img {
   height: 24px;
   width: 24px;
 
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
   &.icon-twitter, &.icon-facebook {
     height: 34px;
     width: 34px;
     opacity: 0.35;
-  }
-}
 
-.icon img {
-  height: 100%;
-  width: 100%;
+    img {
+      height: 34px;
+      width: 34px;
+    }
+  }
 }
 
 main > h1 {
@@ -423,7 +428,7 @@ main .aside-details-wrapper {
     padding: 0 32px;
   }
 
-  .subnav-wrapper {
+  .cards-wrapper {
     margin-left: 12%;
   }
 }
