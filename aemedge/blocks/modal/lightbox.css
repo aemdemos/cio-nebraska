@@ -15,6 +15,28 @@
   }
 }
 
+/* Base image styles */
+.columns img,
+.columns td img,
+.metric-info img,
+.cards.metrics img,
+[data-lightbox="true"] img,
+.section img,
+.slide img {
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.columns img:hover,
+.columns td img:hover,
+.metric-info img:hover,
+.cards.metrics img:hover,
+[data-lightbox="true"] img:hover,
+.section img:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
 .block.cards.metrics {
   & > ul {
     list-style: none;
@@ -72,58 +94,7 @@
   }
 }
 
-@media (width >=900px) {
-  .block.cards.metrics {
-    & > ul {
-      grid-template-columns: repeat(4, 23%);
-      grid-auto-rows: 1fr;
-    }
-
-    .cards-card-image {
-      display: flex;
-      justify-content: flex-end;
-      top: 15px;
-      position: relative;
-
-      img {
-        margin: unset;
-      }
-    }
-  }
-
-  .metric-info picture {
-    position: relative;
-    float: left;
-    width: 80px;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    margin-right: 20px;
-    text-align: right;
-  }
-}
-
-/* Add these styles to the top of your existing CSS file */
-/* Make all images appear clickable */
-.columns img,
-.metric-info img,
-.cards.metrics img,
-[data-lightbox="true"] img,
-.section img {
-  cursor: pointer;
-  transition: opacity 0.2s, transform 0.2s;
-}
-
-.columns img:hover,
-.metric-info img:hover,
-.cards.metrics img:hover,
-[data-lightbox="true"] img:hover,
-.section img:hover {
-  opacity: 0.9;
-  transform: scale(1.02);
-}
-
-/* Ensure the modal appears on top of everything */
+/* Modal styles */
 .image-modal {
   position: fixed;
   left: 50%;
@@ -132,9 +103,9 @@
   display: none;
   z-index: 9999;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgb(0 0 0 / 90%);
   border-radius: 4px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 20px rgb(0 0 0 / 70%);
   max-width: 90vw;
   max-height: 90vh;
 }
@@ -180,25 +151,41 @@
 
 .overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
+  inset: 0;
+  background: rgb(0 0 0 / 80%);
   display: none;
   z-index: 9998;
 }
 
-/* Make images appear clickable */
-.columns td img,
-[data-lightbox="true"] img {
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
+@media (min-width: 900px) {
+  .block.cards.metrics {
+    & > ul {
+      grid-template-columns: repeat(4, 23%);
+      grid-auto-rows: 1fr;
+    }
 
-.columns td img:hover,
-[data-lightbox="true"] img:hover {
-  opacity: 0.8;
+    .cards-card-image {
+      display: flex;
+      justify-content: flex-end;
+      top: 15px;
+      position: relative;
+
+      img {
+        margin: unset;
+      }
+    }
+  }
+
+  .metric-info picture {
+    position: relative;
+    float: left;
+    width: 80px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    text-align: right;
+  }
 }
 
 @media (max-width: 768px) {
