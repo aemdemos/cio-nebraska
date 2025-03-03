@@ -280,6 +280,11 @@ main img {
     height: 34px;
     width: 34px;
     opacity: 0.35;
+
+    img {
+      height: 34px;
+      width: 34px;
+    }
   }
 }
 
