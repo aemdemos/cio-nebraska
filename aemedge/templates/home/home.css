@@ -25,6 +25,10 @@ main .section {
       padding: 1em;
     }
 
+    .button-container:has(.button > .icon) {
+     display: none;
+    }
+
     h2 {
       font-size: 1.5em;
       letter-spacing: -2px;
