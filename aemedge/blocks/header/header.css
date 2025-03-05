@@ -27,7 +27,6 @@ header nav[aria-expanded='true'] {
   grid-template:
     'hamburger hamburger' var(--nav-height)
     'sections sections' 1fr;
-  overflow-y: auto;
   min-height: max-content;
 }
 
@@ -140,6 +139,7 @@ header nav[aria-expanded='true'] .nav-sections {
   visibility: visible;
   align-self: start;
     animation: slide-down .5s;
+  background-color: var(--background-color);
 }
 
 header nav .nav-sections ul {
