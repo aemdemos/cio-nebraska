@@ -2,6 +2,9 @@
 function showGalleryLightbox(picture, pictures) {
   let currentIndex = Array.from(pictures).indexOf(picture);
 
+  // First we must remove any lightboxes that are already open
+  document.querySelectorAll('.lightbox').forEach((el) => el.remove());
+
   // Create the lightbox container
   const lightbox = document.createElement('div');
   lightbox.classList.add('lightbox');
