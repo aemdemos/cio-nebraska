@@ -140,6 +140,7 @@ class LiteYTEmbed extends HTMLElement {
   async addIframe() {
     if (this.classList.contains('lyt-activated')) return;
     this.classList.add('lyt-activated');
+    this.firstChild.hidden = true; // Hide the play button
 
     const params = new URLSearchParams(this.getAttribute('params') || []);
     params.append('autoplay', '1');
