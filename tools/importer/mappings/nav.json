@@ -1,5 +1,5 @@
 {
-  "url": "https://cio.nebraska.gov/",
+  "url": "https://cio.nebraska.gov/news/index.html",
   "browserOptions": {
     "width": 1280,
     "disableJS": false,
@@ -10,10 +10,10 @@
   },
   "autoDetect": true,
   "template": {
-    "raw": "/html[1]/body[1]/nav[1]\n  /html[1]/body[1]/section[1]\n  - /html[1]/body[1]/section[1]/div[1]/header[1]\n  - /html[1]/body[1]/section[1]/div[1]/p[1]\n  /html[1]/body[1]/section[2]\n  /html[1]/body[1]/section[3]\n  /html[1]/body[1]/section[4]\n  /html[1]/body[1]/section[5]\n  /html[1]/body[1]/footer[1]\n  - /html[1]/body[1]/footer[1]/ul[1]\n  - /html[1]/body[1]/footer[1]/ul[2]",
-    "hash": 1067408742
+    "raw": "/html[1]/body[1]/header[1]/nav[1]\n  /html[1]/body[1]/div[2]\n  /html[1]/body[1]/div[3]\n  - /html[1]/body[1]/div[3]/div[3]\n  - /html[1]/body[1]/div[3]/div[6]\n  - /html[1]/body[1]/div[3]/main[1]\n  /html[1]/body[1]/footer[1]\n  - /html[1]/body[1]/footer[1]/div[1]/p[1]\n  - /html[1]/body[1]/footer[1]/div[1]/div[1]\n  - /html[1]/body[1]/footer[1]/div[1]/p[3]\n  - /html[1]/body[1]/footer[1]/div[1]/div[2]",
+    "hash": -2014453672
   },
-  "pageHeight": 913,
+  "pageHeight": 1528,
   "mapping": [
     {
       "id": "nav-1",
@@ -23,11 +23,11 @@
           "id": "nav-1-1",
           "blocks": [
             {
-              "id": "box-id--823498960",
+              "id": "box-id--855297627",
               "color": "rgba(0, 255, 0, 1)",
               "width": 1280,
-              "height": 50,
-              "xpath": "/html[1]/body[1]/nav[1]",
+              "height": 51,
+              "xpath": "/html[1]/body[1]/header[1]/nav[1]",
               "childrenXpaths": null,
               "layout": {
                 "numCols": 0,
@@ -36,7 +36,7 @@
               "x": 0,
               "y": 0,
               "mapping": "header",
-              "customBlockName": "aiheader-xq1tf8-823498960"
+              "customBlockName": "aiheader-dxxjuf-855297627"
             }
           ]
         }
