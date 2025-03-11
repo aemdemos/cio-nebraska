@@ -1,0 +1,434 @@
+/*
+ * Copyright 2020 Adobe. All rights reserved.
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+:root {
+  --background-color: white;
+  --light-color: #f8f8f8;
+  --text-color: #131313;
+  --footer-color: #39454b;
+  --footer-text-color: #b1b1b1; /* accessible contrast */
+  --med-grey: #757575; /* accessible contrast against white */
+  --line-color: #eee;
+  --font-style: normal;
+  --link-color: #3b63fb;
+  --link-hover-color: #1d3ecf;
+  --alt-link-color: #505050;
+  --alt-link-hover-color: #9B9B9B;
+  --highlight-color: #e7e7e7;
+  --body-font-family: "Roboto", "Roboto Fallback", "sans-serif";
+  --heading-font-family: "Roboto", "Roboto Fallback", "sans-serif";
+  --body-font-size-m: 18px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
+  --heading-font-size-xxl: 36px;
+  --heading-font-size-xl: 28px;
+  --heading-font-size-l: 26px;
+  --heading-font-size-m: 18px;
+  --heading-font-size-s: 16px;
+  --heading-font-size-xs: 12px;
+  --nav-height: 50px; /* rgb(117 117 117) */
+  --button-font-size: 18px;
+}
+
+/* fallback fonts */
+@font-face {
+  font-family: "Source Sans Pro Fallback";
+  font-style: var(--font-style);
+  font-weight: 900;
+  src: local("Arial Bold");
+  ascent-override: 103.96%;
+  descent-override: 28.84%;
+  line-gap-override: 0%;
+  size-adjust: 94.65%;
+}
+
+@font-face {
+  font-family: "Source Sans Pro Fallback";
+  font-style: var(--font-style);
+  font-weight: 300;
+  src: local("Arial");
+  ascent-override: 108.45%;
+  descent-override: 30.09%;
+  line-gap-override: 0%;
+  size-adjust: 90.73%;
+}
+
+@font-face {
+  font-family: "Roboto Fallback";
+  font-style: var(--font-style);
+  font-weight: 400;
+  src: local("Arial");
+  ascent-override: 92.43%;
+  descent-override: 24.32%;
+  line-gap-override: 0%;
+  size-adjust: 100.37%;
+}
+
+@font-face {
+  font-family: "FontAwesome Fallback";
+  font-style: var(--font-style);
+  font-weight: normal;
+  src: local("Arial");
+  ascent-override: 85.71%;
+  descent-override: 14.29%;
+  line-gap-override: 0%;
+  size-adjust: 100%;
+}
+
+@media (width >= 900px) {
+  :root {
+    --body-font-size-m: 18px;
+    --body-font-size-s: 14px;
+    --body-font-size-xs: 12px;
+    --heading-font-size-xxl: 36px;
+    --heading-font-size-xl: 28px;
+    --heading-font-size-l: 26px;
+    --heading-font-size-m: 18px;
+    --heading-font-size-s: 16px;
+    --heading-font-size-xs: 12px;
+  }
+}
+
+body {
+  display: none;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  line-height: 1.6;
+}
+
+body.appear {
+  display: block;
+}
+
+header {
+  height: var(--nav-height);
+}
+
+header .header,
+footer .footer {
+  visibility: hidden;
+}
+
+header .header[data-block-status="loaded"],
+footer .footer[data-block-status="loaded"] {
+  visibility: visible;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0.8em;
+  margin-bottom: 0.25em;
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  line-height: 1.25;
+  scroll-margin: 40px;
+}
+
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
+
+p,
+dl,
+ol,
+ul,
+pre,
+blockquote {
+  margin-top: 0.8em;
+  margin-bottom: 0.25em;
+}
+
+code,
+pre {
+  font-size: var(--body-font-size-s);
+}
+
+pre {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--light-color);
+  overflow-x: auto;
+  white-space: pre;
+}
+
+/* use Word or Gdoc table alignment to position cell contents in most blocks */
+.center, [data-align="center"] {
+  text-align: center;
+  background-position-x: center;
+}
+
+[data-valign="bottom"] {
+  align-self: flex-end;
+  background-position-y: bottom;
+}
+
+[data-valign="middle"] {
+  align-self: center;
+  background-position-y: center;
+}
+
+[data-valign="top"] {
+  align-self: flex-start;
+  background-position-y: top;
+}
+
+[data-align="right"] {
+  text-align: right;
+  background-position-x: right;
+}
+
+/* align="left" isn't added to data attributes so use justify instead */
+[data-align="left"], [data-align="justify"] {
+  text-align: left;
+  background-position-x: left;
+}
+
+main > div {
+  margin: 40px 16px;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+/* links */
+a:any-link {
+  color: var(--link-color);
+  text-decoration: none;
+  word-break: break-word;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* buttons */
+.button-container {
+  text-decoration: none;
+  color: var(--link-color);
+  line-height: 1.1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: var(--button-font-size);
+}
+
+button:disabled,
+button:disabled:hover {
+  background-color: var(--light-color);
+  cursor: unset;
+}
+
+a.button.secondary,
+button.secondary {
+  background-color: unset;
+  border: 2px solid currentcolor;
+  color: var(--text-color);
+}
+
+main img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.icon {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  &.icon-twitter, &.icon-facebook {
+    height: 34px;
+    width: 34px;
+    opacity: 0.35;
+
+    img {
+      height: 34px;
+      width: 34px;
+    }
+  }
+}
+
+main > h1 {
+  max-width: 1140px;
+  margin: auto;
+  padding: 20px 16px 10px;
+}
+
+/* sections */
+main > .section {
+  margin: 40px 0;
+
+  & .hero-container {
+    height: 200px;
+  }
+}
+
+main > .section > div {
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+main > .section:first-of-type {
+  margin-top: 0;
+}
+
+.section > div.page-details-wrapper {
+  margin: 80px auto;
+}
+
+main .section.light,
+main .section.highlight {
+  background-color: var(--light-color);
+  margin: 0;
+  padding: 40px 0;
+}
+
+/* dividers */
+p:has(code.divider) {
+  border-bottom: 1px solid #eee;
+  margin-top: 2em;
+  padding-top: 2em;
+  margin-bottom: 0;
+}
+
+/* BREADCRUMBS */
+.breadcrumbs-outer {
+  margin: 0 auto 12px;
+  padding: 0 16px 9px;
+  border-bottom: 1px solid var(--line-color);
+  max-width: 1140px;
+
+  .breadcrumbs,
+  .breadcrumbs a {
+    background-color: transparent;
+    font-weight: bold;
+    font-size: var(--body-font-size-s);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 1.43;
+    display: inline;
+  }
+}
+
+main .aside-details-wrapper {
+  min-height: 345px;
+  max-width: 285px;
+  margin-top: 24px;
+
+  a { /* stylelint-disable-line */
+    text-decoration: underline;
+    color: var(--alt-link-color);
+
+    &:hover {
+      color: var(--alt-link-hover-color);
+    }
+  }
+
+  .columns > div { /* specific to aside icons */
+    display: flex;
+    padding: 10px 0;
+    flex-direction: row;
+
+    > div {
+      margin-right: 10px;
+      flex: unset;
+    }
+
+    img {
+      width: unset;
+    }
+  }
+
+  .content-aside {
+    h1 {
+      margin-top: 0;
+      font-size: var(--heading-font-size-xl);
+      font-weight: normal;
+      border-bottom: 1px solid var(--line-color);
+    }
+
+    ul {
+      list-style-type: none;
+      padding-inline-start: 0;
+
+      li {
+        border-bottom: 1px solid var(--line-color);
+        padding: 5px 0;
+      }
+    }
+  }
+}
+
+@media (width >= 900px) {
+  .section > div.page-details-wrapper {
+    margin: 80px auto;
+    display: flex;
+    max-width: 1140px;
+    padding: 0 16px;
+
+    .aside-details-wrapper {
+      min-width: 200px;
+    }
+
+    .content-details-wrapper {
+      width: 59%;
+      margin-left: 14%;
+    }
+  }
+
+  main > .section > div {
+    padding: 0 32px;
+  }
+
+  .cards-wrapper {
+    margin-left: 12%;
+  }
+}

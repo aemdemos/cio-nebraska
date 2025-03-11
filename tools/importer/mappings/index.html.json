@@ -1,0 +1,126 @@
+{
+  "url": "https://cio.nebraska.gov/index.html",
+  "browserOptions": {
+    "width": 1280,
+    "disableJS": false,
+    "adBlocker": true,
+    "gdprBlocker": true,
+    "delay": 0,
+    "screenshot": false
+  },
+  "autoDetect": true,
+  "template": {
+    "raw": "/html[1]/body[1]/nav[1]\n  /html[1]/body[1]/section[1]\n  - /html[1]/body[1]/section[1]/div[1]/header[1]\n  - /html[1]/body[1]/section[1]/div[1]/p[1]\n  /html[1]/body[1]/section[2]\n  /html[1]/body[1]/section[3]\n  /html[1]/body[1]/section[4]\n  /html[1]/body[1]/section[5]\n  /html[1]/body[1]/footer[1]\n  - /html[1]/body[1]/footer[1]/ul[1]\n  - /html[1]/body[1]/footer[1]/ul[2]",
+    "hash": 1067408742
+  },
+  "pageHeight": 913,
+  "mapping": [
+    {
+      "id": 2,
+      "path": "/index",
+      "sections": [
+        {
+          "id": "2-1",
+          "blocks": [
+            {
+              "id": "box-id--1057360670",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 690,
+              "height": 330,
+              "xpath": "/html[1]/body[1]/section[1]/div[1]/header[1]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 296,
+              "y": 262,
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-g3mcq5-1057360670"
+            },
+            {
+              "id": "box-id-545429967",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 690,
+              "height": 60,
+              "xpath": "/html[1]/body[1]/section[1]/div[1]/p[1]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 296,
+              "y": 609,
+              "mapping": "defaultContent",
+              "customBlockName": "aidefaultContent-g3mcq5-545429967"
+            },
+            {
+              "id": "box-id--469099443",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1280,
+              "height": 517,
+              "xpath": "/html[1]/body[1]/section[2]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 0,
+              "y": 913,
+              "mapping": "defaultContent",
+              "customBlockName": "aidefaultContent-g3mcq5-469099443"
+            },
+            {
+              "id": "box-id--469099412",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1280,
+              "height": 913,
+              "xpath": "/html[1]/body[1]/section[3]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 0,
+              "y": 1430,
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-g3mcq5-469099412"
+            },
+            {
+              "id": "box-id--469099381",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1280,
+              "height": 913,
+              "xpath": "/html[1]/body[1]/section[4]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 0,
+              "y": 2343,
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-g3mcq5-469099381"
+            },
+            {
+              "id": "box-id--469099350",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1280,
+              "height": 519,
+              "xpath": "/html[1]/body[1]/section[5]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 0,
+              "y": 3256,
+              "mapping": "defaultContent",
+              "customBlockName": "aidefaultContent-g3mcq5-469099350"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -2,6 +2,8 @@
 
 This is a project created by AEMY.
 
+NOTE:  If making manual css/js changes, commit them to the branch named "final".
+
 ## Environments
 
 - Preview: https://main--cio-nebraska--aemdemos.aem.page/

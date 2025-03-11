@@ -1,0 +1,142 @@
+{
+  "url": "https://cio.nebraska.gov/recognition/awards/index.html",
+  "browserOptions": {
+    "width": 1280,
+    "disableJS": false,
+    "adBlocker": true,
+    "gdprBlocker": true,
+    "delay": 0,
+    "screenshot": false
+  },
+  "autoDetect": true,
+  "template": {
+    "raw": "/html[1]/body[1]/header[1]/nav[1]\n  /html[1]/body[1]/div[1]\n  /html[1]/body[1]/div[2]\n  - /html[1]/body[1]/div[2]/main[1]\n  - /html[1]/body[1]/div[2]/p[1]\n  - /html[1]/body[1]/div[2]/p[2]\n  /html[1]/body[1]/footer[1]\n  - /html[1]/body[1]/footer[1]/div[1]/p[1]\n  - /html[1]/body[1]/footer[1]/div[1]/div[1]\n  - /html[1]/body[1]/footer[1]/div[1]/p[3]\n  - /html[1]/body[1]/footer[1]/div[1]/div[2]",
+    "hash": 1214810067
+  },
+  "pageHeight": 2096,
+  "mapping": [
+    {
+      "id": 2,
+      "path": "/recognition/awards/index",
+      "sections": [
+        {
+          "id": "2-1",
+          "blocks": [
+            {
+              "id": "box-id--1102402302",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1310,
+              "height": 250,
+              "xpath": "/html[1]/body[1]/div[1]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": -15,
+              "y": 0,
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-62pe3g-1102402302"
+            },
+            {
+              "id": "box-id-1891081859",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1140,
+              "height": 110,
+              "xpath": "/html[1]/body[1]/div[2]/div[2]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 70,
+              "y": 291,
+              "mapping": "defaultContent",
+              "customBlockName": "aidefaultContent-62pe3g-1891081859"
+            },
+            {
+              "id": "box-id-1891081890",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1140,
+              "height": 22,
+              "xpath": "/html[1]/body[1]/div[2]/div[3]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 70,
+              "y": 421,
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-62pe3g-1891081890"
+            },
+            {
+              "id": "box-id--1972658944",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 585,
+              "height": 1181,
+              "xpath": "/html[1]/body[1]/div[2]/main[1]/div[1]/div[1]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 452,
+              "y": 444,
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-62pe3g-1972658944"
+            },
+            {
+              "id": "box-id-1070452948",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 285,
+              "height": 311,
+              "xpath": "/html[1]/body[1]/div[2]/nav[2]/div[1]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 70,
+              "y": 494,
+              "mapping": "defaultContent",
+              "customBlockName": "aidefaultContent-62pe3g-1070452948"
+            },
+            {
+              "id": "box-id-292812197",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1140,
+              "height": 22,
+              "xpath": "/html[1]/body[1]/div[2]/p[1]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 70,
+              "y": 1626,
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-62pe3g-292812197"
+            },
+            {
+              "id": "box-id-292812228",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1140,
+              "height": 22,
+              "xpath": "/html[1]/body[1]/div[2]/p[2]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 70,
+              "y": 1659,
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-62pe3g-292812228"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

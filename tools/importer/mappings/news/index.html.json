@@ -39,14 +39,36 @@
               "customBlockName": "aiunknown-dxxjuf-1102402271"
             },
             {
-              "id": "box-id-1749612991",
+              "id": "box-id-83627427",
+              "color": "rgba(0, 255, 0, 1)",
+              "width": 1170,
+              "height": 171,
+              "xpath": "/html[1]/body[1]/div[3]/div[3]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 55,
+              "y": 250,
+              "mapping": "unknown",
+              "customBlockName": "aiunknown-dxxjuf-83627427"
+            },
+            {
+              "id": "box-id-83627520",
               "color": "rgba(0, 255, 0, 1)",
               "width": 1140,
-              "height": 702,
-              "xpath": "/html[1]/body[1]/div[3]/main[1]/div[1]/div[1]",
-              "xpathWithDetails": "/div[@class=\"container\"]/div[@class=\"row\"]/div[@class=\"col-md-6 col-sm-5 col-xs-10 col-md-offset-1 col-xs-offset-2\"]",
+              "height": 22,
+              "xpath": "/html[1]/body[1]/div[3]/div[6]",
+              "childrenXpaths": null,
+              "layout": {
+                "numCols": 0,
+                "numRows": 0
+              },
+              "x": 70,
+              "y": 421,
               "mapping": "unknown",
-              "customBlockName": "aiunknown-exxjuf-1102402267"
+              "customBlockName": "aiunknown-dxxjuf-83627520"
             },
             {
               "id": "box-id-1749612991",
@@ -62,6 +84,14 @@
                 {
                   "xpath": "/html[1]/body[1]/div[3]/nav[2]/div[1]",
                   "xpathWithDetails": "/div[@class=\"container\"]/div[@class=\"col-lg-10 col-sm-offset-2 clearfix\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[3]/nav[3]/div[1]",
+                  "xpathWithDetails": "/div[@class=\"container\"]/div[@class=\"col-lg-2 col-md-2 col-sm-2 col-xs-12 clearfix\"]"
+                },
+                {
+                  "xpath": "/html[1]/body[1]/div[3]/main[1]/div[1]/div[1]",
+                  "xpathWithDetails": "/div[@class=\"container\"]/div[@class=\"row\"]/div[@class=\"col-md-6 col-sm-5 col-xs-10 col-md-offset-1 col-xs-offset-2\"]"
                 }
               ],
               "layout": {
@@ -70,8 +100,8 @@
               },
               "x": 70,
               "y": 421,
-              "mapping": "cards",
-              "customBlockName": "aicards-dxxjuf-1749612991"
+              "mapping": "columns",
+              "customBlockName": "aicolumns-dxxjuf-1749612991"
             }
           ]
         }

@@ -1,68 +1,44 @@
+
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>Page not found</title>
-  <script type="text/javascript">
-    window.isErrorPage = true;
-    window.errorCode = '404';
-  </script>
+  <title>OCIO - Innovation in Technology - 404 Error</title>
+  <link rel="canonical" href="https://main--cio-nebraska--aemdemos.aem.page/404/">
+  <meta property="og:title" content="OCIO - Innovation in Technology - 404 Error">
+  <meta property="og:url" content="https://main--cio-nebraska--aemdemos.aem.page/404/">
+  <meta property="og:image" content="https://main--cio-nebraska--aemdemos.aem.page/404/media_17f433981b36d4b005ecb0321edf90dcdddd7420d.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+  <meta property="og:image:secure_url" content="https://main--cio-nebraska--aemdemos.aem.page/404/media_17f433981b36d4b005ecb0321edf90dcdddd7420d.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OCIO - Innovation in Technology - 404 Error">
+  <meta name="twitter:image" content="https://main--cio-nebraska--aemdemos.aem.page/404/media_17f433981b36d4b005ecb0321edf90dcdddd7420d.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Page not found">
-  <script src="/scripts/scripts.js" type="module" crossorigin="use-credentials"></script>
-  <script type="module">
-    window.addEventListener('load', () => {
-      if (document.referrer) {
-        const { origin, pathname } = new URL(document.referrer);
-        if (origin === window.location.origin) {
-          const backBtn = document.createElement('a');
-          backBtn.classList.add('button', 'error-button-back');
-          backBtn.href = pathname;
-          backBtn.textContent = 'Go back';
-          backBtn.title = 'Go back';
-          const btnContainer = document.querySelector('.button-container');
-          btnContainer.append(backBtn);
-        }
-      }
-    });
-  </script>
-  <script type="module">
-    import { sampleRUM } from '/scripts/aem.js';
-    sampleRUM('404', { source: document.referrer });
-  </script>
-  <link rel="stylesheet" href="/styles/styles.css">
-  <style>
-    main.error {
-      min-height: calc(100vh - var(--nav-height));
-      display: flex;
-      align-items: center;
-    }
-
-    main.error .error-number {
-      width: 100%;
-    }
-
-    main.error .error-number text {
-      font-family: monospace;
-    }
-  </style>
-  <link rel="stylesheet" href="/styles/lazy-styles.css">
+  <script type="module">  import { sampleRUM } from '/aemedge/scripts/aem.js';  sampleRUM('404', { source: document.referrer });</script>
+  <script src="/aemedge/scripts/aem.js" type="module"></script>
+  <script src="/aemedge/scripts/scripts.js" type="module"></script>
+  <link rel="stylesheet" href="/aemedge/styles/styles.css">
 </head>
-
 <body>
-  <header></header>
-  <main class="error">
-    <div class="section">
-      <svg viewBox="1 0 38 18" class="error-number">
-        <text x="0" y="17">404</text>
-      </svg>
-      <h2 class="error-message">Page Not Found</h2>
-      <p class="button-container">
-        <a href="/" class="button secondary error-button-home">Go home</a>
-      </p>
+<header></header>
+<main>
+  <div>
+    <div class="aidefaultcontent-k1kvr7-1891081828">
+      <div>
+        <div>
+          <h1 id="page-not-found">404 Page Not Found</h1>
+        </div>
+      </div>
     </div>
-  </main>
-  <footer></footer>
+    <div class="aidefaultcontent-k1kvr7-1186836369">
+      <div>
+        <div>
+          <h2 id="the-page-you-requested-is-not-available-or-has-movedplease-use-the-links-above-to-locate-the-page">The page you requested is not available or has moved.<br>Please use the links above to locate the page.</h2>
+          <h3 id="note-to-access-the-service-portal-you-must-be-on-the-internal-state-network">Note: To access the Service Portal, you must be on the internal State Network.</h3>
+          <h3 id="if-you-believe-you-have-received-this-message-in-error-please-contact-the-ocio-webmasters">If you believe you have received this message in error, please contact the <a href="https://cio.nebraska.gov/contact/webmaster.php">OCIO Webmasters</a>.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer></footer>
 </body>
-
 </html>

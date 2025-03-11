@@ -3,8 +3,84 @@
   "totalUrls": 14,
   "urls": [
     {
+      "url": "https://cio.nebraska.gov/",
+      "source": "NAV"
+    },
+    {
+      "url": "https://cio.nebraska.gov/servicedesk/index.html",
+      "source": "NAV"
+    },
+    {
       "url": "https://cio.nebraska.gov/news/index.html",
-      "source": "CRAWL"
+      "source": "NAV"
+    },
+    {
+      "url": "https://cio.nebraska.gov/rates/",
+      "source": "NAV"
+    },
+    {
+      "url": "https://cio.nebraska.gov/contact/index.html",
+      "source": "NAV"
+    },
+    {
+      "url": "https://cio.nebraska.gov/recognition/awards/index.html",
+      "repCount": 10,
+      "source": "SITEMAPS"
+    },
+    {
+      "url": "https://cio.nebraska.gov/contact/webmaster.php",
+      "repCount": 2,
+      "source": "SITEMAPS"
+    },
+    {
+      "url": "https://cio.nebraska.gov/servicedesk/forms/problem.php",
+      "repCount": 2,
+      "source": "SITEMAPS"
+    },
+    {
+      "url": "https://cio.nebraska.gov/news/serv-announcements/index.html",
+      "repCount": 1,
+      "source": "SITEMAPS"
+    },
+    {
+      "url": "https://cio.nebraska.gov/index.html",
+      "repCount": 1,
+      "source": "SITEMAPS"
+    },
+    {
+      "url": "https://cio.nebraska.gov/recognition/index.html",
+      "repCount": 1,
+      "source": "SITEMAPS"
+    },
+    {
+      "url": "https://cio.nebraska.gov/about/about-ocio.html",
+      "repCount": 1,
+      "source": "SITEMAPS"
+    },
+    {
+      "url": "https://cio.nebraska.gov/servicedesk/feedback/feedback.php",
+      "repCount": 1,
+      "source": "SITEMAPS"
+    },
+    {
+      "url": "https://cio.nebraska.gov/servicedesk/metrics/metrics.html",
+      "repCount": 1,
+      "source": "SITEMAPS"
+    },
+    {
+      "url": "https://cio.nebraska.gov/news/reports/index.html",
+      "repCount": 1,
+      "source": "SITEMAPS"
     }
-  ]
+  ],
+  "crawlOptions": {
+    "timeout": 10000,
+    "inclusionPatterns": [],
+    "exclusionPatterns": [],
+    "limit": -1,
+    "sameDomain": true,
+    "keepHash": false,
+    "strategy": "sitemaps",
+    "logger": {}
+  }
 }
