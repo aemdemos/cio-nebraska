@@ -4,6 +4,13 @@ main .section {
     width: 72%;
   }
 
+  h1 {
+    font-size: 2.25em;
+    font-family: "Roboto Bold", "Roboto Fallback", sans-serif;
+    letter-spacing: -2px;
+    line-height: 1.25em;
+  }
+
   &.parallax {
     padding: 96px 15px;
     background-size: cover;
