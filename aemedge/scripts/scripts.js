@@ -117,7 +117,7 @@ export function createOptimizedBackgroundImage(element, breakpoints = [
       > parseInt(acc.width, 10) ? curr : acc), breakpoints[0]);
 
     const adjustedWidth = matchedBreakpoint.width * window.devicePixelRatio;
-    element.style.backgroundImage = `url(https://main--cio-nebraska--aemdemos.hlx.live${pathname}?width=${adjustedWidth}&format=webply&optimize=highest)`;
+    element.style.backgroundImage = `url(https://main--cio-nebraska--aemdemos.aem.live${pathname}?width=${adjustedWidth}&format=webply&optimize=highest)`;
   };
 
   if (resizeListeners.has(element)) {
