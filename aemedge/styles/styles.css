@@ -347,7 +347,6 @@ p:has(code.divider) {
   .breadcrumbs,
   .breadcrumbs a {
     background-color: transparent;
-    font-weight: bold;
     font-size: var(--body-font-size-s);
     color: var(--text-color);
     margin: 0;

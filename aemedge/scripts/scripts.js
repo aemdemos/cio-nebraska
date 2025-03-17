@@ -202,16 +202,13 @@ export async function loadFragment(path) {
 const getFragmentPath = (path) => {
   let fragmentPath;
   switch (true) {
-    case path.includes('/news/'):
+    case path.startsWith('/news/'):
       fragmentPath = '/aemedge/fragments/breadcrumbs-news';
       break;
-    case path.includes('/contact/'):
-      fragmentPath = '/aemedge/fragments/breadcrumbs-contact';
-      break;
-    case path.includes('/servicedesk/'):
+    case path.startsWith('/servicedesk/'):
       fragmentPath = '/aemedge/fragments/breadcrumbs-servicedesk';
       break;
-    case path.includes('/about/'):
+    case path.startsWith('/about/'):
       fragmentPath = '/aemedge/fragments/breadcrumbs-about';
       break;
     default:
@@ -222,7 +219,7 @@ const getFragmentPath = (path) => {
 
 async function buildBreadcrumbs() {
   const outerSection = document.createElement('div');
-  const breadcrumbMetadata = getMetadata('breadcrumb-title') || getMetadata('og:title') || '';
+  const breadcrumbMetadata = getMetadata('breadcrumb-title') || '';
   // if breadcrumb-title is "false" in metadata, return an empty div
   if (breadcrumbMetadata !== 'False' && breadcrumbMetadata !== 'false') {
     // Even if breadcrumbs are disabled, we need an empty div to keep the layout consistent
@@ -240,7 +237,9 @@ async function buildBreadcrumbs() {
       const breadcrumbLinks = fragment.querySelectorAll('a');
       breadcrumbLinks.forEach((link, index) => {
         breadcrumb.appendChild(link);
-        if (index < breadcrumbLinks.length) {
+        // Only add separator if it's not the last link OR there is breadcrumb metadata
+        if (index < breadcrumbLinks.length - 1
+          || (breadcrumbMetadata && breadcrumbMetadata.trim())) {
           const separator = document.createElement('span');
           separator.className = 'breadcrumb-separator';
           separator.textContent = ' / ';
