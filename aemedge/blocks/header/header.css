@@ -212,6 +212,11 @@ header nav .nav-sections ul > li > ul > li > a {
   color: inherit;
 }
 
+header nav a:any-link:hover {
+  color: #333;
+  text-decoration: none;
+}
+
   @media (width >= 900px) {
     header nav {
       display: flex;
