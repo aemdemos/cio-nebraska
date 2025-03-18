@@ -1,7 +1,18 @@
 main .section {
   margin: 120px 0;
+  
   > div {
     width: 72%;
+  }
+
+  > div.fragment-wrapper {
+    .section {
+      margin: 0 auto;
+
+      div.default-content-wrapper {
+        margin: auto;
+      }
+    }
   }
 
   h1 {
@@ -27,7 +38,7 @@ main .section {
 
     &.left > div,
     &.right > div {
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgb(255 255 255 / 90%);
       width: unset;
       padding: 1em;
     }
